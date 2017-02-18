@@ -1,0 +1,51 @@
+body {
+  background-color: #fff;
+  font-size: 16px;
+  font-family: "Asul", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  margin: 0;
+  padding: 0; }
+
+header {
+  background-color: #343f45;
+  width: 100%;
+  padding: 20px;
+  color: #fff; }
+
+div.container {
+  display: flex;
+  height: 100vh; }
+
+div.interaction {
+  background-color: #fff;
+  width: 60%;
+  padding: 20px; }
+  div.interaction h1 {
+    color: #4f00ff; }
+  div.interaction fieldset {
+    border: none; }
+    div.interaction fieldset button {
+      background-color: #ff4500;
+      outline: none;
+      border: none;
+      border-radius: 2px;
+      padding: 10px 12px;
+      margin: 5px;
+      color: #fff;
+      font-weight: bold; }
+  div.interaction button.next {
+    text-transform: uppercase;
+    padding: 20px 50px;
+    background-color: #4f00ff;
+    border: none;
+    color: #fff;
+    font-size: 1em;
+    letter-spacing: 2px; }
+
+div.response {
+  background-color: #343f45;
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  width: 40%;
+  min-width: 500px; }
+
+/*# sourceMappingURL=master.css.map */
