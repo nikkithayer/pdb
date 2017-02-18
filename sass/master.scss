@@ -44,6 +44,11 @@ div.interaction{
 			margin: 5px;
 			color: $white;
 			font-weight: bold;
+			transition: all 0.5s;
+			&.selected{
+				transition: all 0.3s;
+				background-color: $hot-blue;
+			}
 		}
 	}	
 	
@@ -55,6 +60,10 @@ div.interaction{
 		color: $white; 
 		font-size: 1em;
 		letter-spacing: 2px;
+		&.inactive{
+			background-color: $warm-dark-grey;
+			opacity: 0.7;
+		}
 	}
 }
 

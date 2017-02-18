@@ -32,7 +32,11 @@ div.interaction {
       padding: 10px 12px;
       margin: 5px;
       color: #fff;
-      font-weight: bold; }
+      font-weight: bold;
+      transition: all 0.5s; }
+      div.interaction fieldset button.selected {
+        transition: all 0.3s;
+        background-color: #4f00ff; }
   div.interaction button.next {
     text-transform: uppercase;
     padding: 20px 50px;
@@ -41,6 +45,9 @@ div.interaction {
     color: #fff;
     font-size: 1em;
     letter-spacing: 2px; }
+    div.interaction button.next.inactive {
+      background-color: #343f45;
+      opacity: 0.7; }
 
 div.response {
   background-color: #343f45;
