@@ -2,9 +2,10 @@ $warm-dark-grey : #343f45;
 $hot-blue : #4f00ff;
 $hot-orange : #ff4500;
 $white : #fff;
+$hot-magenta : #f70582;
 
 body{
-	background-color: #fff;
+	background-color: $white;
 	font-size: 16px;
 	font-family: "Asul", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 	font-weight: 500;
@@ -45,9 +46,13 @@ div.interaction{
 			color: $white;
 			font-weight: bold;
 			transition: all 0.5s;
-			&.selected{
+			&.active{
 				transition: all 0.3s;
 				background-color: $hot-blue;
+			}
+			&:hover{
+				transform: scale(1.1);
+				transition: all 0.3s;
 			}
 		}
 	}	
@@ -55,7 +60,7 @@ div.interaction{
 	button.next{
 		text-transform: uppercase;
 		padding: 20px 50px;
-		background-color: $hot-blue;
+		background-color: $hot-magenta;
 		border: none;
 		color: $white; 
 		font-size: 1em;

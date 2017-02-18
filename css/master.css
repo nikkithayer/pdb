@@ -34,13 +34,16 @@ div.interaction {
       color: #fff;
       font-weight: bold;
       transition: all 0.5s; }
-      div.interaction fieldset button.selected {
+      div.interaction fieldset button.active {
         transition: all 0.3s;
         background-color: #4f00ff; }
+      div.interaction fieldset button:hover {
+        transform: scale(1.1);
+        transition: all 0.3s; }
   div.interaction button.next {
     text-transform: uppercase;
     padding: 20px 50px;
-    background-color: #4f00ff;
+    background-color: #f70582;
     border: none;
     color: #fff;
     font-size: 1em;

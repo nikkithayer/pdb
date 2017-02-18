@@ -2,12 +2,14 @@ $( document ).ready(function() {
 
 $("button.next").addClass("inactive");
 
-$("fieldset button").hover(
+$("fieldset button").click(
 	function(){
-		$(this).addClass("selected");
-		$(this).prevAll().addClass("selected");
-		$(this).nextAll().removeClass("selected");
+		$(this).addClass("active");
+		$(this).prevAll().addClass("active");
+		$(this).nextAll().removeClass("active");
+		$("button.next").removeClass("inactive");
 	}
 );	
+
 
 });
