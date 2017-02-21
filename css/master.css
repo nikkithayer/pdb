@@ -80,17 +80,14 @@ div.response {
     fill: rgba(255, 255, 255, 0.1);
     stroke-width: 0.5;
     stroke-miterlimit: 10; }
+    div.response #dartboard #svg-empty {
+      fill: rgba(255, 255, 255, 0.1); }
     div.response #dartboard #svg-error {
-      fill: #ff4500;
-      stroke: #fff;
-      opacity: 1; }
+      fill: #ff4500; }
     div.response #dartboard #svg-filled {
-      fill: #4f00ff;
-      stroke: #fff;
-      opacity: 1; }
+      fill: #4f00ff; }
     div.response #dartboard #svg-bullseye {
-      fill: #f70582;
-      stroke: #fff; }
+      fill: #f70582; }
   div.response div#dartboard-label {
     color: white;
     font-size: 1.25em;

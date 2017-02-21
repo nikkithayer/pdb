@@ -25,9 +25,9 @@ $.getJSON( "../questions.json", function( json ) {
 	);
 
 	function lightUpQuiz(attrId, buttonRating){
-//		$("#dartboard "+attrId).children().attr("id","svg-error");
 		var buttonCount = 0;
 		$("#dartboard "+attrId).children().each(function () {
+			$(this).attr("id","svg-empty");
 			if(buttonCount < buttonRating){
 				$(this).attr("id","svg-filled");
 				buttonCount++;

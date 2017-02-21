@@ -109,19 +109,17 @@ div.response{
 		stroke-width:0.5;
 		stroke-miterlimit:10;
 
+		#svg-empty{
+			fill:$transparent-fill;			
+		}
 		#svg-error{
 			fill:$hot-orange;
-			stroke:$stroke-color;
-			opacity: 1;
 		}
 		#svg-filled{
 			fill:$hot-blue;
-			stroke:$stroke-color;
-			opacity: 1;
 		}
 		#svg-bullseye{
 			fill:$hot-magenta;
-			stroke:$stroke-color;
 		}
 	
 	}
