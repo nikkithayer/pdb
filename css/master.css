@@ -1,20 +1,30 @@
-body {
+html, body {
   background-color: #fff;
+  height: 100%;
   font-size: 16px;
   font-family: "Asul", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: 500;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  display: flex;
+  flex-direction: column; }
+
+body > * {
+  flex-shrink: 0; }
 
 header {
   background-color: #343f45;
   width: 100%;
   padding: 20px;
-  color: #fff; }
+  color: #fff;
+  box-sizing: border-box;
+  display: absolute;
+  z-index: 1; }
 
 div.container {
   display: flex;
-  height: 100vh; }
+  background-color: #343f45;
+  flex-grow: 1; }
 
 div.interaction {
   background-color: #fff;
@@ -53,9 +63,39 @@ div.interaction {
       opacity: 0.7; }
 
 div.response {
-  background-color: #343f45;
   background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   width: 40%;
-  min-width: 500px; }
+  min-width: 500px;
+  position: relative; }
+
+#display-progress {
+  bottom: 0;
+  fill: #f70582;
+  position: absolute;
+  stroke-width: 1;
+  stroke-miterlimit: 10; }
+  #display-progress .svg-error {
+    fill: #ff4500;
+    stroke: rgba(255, 255, 255, 0.6); }
+  #display-progress .svg-unfilled {
+    opacity: 0.5;
+    fill: #fff;
+    stroke: rgba(255, 255, 255, 0.6); }
+  #display-progress .svg-fill1 {
+    fill: #4f00ff;
+    stroke: rgba(255, 255, 255, 0.6); }
+  #display-progress .svg-fill2 {
+    opacity: 0.8;
+    fill: #4f00ff;
+    stroke: rgba(255, 255, 255, 0.6); }
+  #display-progress .svg-fill3 {
+    opacity: 0.5;
+    fill: #4f00ff;
+    stroke: rgba(255, 255, 255, 0.6); }
+  #display-progress .svg-bullseye {
+    fill: #f70582;
+    stroke: rgba(255, 255, 255, 0.6); }
+  #display-progress path:hover {
+    fill: rgba(255, 255, 255, 0.6); }
 
 /*# sourceMappingURL=master.css.map */
