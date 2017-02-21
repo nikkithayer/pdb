@@ -1,0 +1,37 @@
+[{
+		"title": "Clear Roles",
+		"description": "Do the roles and responsibilities on your team match the skills and abilities of the team? Do team members understand what is expected of them consistently?"
+	}, {
+		"title": "Understand Process",
+		"description": "Does your team follow a process? Do all members have a shared understanding of that process and a say in the evolution of that process?"
+	}, {
+		"title": "Experienced in Software",
+		"description": "Does your team have experience working on software projects similar to this one?"
+	}, {
+		"title": "Experts in Our Field",
+		"description": "Does your team have experience working on software projects similar to this one?"
+	}, {
+		"title": "Clear, Shared Vision",
+		"description": "Is there a vision for this product that has been clearly communicated? Do all team members have a shared understanding of what they’re trying to achieve?"
+	}, {
+		"title": "Talent is Valued",
+		"description": "Do all the team members feel that the work they do is respected and their contributions to the work are valuable?"
+	}, {
+		"title": "Challenge",
+		"description": "Do the members feel challenged by their work and think the work is important?"
+	}, {
+		"title": "Debate and Decide Together",
+		"description": "Do people on your team give their opinions? Does the team debate different options and make decisions together?"
+	}, {
+		"title": "MVP",
+		"description": "Is your team committed to building the smallest whole product and releasing it to real users?"
+	}, {
+		"title": "UVP",
+		"description": "Can your team articulate the unique value proposition for this product, i.e. the thing that will make users choose this over other options?"
+	}, {
+		"title": "Metrics",
+		"description": "Does your team focus on one success metric at a time?"
+	}, {
+		"title": "Product/Market Fit",
+		"description": "Does your team feel it is in a good market with a product that can satisfy that market?"
+	}]

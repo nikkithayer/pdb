@@ -29,7 +29,8 @@ div.container {
 div.interaction {
   background-color: #fff;
   width: 60%;
-  padding: 20px; }
+  padding: 20px;
+  z-index: 1; }
   div.interaction h1 {
     color: #4f00ff; }
   div.interaction fieldset {
@@ -53,49 +54,61 @@ div.interaction {
   div.interaction button.next {
     text-transform: uppercase;
     padding: 20px 50px;
-    background-color: #f70582;
+    background-color: #ff4500;
     border: none;
     color: #fff;
     font-size: 1em;
-    letter-spacing: 2px; }
+    letter-spacing: 2px;
+    transition: all 1s; }
     div.interaction button.next.inactive {
-      background-color: #343f45;
-      opacity: 0.7; }
+      opacity: 0;
+      transition: all 1s; }
 
 div.response {
   background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  overflow: hidden;
   width: 40%;
   min-width: 500px;
   position: relative; }
-
-#display-progress {
-  bottom: 0;
-  fill: #f70582;
-  position: absolute;
-  stroke-width: 1;
-  stroke-miterlimit: 10; }
-  #display-progress .svg-error {
-    fill: #ff4500;
-    stroke: rgba(255, 255, 255, 0.6); }
-  #display-progress .svg-unfilled {
-    opacity: 0.5;
-    fill: #fff;
-    stroke: rgba(255, 255, 255, 0.6); }
-  #display-progress .svg-fill1 {
-    fill: #4f00ff;
-    stroke: rgba(255, 255, 255, 0.6); }
-  #display-progress .svg-fill2 {
-    opacity: 0.8;
-    fill: #4f00ff;
-    stroke: rgba(255, 255, 255, 0.6); }
-  #display-progress .svg-fill3 {
-    opacity: 0.5;
-    fill: #4f00ff;
-    stroke: rgba(255, 255, 255, 0.6); }
-  #display-progress .svg-bullseye {
-    fill: #f70582;
-    stroke: rgba(255, 255, 255, 0.6); }
-  #display-progress path:hover {
-    fill: rgba(255, 255, 255, 0.6); }
+  div.response #display-progress {
+    position: absolute;
+    left: -250px;
+    bottom: -250px;
+    stroke-width: 1;
+    stroke-miterlimit: 10;
+    transform: scale(1.9);
+    transition: all 1s; }
+    div.response #display-progress .svg-error {
+      fill: #ff4500;
+      stroke: rgba(255, 255, 255, 0.6); }
+    div.response #display-progress .svg-unfilled {
+      opacity: 0.9;
+      fill: #fff;
+      stroke: rgba(255, 255, 255, 0.6); }
+    div.response #display-progress .svg-fill1 {
+      fill: #4f00ff;
+      stroke: rgba(255, 255, 255, 0.6); }
+    div.response #display-progress .svg-fill2 {
+      opacity: 0.8;
+      fill: #4f00ff;
+      stroke: rgba(255, 255, 255, 0.6); }
+    div.response #display-progress .svg-fill3 {
+      opacity: 0.5;
+      fill: #4f00ff;
+      stroke: rgba(255, 255, 255, 0.6); }
+    div.response #display-progress .svg-bullseye {
+      fill: #f70582;
+      stroke: rgba(255, 255, 255, 0.6); }
+    div.response #display-progress path:hover {
+      fill: rgba(255, 255, 255, 0.6); }
+  div.response div#dartboard-label {
+    color: white;
+    font-size: 1.25em;
+    font-family: Helvetica;
+    font-weight: lighter;
+    width: 150px;
+    position: absolute;
+    left: 350px;
+    bottom: 350px; }
 
 /*# sourceMappingURL=master.css.map */

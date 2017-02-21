@@ -45,6 +45,7 @@ div.interaction{
 	background-color: $white;
 	width: 60%;
 	padding: 20px;
+	z-index: 1;
 
 	h1{
 		color: $hot-blue;
@@ -76,63 +77,80 @@ div.interaction{
 	button.next{
 		text-transform: uppercase;
 		padding: 20px 50px;
-		background-color: $hot-magenta;
+		background-color: $hot-orange;
 		border: none;
 		color: $white; 
 		font-size: 1em;
 		letter-spacing: 2px;
+		transition: all 1s;
 		&.inactive{
-			background-color: $warm-dark-grey;
-			opacity: 0.7;
+			opacity: 0;
+			transition: all 1s;
 		}
 	}
 }
 
 div.response{
 	background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	overflow: hidden;
 	width: 40%;
 	min-width: 500px;
 	position: relative;
-}
 
-#display-progress{ 
-	bottom: 0;
-	fill: $hot-magenta;
-	position: absolute;
-	stroke-width:1;
-	stroke-miterlimit:10;
-	.svg-error{
-		fill:$hot-orange;
-		stroke:$stroke-color;
-	}
-	.svg-unfilled{
-		opacity:0.5;
-		fill:$white;
-		stroke:$stroke-color;
-	}
-	.svg-fill1{
-		fill:$hot-blue;
-		stroke:$stroke-color;
-	}
-	.svg-fill2{
-		opacity:0.8;
-		fill:$hot-blue;
-		stroke:$stroke-color;
-	}
-	.svg-fill3{
-		opacity:0.5;
-		fill:$hot-blue;
-		stroke:$stroke-color;
-	}
-	.svg-bullseye{
-		fill:$hot-magenta;
-		stroke:$stroke-color;
-	}
 
-	path{
-		&:hover{
-			fill: $transparent-white;
+	#display-progress{ 
+		position: absolute;
+		left: -250px;
+		bottom: -250px;
+		stroke-width:1;
+		stroke-miterlimit:10;
+		transform: scale(1.9);
+		transition: all 1s;
+		.svg-error{
+			fill:$hot-orange;
+			stroke:$stroke-color;
+		}
+		.svg-unfilled{
+			opacity:0.9;
+			fill:$white;
+			stroke:$stroke-color;
+		}
+		.svg-fill1{
+			fill:$hot-blue;
+			stroke:$stroke-color;
+		}
+		.svg-fill2{
+			opacity:0.8;
+			fill:$hot-blue;
+			stroke:$stroke-color;
+		}
+		.svg-fill3{
+			opacity:0.5;
+			fill:$hot-blue;
+			stroke:$stroke-color;
+		}
+		.svg-bullseye{
+			fill:$hot-magenta;
+			stroke:$stroke-color;
+		}
+	
+		path{
+			&:hover{
+				fill: $transparent-white;
+			}
 		}
 	}
+
+	div#dartboard-label {
+	    color: white;
+	    font-size: 1.25em;
+	    font-family: Helvetica;
+	    font-weight: lighter;
+	    width: 150px;
+	    position: absolute;
+	    left: 350px;
+	    bottom: 350px;
+	}
+
 }
 
