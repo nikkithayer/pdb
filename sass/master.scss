@@ -2,10 +2,10 @@ $warm-dark-grey : #343f45;
 $hot-blue : #4f00ff;
 $hot-orange : #ff4500;
 $white : #fff;
-$transparent-white : rgba(255,255,255,0.6);
 $hot-magenta : #f70582;
 
-$stroke-color: $transparent-white;
+$stroke-color: $white;
+$transparent-fill: rgba(255,255,255,0.1);
 
 //*{ padding: 0; margin: 0; }
 
@@ -98,47 +98,32 @@ div.response{
 	position: relative;
 
 
-	#display-progress{ 
+	#dartboard{ 
 		position: absolute;
 		left: -250px;
 		bottom: -250px;
-		stroke-width:1;
-		stroke-miterlimit:10;
 		transform: scale(1.9);
 		transition: all 1s;
-		.svg-error{
+		stroke:$stroke-color;
+		fill:$transparent-fill;
+		stroke-width:0.5;
+		stroke-miterlimit:10;
+
+		#svg-error{
 			fill:$hot-orange;
 			stroke:$stroke-color;
+			opacity: 1;
 		}
-		.svg-unfilled{
-			opacity:0.9;
-			fill:$white;
-			stroke:$stroke-color;
-		}
-		.svg-fill1{
+		#svg-filled{
 			fill:$hot-blue;
 			stroke:$stroke-color;
+			opacity: 1;
 		}
-		.svg-fill2{
-			opacity:0.8;
-			fill:$hot-blue;
-			stroke:$stroke-color;
-		}
-		.svg-fill3{
-			opacity:0.5;
-			fill:$hot-blue;
-			stroke:$stroke-color;
-		}
-		.svg-bullseye{
+		#svg-bullseye{
 			fill:$hot-magenta;
 			stroke:$stroke-color;
 		}
 	
-		path{
-			&:hover{
-				fill: $transparent-white;
-			}
-		}
 	}
 
 	div#dartboard-label {

@@ -70,37 +70,27 @@ div.response {
   width: 40%;
   min-width: 500px;
   position: relative; }
-  div.response #display-progress {
+  div.response #dartboard {
     position: absolute;
     left: -250px;
     bottom: -250px;
-    stroke-width: 1;
-    stroke-miterlimit: 10;
     transform: scale(1.9);
-    transition: all 1s; }
-    div.response #display-progress .svg-error {
+    transition: all 1s;
+    stroke: #fff;
+    fill: rgba(255, 255, 255, 0.1);
+    stroke-width: 0.5;
+    stroke-miterlimit: 10; }
+    div.response #dartboard #svg-error {
       fill: #ff4500;
-      stroke: rgba(255, 255, 255, 0.6); }
-    div.response #display-progress .svg-unfilled {
-      opacity: 0.9;
-      fill: #fff;
-      stroke: rgba(255, 255, 255, 0.6); }
-    div.response #display-progress .svg-fill1 {
+      stroke: #fff;
+      opacity: 1; }
+    div.response #dartboard #svg-filled {
       fill: #4f00ff;
-      stroke: rgba(255, 255, 255, 0.6); }
-    div.response #display-progress .svg-fill2 {
-      opacity: 0.8;
-      fill: #4f00ff;
-      stroke: rgba(255, 255, 255, 0.6); }
-    div.response #display-progress .svg-fill3 {
-      opacity: 0.5;
-      fill: #4f00ff;
-      stroke: rgba(255, 255, 255, 0.6); }
-    div.response #display-progress .svg-bullseye {
+      stroke: #fff;
+      opacity: 1; }
+    div.response #dartboard #svg-bullseye {
       fill: #f70582;
-      stroke: rgba(255, 255, 255, 0.6); }
-    div.response #display-progress path:hover {
-      fill: rgba(255, 255, 255, 0.6); }
+      stroke: #fff; }
   div.response div#dartboard-label {
     color: white;
     font-size: 1.25em;

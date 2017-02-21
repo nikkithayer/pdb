@@ -5,19 +5,18 @@ $.getJSON( "../questions.json", function( json ) {
 	var quizPosition = 0;
 	iterateQuizPosition();
 
-	var buttonRating = 0;
-
 	$("fieldset button").click(
 		function(){
 			$(this).addClass("active");
 			$(this).prevAll().addClass("active");
 			$(this).nextAll().removeClass("active");
 			$("button.next").removeClass("inactive");
-			$("#display-progress").addClass("click");
-			buttonRating = $(this).text();
-			console.log($("#display-progress").children("g"));
+			var buttonRating = $(this).text();
+			var attrId = "#attr"+quizPosition;
+			lightUpQuiz(attrId, buttonRating);
 		}
 	);	
+
 	$("button.next").click(
 		function(){
 			iterateQuizPosition();
@@ -25,19 +24,30 @@ $.getJSON( "../questions.json", function( json ) {
 		}
 	);
 
+	function lightUpQuiz(attrId, buttonRating){
+//		$("#dartboard "+attrId).children().attr("id","svg-error");
+		var buttonCount = 0;
+		$("#dartboard "+attrId).children().each(function () {
+			if(buttonCount < buttonRating){
+				$(this).attr("id","svg-filled");
+				buttonCount++;
+			}
+		});
+	}
+
 	function iterateQuizPosition(){
 		if(quizPosition<questions.length){
 			var quizStep = quizPosition+1;
 			$("h1#question-title").text(quizStep + ". " + questions[quizPosition].title);
 			$("p#question-description").text(questions[quizPosition].description);
-			rotateDartboard();
+			rotateDartboard(quizStep);
 			quizPosition++;		
 		}
 	}
 	
-	function rotateDartboard(){
-		$("#display-progress").css("transform","scale(1.9) rotate("+(quizPosition*30)+"deg)");
-		$("#dartboard-label").text(questions[quizPosition].title);	
+	function rotateDartboard(quizStep){
+		$("#dartboard").css("transform","scale(1.9) rotate("+(quizPosition*30)+"deg)");
+		$("#dartboard-label").text(quizStep + ". " +questions[quizPosition].title);	
 	}
 	
 	function resetQuizStatus(){
@@ -47,6 +57,6 @@ $.getJSON( "../questions.json", function( json ) {
 
  });
 });
-//text label should show up over circle
+
 //chart lights up with appropriate light up
 //fix up the positioning, especially for the next button
