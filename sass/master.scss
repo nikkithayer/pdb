@@ -53,7 +53,6 @@ div.container{
 div.interaction{
 	background-color: $interaction-bg;
 	width: 60%;
-	padding: 3%;
 	z-index: 1;
 
 	h1{
@@ -73,7 +72,7 @@ div.interaction{
 		text-transform: uppercase;
 		margin-bottom: 3vh;
 		span{
-			color: $hot-orange;
+			color: $pink;
 			font-family: "freight-display-pro";
 			font-size: 2.5em;
 		}		
@@ -83,7 +82,7 @@ div.interaction{
 		border: none;
 		margin: 5vh 0;
 		button{
-			background-color: $hot-orange;
+			background-color: $pink;
 			outline: none;
 			border: none;
 			border-radius: 2px;
@@ -122,16 +121,23 @@ div.interaction{
 		transition: $transition-long;
 		display: block;
 		&.inactive{
-			background-color: $warm-dark-grey;
+			background-color: $hot-blue;
 			transition: $transition-long;
 		}
 	}
+	.quiz{
+		padding: 3%;		
+	}
 	.progress-bar{
-		margin: 1vh 0;
-		position: absolute;
+		float:right;
+		padding: 1vh 3%;
+		box-sizing: border-box;
+		position: relative;
 		bottom: 0;
 		font-family: "futura-pt";
 		font-weight: 600;
+		font-size: 1.5em;
+		color: $hot-blue;
 		svg#progress-bar {
 			fill: $pink;
 		    stroke: white;
@@ -139,6 +145,8 @@ div.interaction{
 		    stroke-miterlimit:10;
 		    width: 60px;
 		    height: 60px;
+		    display: inline-block;
+		    vertical-align: middle;
 			#step-filled{
 				fill:$hot-blue;
 				transition: $transition-long;

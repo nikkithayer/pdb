@@ -13,15 +13,15 @@ $.getJSON( "./questions.json", function( json ) {
 			$("button.next").removeClass("inactive");
 			var buttonRating = $(this).text();
 			var attrId = "#attr"+quizPosition;
-			var stepId = "#step"+quizPosition;
 			lightUpQuiz(attrId, buttonRating);
-			iterateProgressWheel(stepId);
 		}
 	);	
 
 	$("button.next").click(
 		function(){
 			iterateQuizPosition();
+			var stepId = "#step"+quizPosition;
+			iterateProgressWheel(stepId);
 			resetQuizStatus();
 		}
 	);
@@ -40,7 +40,6 @@ $.getJSON( "./questions.json", function( json ) {
 	}
 	
 	function iterateProgressWheel(stepId){
-		console.log($("#progress-bar "+stepId));
 		$("#progress-bar "+stepId).attr("id","step-filled");
 	}
 

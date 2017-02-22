@@ -33,7 +33,6 @@ div.container {
 div.interaction {
   background-color: #fff;
   width: 60%;
-  padding: 3%;
   z-index: 1; }
   div.interaction h1 {
     font-family: "freight-display-pro";
@@ -50,14 +49,14 @@ div.interaction {
     text-transform: uppercase;
     margin-bottom: 3vh; }
     div.interaction h1#question-title span {
-      color: #ff4500;
+      color: #ff9faa;
       font-family: "freight-display-pro";
       font-size: 2.5em; }
   div.interaction fieldset {
     border: none;
     margin: 5vh 0; }
     div.interaction fieldset button {
-      background-color: #ff4500;
+      background-color: #ff9faa;
       outline: none;
       border: none;
       border-radius: 2px;
@@ -90,21 +89,29 @@ div.interaction {
     transition: all 1s;
     display: block; }
     div.interaction button.next.inactive {
-      background-color: #343f45;
+      background-color: #4f00ff;
       transition: all 1s; }
+  div.interaction .quiz {
+    padding: 3%; }
   div.interaction .progress-bar {
-    margin: 1vh 0;
-    position: absolute;
+    float: right;
+    padding: 1vh 3%;
+    box-sizing: border-box;
+    position: relative;
     bottom: 0;
     font-family: "futura-pt";
-    font-weight: 600; }
+    font-weight: 600;
+    font-size: 1.5em;
+    color: #4f00ff; }
     div.interaction .progress-bar svg#progress-bar {
       fill: #ff9faa;
       stroke: white;
       stroke-width: 6;
       stroke-miterlimit: 10;
       width: 60px;
-      height: 60px; }
+      height: 60px;
+      display: inline-block;
+      vertical-align: middle; }
       div.interaction .progress-bar svg#progress-bar #step-filled {
         fill: #4f00ff;
         transition: all 1s; }
