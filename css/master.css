@@ -1,9 +1,13 @@
+* {
+  padding: 0;
+  margin: 0; }
+
 html, body {
   background-color: #fff;
   height: 100%;
   font-size: 16px;
-  font-family: "Asul", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  font-weight: 500;
+  font-family: "aktiv-grotesk", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  color: #343f45;
   margin: 0;
   padding: 0;
   display: flex;
@@ -19,22 +23,39 @@ header {
   color: #fff;
   box-sizing: border-box;
   display: absolute;
-  z-index: 1; }
+  z-index: 1;
+  display: none; }
 
 div.container {
   display: flex;
-  background-color: #343f45;
   flex-grow: 1; }
 
 div.interaction {
   background-color: #fff;
   width: 60%;
-  padding: 20px;
+  padding: 3%;
   z-index: 1; }
   div.interaction h1 {
-    color: #4f00ff; }
+    font-family: "freight-display-pro";
+    color: black;
+    margin-bottom: 5vh; }
+    div.interaction h1 img {
+      display: inline-block;
+      height: 42px;
+      vertical-align: bottom; }
+  div.interaction h1#question-title {
+    color: #4f00ff;
+    font-family: "futura pt";
+    font-size: 1.25em;
+    text-transform: uppercase;
+    margin-bottom: 3vh; }
+    div.interaction h1#question-title span {
+      color: #ff4500;
+      font-family: "freight-display-pro";
+      font-size: 2.5em; }
   div.interaction fieldset {
-    border: none; }
+    border: none;
+    margin: 5vh 0; }
     div.interaction fieldset button {
       background-color: #ff4500;
       outline: none;
@@ -44,36 +65,60 @@ div.interaction {
       margin: 5px;
       color: #fff;
       font-weight: bold;
-      transition: all 0.5s; }
+      transition: all 0.3s; }
       div.interaction fieldset button.active {
         transition: all 0.3s;
         background-color: #4f00ff; }
       div.interaction fieldset button:hover {
         transform: scale(1.1);
         transition: all 0.3s; }
+    div.interaction fieldset span {
+      font-size: 0.8em;
+      color: #343f45;
+      display: block;
+      opacity: 0.7; }
   div.interaction button.next {
     text-transform: uppercase;
-    padding: 20px 50px;
-    background-color: #ff4500;
+    padding: 10px 30px;
+    background-color: #ff9faa;
     border: none;
     color: #fff;
     font-size: 1em;
+    font-family: "futura pt";
     letter-spacing: 2px;
-    transition: all 1s; }
+    font-weight: 600;
+    transition: all 1s;
+    display: block; }
     div.interaction button.next.inactive {
-      opacity: 0;
+      background-color: #343f45;
       transition: all 1s; }
+  div.interaction .progress-bar {
+    margin: 1vh 0;
+    position: absolute;
+    bottom: 0;
+    font-family: "futura-pt";
+    font-weight: 600; }
+    div.interaction .progress-bar svg#progress-bar {
+      fill: #ff9faa;
+      stroke: white;
+      stroke-width: 6;
+      stroke-miterlimit: 10;
+      width: 60px;
+      height: 60px; }
+      div.interaction .progress-bar svg#progress-bar #svg-filled {
+        fill: #4f00ff;
+        transition: all 1s; }
 
 div.response {
-  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
   overflow: hidden;
   width: 40%;
   min-width: 500px;
   position: relative; }
   div.response #dartboard {
     position: absolute;
-    left: -250px;
-    bottom: -250px;
+    left: -252px;
+    bottom: -252px;
     transform: scale(1.9);
     transition: all 1s;
     stroke: #fff;
@@ -81,18 +126,23 @@ div.response {
     stroke-width: 0.5;
     stroke-miterlimit: 10; }
     div.response #dartboard #svg-empty {
-      fill: rgba(255, 255, 255, 0.1); }
+      fill: rgba(255, 255, 255, 0.1);
+      transition: all 1s; }
     div.response #dartboard #svg-error {
-      fill: #ff4500; }
+      fill: #ff4500;
+      transition: all 1s; }
     div.response #dartboard #svg-filled {
-      fill: #4f00ff; }
+      fill: #4f00ff;
+      transition: all 1s; }
+    div.response #dartboard #svg-unfilled {
+      fill: #fff;
+      transition: all 1s; }
     div.response #dartboard #svg-bullseye {
-      fill: #f70582; }
+      fill: #ff9faa;
+      transition: all 1s; }
   div.response div#dartboard-label {
-    color: white;
+    color: #fff;
     font-size: 1.25em;
-    font-family: Helvetica;
-    font-weight: lighter;
     width: 150px;
     position: absolute;
     left: 350px;

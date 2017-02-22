@@ -1,0 +1,24 @@
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In  -->
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="36.4px" height="36.4px" viewBox="0 0 36.4 36.4" style="enable-background:new 0 0 36.4 36.4;"
+	 xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#F69DAA;stroke:#fff;stroke-width:1.4;stroke-miterlimit:10;}
+	.st1{fill:#FFFFFF;stroke:#4f00ff;stroke-width:1.4;stroke-miterlimit:10;}
+	.st2{fill:#4f00ff;stroke:#4f00ff;stroke-width:1.4;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#fff;stroke-width:1.4;stroke-linecap:round;stroke-miterlimit:10;}
+</style>
+<defs>
+</defs>
+<g>
+	<circle class="st2" cx="15.6" cy="15.6" r="14.9"/>
+	<circle class="st1" cx="15.6" cy="15.6" r="10.4"/>
+	<circle class="st2" cx="15.6" cy="15.6" r="5"/>
+	<g>
+		<polygon class="st0" points="20.5,20.5 20.4,27.3 28.8,35.7 28.9,28.9 		"/>
+		<polygon class="st0" points="35.7,28.8 27.3,20.4 20.5,20.5 28.9,28.9 		"/>
+	</g>
+	<line class="st3" x1="15.6" y1="15.6" x2="28.9" y2="28.9"/>
+</g>
+</svg>

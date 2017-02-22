@@ -1,6 +1,6 @@
 $( document ).ready(function() {								
 
-$.getJSON( "../questions.json", function( json ) {
+$.getJSON( "./questions.json", function( json ) {
 	var questions = json;
 	var quizPosition = 0;
 	iterateQuizPosition();
@@ -13,7 +13,9 @@ $.getJSON( "../questions.json", function( json ) {
 			$("button.next").removeClass("inactive");
 			var buttonRating = $(this).text();
 			var attrId = "#attr"+quizPosition;
+			var stepId = "#step"+quizPosition;
 			lightUpQuiz(attrId, buttonRating);
+			iterateProgressWheel(stepId);
 		}
 	);	
 
@@ -30,16 +32,24 @@ $.getJSON( "../questions.json", function( json ) {
 			$(this).attr("id","svg-empty");
 			if(buttonCount < buttonRating){
 				$(this).attr("id","svg-filled");
-				buttonCount++;
+			}else{
+				$(this).attr("id","svg-unfilled");				
 			}
+			buttonCount++;
 		});
+	}
+	
+	function iterateProgressWheel(stepId){
+		console.log("hi?");
+		console.log($("#progress-bar "+stepId));
 	}
 
 	function iterateQuizPosition(){
 		if(quizPosition<questions.length){
 			var quizStep = quizPosition+1;
-			$("h1#question-title").text(quizStep + ". " + questions[quizPosition].title);
+			$("h1#question-title").html("<span>" + quizStep + ". </span>" + questions[quizPosition].title);
 			$("p#question-description").text(questions[quizPosition].description);
+			$("span#progress-step").text(quizStep);
 			rotateDartboard(quizStep);
 			quizPosition++;		
 		}
@@ -58,5 +68,6 @@ $.getJSON( "../questions.json", function( json ) {
  });
 });
 
-//chart lights up with appropriate light up
+//make the next button work nicer
+//little svg version lights up at bottom of window
 //fix up the positioning, especially for the next button

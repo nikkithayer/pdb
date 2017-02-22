@@ -3,18 +3,26 @@ $hot-blue : #4f00ff;
 $hot-orange : #ff4500;
 $white : #fff;
 $hot-magenta : #f70582;
+$pink: #ff9faa;
+$blue-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+$grey-gradient: linear-gradient(to top, #09203f 0%, #537895 100%);
 
 $stroke-color: $white;
 $transparent-fill: rgba(255,255,255,0.1);
+$header-color: $warm-dark-grey;
+$interaction-bg: $white;
 
-//*{ padding: 0; margin: 0; }
+$transition-long: all 1s;
+$transition-short: all 0.3s;
+
+*{ padding: 0; margin: 0; }
 
 html, body{
 	background-color: $white;
 	height: 100%;
 	font-size: 16px;
-	font-family: "Asul", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-	font-weight: 500;
+	font-family: "aktiv-grotesk", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	color: $warm-dark-grey;
 	margin: 0;
 	padding: 0;
 	display: flex;
@@ -26,33 +34,53 @@ body > *{
 }
 
 header{
-	background-color: $warm-dark-grey;
+	background-color: $header-color;
 	width: 100%;
 	padding: 20px;
 	color: $white;
 	box-sizing: border-box;
 	display: absolute;
 	z-index: 1;
+	display:none;
 }
 
 div.container{
 	display: flex;
-	background-color: $warm-dark-grey;
 	flex-grow: 1;
 }
 
 div.interaction{
-	background-color: $white;
+	background-color: $interaction-bg;
 	width: 60%;
-	padding: 20px;
+	padding: 3%;
 	z-index: 1;
 
 	h1{
+		font-family: "freight-display-pro";
+		color: black;
+		margin-bottom: 5vh;
+		img{
+		    display: inline-block;
+		    height: 42px;
+		    vertical-align: bottom;			
+		}
+	}
+	h1#question-title{
 		color: $hot-blue;
+		font-family: "futura pt";
+		font-size: 1.25em;
+		text-transform: uppercase;
+		margin-bottom: 3vh;
+		span{
+			color: $hot-orange;
+			font-family: "freight-display-pro";
+			font-size: 2.5em;
+		}		
 	}
 
 	fieldset{
 		border: none;
+		margin: 5vh 0;
 		button{
 			background-color: $hot-orange;
 			outline: none;
@@ -62,36 +90,64 @@ div.interaction{
 			margin: 5px;
 			color: $white;
 			font-weight: bold;
-			transition: all 0.5s;
+			transition: $transition-short;
 			&.active{
-				transition: all 0.3s;
+				transition: $transition-short;
 				background-color: $hot-blue;
 			}
 			&:hover{
 				transform: scale(1.1);
-				transition: all 0.3s;
+				transition: $transition-short;
 			}
+		}
+		span{
+			font-size: 0.8em;
+			color: $warm-dark-grey;
+			display: block;
+			opacity: 0.7;
 		}
 	}	
 	
 	button.next{
 		text-transform: uppercase;
-		padding: 20px 50px;
-		background-color: $hot-orange;
+		padding: 10px 30px;
+		background-color: $pink;
 		border: none;
 		color: $white; 
 		font-size: 1em;
+		font-family: "futura pt";
 		letter-spacing: 2px;
-		transition: all 1s;
+		font-weight: 600;
+		transition: $transition-long;
+		display: block;
 		&.inactive{
-			opacity: 0;
-			transition: all 1s;
+			background-color: $warm-dark-grey;
+			transition: $transition-long;
 		}
+	}
+	.progress-bar{
+		margin: 1vh 0;
+		position: absolute;
+		bottom: 0;
+		font-family: "futura-pt";
+		font-weight: 600;
+		svg#progress-bar {
+			fill: $pink;
+		    stroke: white;
+		    stroke-width: 6;
+		    stroke-miterlimit:10;
+		    width: 60px;
+		    height: 60px;
+			#svg-filled{
+				fill:$hot-blue;
+				transition: $transition-long;
+			}
+		}		
 	}
 }
 
 div.response{
-	background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	background-image: $grey-gradient;
 	overflow: hidden;
 	width: 40%;
 	min-width: 500px;
@@ -100,10 +156,10 @@ div.response{
 
 	#dartboard{ 
 		position: absolute;
-		left: -250px;
-		bottom: -250px;
+		left: -252px;
+		bottom: -252px;
 		transform: scale(1.9);
-		transition: all 1s;
+		transition: $transition-long;
 		stroke:$stroke-color;
 		fill:$transparent-fill;
 		stroke-width:0.5;
@@ -111,24 +167,30 @@ div.response{
 
 		#svg-empty{
 			fill:$transparent-fill;			
+			transition: $transition-long;
 		}
 		#svg-error{
 			fill:$hot-orange;
+			transition: $transition-long;
 		}
 		#svg-filled{
 			fill:$hot-blue;
+			transition: $transition-long;
+		}
+		#svg-unfilled{
+			fill:$white;
+			transition: $transition-long;
 		}
 		#svg-bullseye{
-			fill:$hot-magenta;
+			fill:$pink;
+			transition: $transition-long;
 		}
 	
 	}
 
 	div#dartboard-label {
-	    color: white;
+	    color: $white;
 	    font-size: 1.25em;
-	    font-family: Helvetica;
-	    font-weight: lighter;
 	    width: 150px;
 	    position: absolute;
 	    left: 350px;
