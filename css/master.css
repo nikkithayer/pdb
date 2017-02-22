@@ -105,12 +105,12 @@ div.interaction {
       stroke-miterlimit: 10;
       width: 60px;
       height: 60px; }
-      div.interaction .progress-bar svg#progress-bar #svg-filled {
+      div.interaction .progress-bar svg#progress-bar #step-filled {
         fill: #4f00ff;
         transition: all 1s; }
 
 div.response {
-  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   overflow: hidden;
   width: 40%;
   min-width: 500px;

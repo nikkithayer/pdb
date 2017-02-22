@@ -11,6 +11,7 @@ $stroke-color: $white;
 $transparent-fill: rgba(255,255,255,0.1);
 $header-color: $warm-dark-grey;
 $interaction-bg: $white;
+$response-bg: $blue-gradient;
 
 $transition-long: all 1s;
 $transition-short: all 0.3s;
@@ -138,7 +139,7 @@ div.interaction{
 		    stroke-miterlimit:10;
 		    width: 60px;
 		    height: 60px;
-			#svg-filled{
+			#step-filled{
 				fill:$hot-blue;
 				transition: $transition-long;
 			}
@@ -147,7 +148,7 @@ div.interaction{
 }
 
 div.response{
-	background-image: $grey-gradient;
+	background: $response-bg;
 	overflow: hidden;
 	width: 40%;
 	min-width: 500px;

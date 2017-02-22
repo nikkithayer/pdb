@@ -40,8 +40,8 @@ $.getJSON( "./questions.json", function( json ) {
 	}
 	
 	function iterateProgressWheel(stepId){
-		console.log("hi?");
 		console.log($("#progress-bar "+stepId));
+		$("#progress-bar "+stepId).attr("id","step-filled");
 	}
 
 	function iterateQuizPosition(){
