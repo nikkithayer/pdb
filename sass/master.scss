@@ -15,7 +15,7 @@ $stroke-color: $white;
 $transparent-fill: rgba(255,255,255,0.1);
 $header-color: $warm-dark-grey;
 $interaction-bg: $white;
-$response-bg: $blue-gradient;
+$response-bg: $warm-dark-grey;
 
 $transition-long: all 1s;
 $transition-short: all 0.3s;
@@ -58,6 +58,7 @@ div.interaction{
 	background-color: $interaction-bg;
 	width: 60%;
 	z-index: 1;
+	position: relative;
 
 	h1{
 		font-family: $freight-family;
@@ -112,36 +113,39 @@ div.interaction{
 		}
 	}	
 	
+	.quiz{
+		padding: 3%;		
+	}
+
 	button.next{
 		text-transform: uppercase;
 		padding: 10px 30px;
+		margin: 15px 0;
 		background-color: $pink;
 		border: none;
 		color: $white; 
-		font-size: 1em;
-		font-family: $futura-family;
+		font-size: 0.8em;
 		letter-spacing: 2px;
 		font-weight: 600;
 		transition: $transition-long;
-		display: block;
+		position: absolute;
+		bottom: 3%;
+		left: 3%;
 		&.inactive{
 			background-color: $hot-blue;
 			transition: $transition-long;
 		}
 	}
-	.quiz{
-		padding: 3%;		
-	}
+
 	.progress-bar{
-		float:right;
-		padding: 1vh 3%;
-		box-sizing: border-box;
-		position: relative;
-		bottom: 0;
 		font-family: $futura-family;
 		font-weight: 600;
 		font-size: 1.5em;
 		color: $hot-blue;
+		position: absolute;
+		bottom: 3%;
+		right: 3%;
+	
 		svg#progress-bar {
 			fill: $pink;
 		    stroke: white;

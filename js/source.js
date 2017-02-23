@@ -49,7 +49,7 @@ $.getJSON( "./questions.json", function( json ) {
 			var quizStep = quizPosition+1;
 			$("h1#question-title").html("<span>" + quizStep + ". </span>" + questions[quizPosition].title);
 			$("p#question-description").text(questions[quizPosition].description);
-			$("span#progress-step").text(quizStep);
+			$("span#progress-step").text(quizStep + "of 12");
 			rotateDartboard(quizStep);
 			quizPosition++;		
 		}
