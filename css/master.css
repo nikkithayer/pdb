@@ -12,47 +12,72 @@ html, body {
   padding: 0;
   display: flex;
   flex-direction: column; }
+  html .body-results, body .body-results {
+    background: linear-gradient(to top, #09203f 0%, #537895 100%); }
 
 body > * {
   flex-shrink: 0; }
 
 header {
-  background-color: #343f45;
-  width: 100%;
-  padding: 20px;
-  color: #fff;
-  box-sizing: border-box;
-  display: absolute;
-  z-index: 1;
-  display: none; }
+  font-family: "freight-display-pro", "Bodoni", "Garamond", serif;
+  font-weight: bold;
+  color: black;
+  font-size: 2em; }
+  header img {
+    display: inline-block;
+    height: 42px;
+    vertical-align: bottom; }
+
+h1 {
+  color: #4f00ff;
+  font-family: "futura-pt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 1.5em;
+  text-transform: uppercase; }
+
+h2 {
+  color: #343f45;
+  font-size: 1.25em;
+  font-family: "freight-display-pro", "Bodoni", "Garamond", serif; }
+
+h3 {
+  color: #343f45;
+  font-family: "futura-pt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 1.25em; }
+
+ul {
+  list-style: disc inside none; }
 
 div.container {
   display: flex;
   flex-grow: 1; }
+
+svg #svg-empty {
+  fill: rgba(255, 255, 255, 0.1);
+  transition: all 1s; }
+svg #svg-error {
+  fill: #ff4500;
+  transition: all 1s; }
+svg #svg-filled {
+  fill: #4f00ff;
+  transition: all 1s; }
+svg #svg-unfilled {
+  fill: #fff;
+  transition: all 1s; }
+svg #svg-bullseye {
+  fill: #ff9faa;
+  transition: all 1s; }
 
 div.interaction {
   background-color: #fff;
   width: 60%;
   z-index: 1;
   position: relative; }
-  div.interaction h1 {
-    font-family: "freight-display-pro", "Garamond", serif;
-    color: black;
-    margin-bottom: 5vh; }
-    div.interaction h1 img {
-      display: inline-block;
-      height: 42px;
-      vertical-align: bottom; }
-  div.interaction h1#question-title {
-    color: #4f00ff;
-    font-family: "futura-pt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    font-size: 1.25em;
-    text-transform: uppercase;
-    margin-bottom: 3vh; }
-    div.interaction h1#question-title span {
-      color: #ff9faa;
-      font-family: "freight-display-pro", "Garamond", serif;
-      font-size: 2.5em; }
+  div.interaction h1#question-title span {
+    color: #ff9faa;
+    font-family: "freight-display-pro", "Bodoni", "Garamond", serif;
+    font-size: 2.5em; }
+  div.interaction .quiz, div.interaction .content, div.interaction .results {
+    padding: 3%; }
   div.interaction fieldset {
     border: none;
     margin: 5vh 0; }
@@ -77,8 +102,6 @@ div.interaction {
       color: #343f45;
       display: block;
       opacity: 0.7; }
-  div.interaction .quiz {
-    padding: 3%; }
   div.interaction button.next {
     text-transform: uppercase;
     padding: 10px 30px;
@@ -133,21 +156,17 @@ div.response {
     fill: rgba(255, 255, 255, 0.1);
     stroke-width: 0.5;
     stroke-miterlimit: 10; }
-    div.response #dartboard #svg-empty {
-      fill: rgba(255, 255, 255, 0.1);
-      transition: all 1s; }
-    div.response #dartboard #svg-error {
-      fill: #ff4500;
-      transition: all 1s; }
-    div.response #dartboard #svg-filled {
-      fill: #4f00ff;
-      transition: all 1s; }
-    div.response #dartboard #svg-unfilled {
-      fill: #fff;
-      transition: all 1s; }
-    div.response #dartboard #svg-bullseye {
-      fill: #ff9faa;
-      transition: all 1s; }
+  div.response #dartboard-results {
+    transition: all 1s;
+    stroke: #fff;
+    fill: rgba(255, 255, 255, 0.1);
+    stroke-width: 1;
+    stroke-miterlimit: 10;
+    transform: scale(0.75); }
+    div.response #dartboard-results g:hover {
+      transition: all 0.3s;
+      stroke: #ff4500;
+      stroke-width: 5; }
   div.response div#dartboard-label {
     color: #fff;
     font-size: 1.25em;

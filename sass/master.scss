@@ -8,8 +8,8 @@ $blue-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 $grey-gradient: linear-gradient(to top, #09203f 0%, #537895 100%);
 
 $futura-family: 'futura-pt', "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-$aktiv-family: "aktiv-grotesk", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-$freight-family: "freight-display-pro", "Garamond", serif;
+$aktiv-family: 'aktiv-grotesk', "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$freight-family: "freight-display-pro", "Bodoni", "Garamond", serif;
 
 $stroke-color: $white;
 $transparent-fill: rgba(255,255,255,0.1);
@@ -32,6 +32,9 @@ html, body{
 	padding: 0;
 	display: flex;
 	flex-direction: column;
+	.body-results{
+		background: $grey-gradient;
+	}
 }
 
 body > *{
@@ -39,19 +42,63 @@ body > *{
 }
 
 header{
-	background-color: $header-color;
-	width: 100%;
-	padding: 20px;
-	color: $white;
-	box-sizing: border-box;
-	display: absolute;
-	z-index: 1;
-	display:none;
+	font-family: $freight-family;
+	font-weight: bold;
+	color: black;
+	font-size: 2em;
+	img{
+	    display: inline-block;
+	    height: 42px;
+	    vertical-align: bottom;			
+	}
+}
+
+h1{
+	color: $hot-blue;
+	font-family: $futura-family;
+	font-size: 1.5em;
+	text-transform: uppercase;
+}
+h2{
+	color: $warm-dark-grey;
+	font-size: 1.25em;
+	font-family: $freight-family;
+}
+h3{
+	color: $warm-dark-grey;
+	font-family: $futura-family;
+	font-size: 1.25em;
+}
+ul{
+	list-style: disc inside none;
 }
 
 div.container{
 	display: flex;
 	flex-grow: 1;
+}
+
+svg{
+	#svg-empty{
+		fill:$transparent-fill;			
+		transition: $transition-long;
+	}
+	#svg-error{
+		fill:$hot-orange;
+		transition: $transition-long;
+	}
+	#svg-filled{
+		fill:$hot-blue;
+		transition: $transition-long;
+	}
+	#svg-unfilled{
+		fill:$white;
+		transition: $transition-long;
+	}
+	#svg-bullseye{
+		fill:$pink;
+		transition: $transition-long;
+	}
 }
 
 div.interaction{
@@ -60,27 +107,15 @@ div.interaction{
 	z-index: 1;
 	position: relative;
 
-	h1{
-		font-family: $freight-family;
-		color: black;
-		margin-bottom: 5vh;
-		img{
-		    display: inline-block;
-		    height: 42px;
-		    vertical-align: bottom;			
-		}
-	}
 	h1#question-title{
-		color: $hot-blue;
-		font-family: $futura-family;
-		font-size: 1.25em;
-		text-transform: uppercase;
-		margin-bottom: 3vh;
 		span{
 			color: $pink;
 			font-family: $freight-family;
 			font-size: 2.5em;
 		}		
+	}
+	.quiz, .content, .results{
+		padding: 3%;		
 	}
 
 	fieldset{
@@ -113,9 +148,6 @@ div.interaction{
 		}
 	}	
 	
-	.quiz{
-		padding: 3%;		
-	}
 
 	button.next{
 		text-transform: uppercase;
@@ -180,29 +212,21 @@ div.response{
 		stroke:$stroke-color;
 		fill:$transparent-fill;
 		stroke-width:0.5;
-		stroke-miterlimit:10;
-
-		#svg-empty{
-			fill:$transparent-fill;			
-			transition: $transition-long;
-		}
-		#svg-error{
-			fill:$hot-orange;
-			transition: $transition-long;
-		}
-		#svg-filled{
-			fill:$hot-blue;
-			transition: $transition-long;
-		}
-		#svg-unfilled{
-			fill:$white;
-			transition: $transition-long;
-		}
-		#svg-bullseye{
-			fill:$pink;
-			transition: $transition-long;
-		}
+		stroke-miterlimit:10;	
+	}
 	
+	#dartboard-results{
+		transition: $transition-long;
+		stroke:$stroke-color;
+		fill:$transparent-fill;
+		stroke-width:1;
+		stroke-miterlimit:10;			
+		transform: scale(0.75);
+		g:hover{
+			transition: $transition-short;
+			stroke: $hot-orange;
+			stroke-width: 5;
+		}
 	}
 
 	div#dartboard-label {
@@ -215,4 +239,3 @@ div.response{
 	}
 
 }
-
