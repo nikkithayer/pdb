@@ -7,6 +7,10 @@ $pink: #ff9faa;
 $blue-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 $grey-gradient: linear-gradient(to top, #09203f 0%, #537895 100%);
 
+$futura-family: 'futura-pt', "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$aktiv-family: "aktiv-grotesk", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$freight-family: "freight-display-pro", "Garamond", serif;
+
 $stroke-color: $white;
 $transparent-fill: rgba(255,255,255,0.1);
 $header-color: $warm-dark-grey;
@@ -22,7 +26,7 @@ html, body{
 	background-color: $white;
 	height: 100%;
 	font-size: 16px;
-	font-family: "aktiv-grotesk", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-family: $aktiv-family;
 	color: $warm-dark-grey;
 	margin: 0;
 	padding: 0;
@@ -56,7 +60,7 @@ div.interaction{
 	z-index: 1;
 
 	h1{
-		font-family: "freight-display-pro";
+		font-family: $freight-family;
 		color: black;
 		margin-bottom: 5vh;
 		img{
@@ -67,13 +71,13 @@ div.interaction{
 	}
 	h1#question-title{
 		color: $hot-blue;
-		font-family: "futura pt";
+		font-family: $futura-family;
 		font-size: 1.25em;
 		text-transform: uppercase;
 		margin-bottom: 3vh;
 		span{
 			color: $pink;
-			font-family: "freight-display-pro";
+			font-family: $freight-family;
 			font-size: 2.5em;
 		}		
 	}
@@ -115,7 +119,7 @@ div.interaction{
 		border: none;
 		color: $white; 
 		font-size: 1em;
-		font-family: "futura pt";
+		font-family: $futura-family;
 		letter-spacing: 2px;
 		font-weight: 600;
 		transition: $transition-long;
@@ -134,7 +138,7 @@ div.interaction{
 		box-sizing: border-box;
 		position: relative;
 		bottom: 0;
-		font-family: "futura-pt";
+		font-family: $futura-family;
 		font-weight: 600;
 		font-size: 1.5em;
 		color: $hot-blue;

@@ -4,6 +4,7 @@ $.getJSON( "./questions.json", function( json ) {
 	var questions = json;
 	var quizPosition = 0;
 	iterateQuizPosition();
+	iterateProgressWheel(2)
 
 	$("fieldset button").click(
 		function(){
