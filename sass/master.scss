@@ -1,8 +1,9 @@
 $warm-dark-grey : #343f45;
+$warm-light-grey : #b4bfc5;
 $hot-blue : #4f00ff;
 $hot-orange : #ff4500;
 $white : #fff;
-$transparent-white: rgba(255,255,255,1);
+$transparent-white: rgba(255,255,255,0.8);
 $hot-magenta : #f70582;
 $pink: #ff9faa;
 $blue-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -12,7 +13,7 @@ $futura-family: 'futura-pt', "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $aktiv-family: 'aktiv-grotesk', "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $freight-family: "freight-display-pro", "Bodoni", "Garamond", serif;
 
-$stroke-color: $white;
+$stroke-color: $warm-light-grey;
 $transparent-fill: rgba(255,255,255,0.1);
 $header-color: $warm-dark-grey;
 $interaction-bg: $white;
@@ -59,6 +60,12 @@ header{
 	    height: 42px;
 	    vertical-align: bottom;			
 	}
+	p{
+		font-family: $aktiv-family;
+		font-weight: normal;
+		font-size: 0.5em;
+		color: $hot-blue;
+	}
 }
 
 h1{
@@ -100,7 +107,7 @@ svg{
 		transition: $transition-long;
 	}
 	#svg-unfilled{
-		fill:$transparent-white;
+		fill:$white;
 		transition: $transition-long;
 	}
 	#svg-bullseye{
@@ -113,6 +120,8 @@ div.interaction{
 	background-color: $interaction-bg;
 	width: 60%;
 	z-index: 1;
+	height: 100vh;
+	overflow-y: scroll;
 	position: relative;
 
 	h1#question-title{
@@ -200,6 +209,15 @@ div.interaction{
 				transition: $transition-long;
 			}
 		}		
+	}
+	
+	.results{
+		h1{ 
+			color: $warm-dark-grey;
+			font-size: 1.125em; 
+			margin-bottom: 10px;
+			img{ margin-right: 5px; }
+		}
 	}
 }
 

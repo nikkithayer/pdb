@@ -31,6 +31,11 @@ header {
     display: inline-block;
     height: 42px;
     vertical-align: bottom; }
+  header p {
+    font-family: "aktiv-grotesk", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: normal;
+    font-size: 0.5em;
+    color: #4f00ff; }
 
 h1 {
   color: #4f00ff;
@@ -65,7 +70,7 @@ svg #svg-filled {
   fill: #4f00ff;
   transition: all 1s; }
 svg #svg-unfilled {
-  fill: white;
+  fill: #fff;
   transition: all 1s; }
 svg #svg-bullseye {
   fill: #ff9faa;
@@ -75,6 +80,8 @@ div.interaction {
   background-color: #fff;
   width: 60%;
   z-index: 1;
+  height: 100vh;
+  overflow-y: scroll;
   position: relative; }
   div.interaction h1#question-title span {
     color: #ff9faa;
@@ -143,6 +150,12 @@ div.interaction {
       div.interaction .progress-bar svg#progress-bar #step-filled {
         fill: #4f00ff;
         transition: all 1s; }
+  div.interaction .results h1 {
+    color: #343f45;
+    font-size: 1.125em;
+    margin-bottom: 10px; }
+    div.interaction .results h1 img {
+      margin-right: 5px; }
 
 div.response {
   background: #343f45;
@@ -156,13 +169,13 @@ div.response {
     bottom: -252px;
     transform: scale(1.9);
     transition: all 1s;
-    stroke: #fff;
+    stroke: #b4bfc5;
     fill: rgba(255, 255, 255, 0.1);
     stroke-width: 0.5;
     stroke-miterlimit: 10; }
   div.response #dartboard-results {
     transition: all 1s;
-    stroke: #fff;
+    stroke: #b4bfc5;
     fill: rgba(255, 255, 255, 0.1);
     stroke-width: 1;
     stroke-miterlimit: 10;
