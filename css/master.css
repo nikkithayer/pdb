@@ -46,12 +46,15 @@ h1 {
 h2 {
   color: #343f45;
   font-size: 1.25em;
-  font-family: "freight-display-pro", "Bodoni", "Garamond", serif; }
+  font-family: "freight-display-pro", "Bodoni", "Garamond", serif;
+  margin-top: 10px; }
 
 h3 {
-  color: #343f45;
-  font-family: "futura-pt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  font-size: 1.25em; }
+  color: #4f00ff;
+  font-size: 1em;
+  font-family: "freight-display-pro", "Bodoni", "Garamond", serif;
+  margin-top: 10px;
+  font-style: italic; }
 
 ul {
   list-style: disc inside none; }
@@ -154,8 +157,20 @@ div.interaction {
     color: #343f45;
     font-size: 1.125em;
     margin-bottom: 10px; }
-    div.interaction .results h1 img {
-      margin-right: 5px; }
+    div.interaction .results h1:before {
+      content: "";
+      background: url(../triangle.svg) no-repeat top left;
+      width: 16px;
+      height: 16px;
+      display: inline-block; }
+    div.interaction .results h1 span {
+      color: #4f00ff;
+      float: right;
+      font-size: 0.8em;
+      margin-top: 3px; }
+  div.interaction .results .result-content {
+    border: 3px solid #4f00ff;
+    padding: 15px; }
 
 div.response {
   background: #343f45;

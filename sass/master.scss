@@ -78,11 +78,14 @@ h2{
 	color: $warm-dark-grey;
 	font-size: 1.25em;
 	font-family: $freight-family;
+	margin-top: 10px;
 }
 h3{
-	color: $warm-dark-grey;
-	font-family: $futura-family;
-	font-size: 1.25em;
+	color: $hot-blue;
+	font-size: 1em;
+	font-family: $freight-family;
+	margin-top: 10px;
+	font-style: italic;
 }
 ul{
 	list-style: disc inside none;
@@ -216,7 +219,23 @@ div.interaction{
 			color: $warm-dark-grey;
 			font-size: 1.125em; 
 			margin-bottom: 10px;
-			img{ margin-right: 5px; }
+			&:before{
+			    content: "";
+			    background: url(../triangle.svg) no-repeat top left;
+			    width: 16px;
+			    height: 16px;
+			    display: inline-block;
+    			}
+			span{
+			    color: #4f00ff;
+			    float: right;
+			    font-size: 0.8em;
+			    margin-top: 3px;				
+			}
+		}
+		.result-content{
+			border: 3px solid $hot-blue;
+			padding: 15px;
 		}
 	}
 }
