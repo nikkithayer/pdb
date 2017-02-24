@@ -12,8 +12,11 @@ html, body {
   padding: 0;
   display: flex;
   flex-direction: column; }
-  html .body-results, body .body-results {
-    background: linear-gradient(to top, #09203f 0%, #537895 100%); }
+  html.results .interaction, body.results .interaction {
+    width: 40%; }
+  html.results .response, body.results .response {
+    width: 60%;
+    min-width: 700px; }
 
 body > * {
   flex-shrink: 0; }
@@ -22,6 +25,7 @@ header {
   font-family: "freight-display-pro", "Bodoni", "Garamond", serif;
   font-weight: bold;
   color: black;
+  margin: 30px;
   font-size: 2em; }
   header img {
     display: inline-block;
@@ -61,7 +65,7 @@ svg #svg-filled {
   fill: #4f00ff;
   transition: all 1s; }
 svg #svg-unfilled {
-  fill: #fff;
+  fill: white;
   transition: all 1s; }
 svg #svg-bullseye {
   fill: #ff9faa;
@@ -77,7 +81,7 @@ div.interaction {
     font-family: "freight-display-pro", "Bodoni", "Garamond", serif;
     font-size: 2.5em; }
   div.interaction .quiz, div.interaction .content, div.interaction .results {
-    padding: 3%; }
+    padding: 30px; }
   div.interaction fieldset {
     border: none;
     margin: 5vh 0; }
@@ -106,7 +110,7 @@ div.interaction {
     text-transform: uppercase;
     padding: 10px 30px;
     margin: 15px 0;
-    background-color: #ff9faa;
+    background-color: #4f00ff;
     border: none;
     color: #fff;
     font-size: 0.8em;
@@ -114,10 +118,10 @@ div.interaction {
     font-weight: 600;
     transition: all 1s;
     position: absolute;
-    bottom: 3%;
-    left: 3%; }
+    bottom: 30px;
+    left: 30px; }
     div.interaction button.next.inactive {
-      background-color: #4f00ff;
+      opacity: 0.3;
       transition: all 1s; }
   div.interaction .progress-bar {
     font-family: "futura-pt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -125,8 +129,8 @@ div.interaction {
     font-size: 1.5em;
     color: #4f00ff;
     position: absolute;
-    bottom: 3%;
-    right: 3%; }
+    bottom: 30px;
+    right: 30px; }
     div.interaction .progress-bar svg#progress-bar {
       fill: #ff9faa;
       stroke: white;
@@ -162,17 +166,58 @@ div.response {
     fill: rgba(255, 255, 255, 0.1);
     stroke-width: 1;
     stroke-miterlimit: 10;
-    transform: scale(0.75); }
-    div.response #dartboard-results g:hover {
-      transition: all 0.3s;
-      stroke: #ff4500;
-      stroke-width: 5; }
-  div.response div#dartboard-label {
+    position: relative;
+    left: calc(50% - 250px);
+    top: calc(50% - 250px); }
+  div.response div.dartboard-label {
     color: #fff;
     font-size: 1.25em;
     width: 150px;
     position: absolute;
     left: 350px;
     bottom: 350px; }
+  div.response div.result-label {
+    color: #fff;
+    font-size: 0.9em;
+    width: 90px;
+    position: absolute;
+    left: 50%;
+    top: 50%; }
+    div.response div.result-label.label1 {
+      top: calc(50% - 280px);
+      left: calc(50% + 20px); }
+    div.response div.result-label.label2 {
+      top: calc(50% - 220px);
+      left: calc(50% + 180px); }
+    div.response div.result-label.label3 {
+      top: calc(50% - 90px);
+      left: calc(50% + 260px); }
+    div.response div.result-label.label4 {
+      left: calc(50% + 260px);
+      top: calc(50% + 50px); }
+    div.response div.result-label.label5 {
+      top: calc(50% + 180px);
+      left: calc(50% + 180px); }
+    div.response div.result-label.label6 {
+      top: calc(50% + 260px);
+      left: calc(50% + 20px); }
+    div.response div.result-label.label7 {
+      top: calc(50% + 260px);
+      left: calc(50% - 100px); }
+    div.response div.result-label.label8 {
+      top: calc(50% + 180px);
+      left: calc(50% - 258px); }
+    div.response div.result-label.label9 {
+      top: calc(50% + 50px);
+      left: calc(50% - 290px); }
+    div.response div.result-label.label10 {
+      top: calc(50% - 70px);
+      left: calc(50% - 285px); }
+    div.response div.result-label.label11 {
+      top: calc(50% - 210px);
+      left: calc(50% - 225px); }
+    div.response div.result-label.label12 {
+      top: calc(50% - 280px);
+      left: calc(50% - 120px); }
 
 /*# sourceMappingURL=master.css.map */

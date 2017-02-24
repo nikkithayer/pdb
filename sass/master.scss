@@ -2,6 +2,7 @@ $warm-dark-grey : #343f45;
 $hot-blue : #4f00ff;
 $hot-orange : #ff4500;
 $white : #fff;
+$transparent-white: rgba(255,255,255,1);
 $hot-magenta : #f70582;
 $pink: #ff9faa;
 $blue-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -32,8 +33,14 @@ html, body{
 	padding: 0;
 	display: flex;
 	flex-direction: column;
-	.body-results{
-		background: $grey-gradient;
+	&.results{
+		.interaction{
+			width: 40%;
+		}
+		.response{
+			width: 60%;
+			min-width: 700px;			
+		}
 	}
 }
 
@@ -45,6 +52,7 @@ header{
 	font-family: $freight-family;
 	font-weight: bold;
 	color: black;
+	margin: 30px;
 	font-size: 2em;
 	img{
 	    display: inline-block;
@@ -92,7 +100,7 @@ svg{
 		transition: $transition-long;
 	}
 	#svg-unfilled{
-		fill:$white;
+		fill:$transparent-white;
 		transition: $transition-long;
 	}
 	#svg-bullseye{
@@ -115,7 +123,7 @@ div.interaction{
 		}		
 	}
 	.quiz, .content, .results{
-		padding: 3%;		
+		padding: 30px;		
 	}
 
 	fieldset{
@@ -153,7 +161,7 @@ div.interaction{
 		text-transform: uppercase;
 		padding: 10px 30px;
 		margin: 15px 0;
-		background-color: $pink;
+		background-color: $hot-blue;
 		border: none;
 		color: $white; 
 		font-size: 0.8em;
@@ -161,10 +169,10 @@ div.interaction{
 		font-weight: 600;
 		transition: $transition-long;
 		position: absolute;
-		bottom: 3%;
-		left: 3%;
+		bottom: 30px;
+		left: 30px;
 		&.inactive{
-			background-color: $hot-blue;
+			opacity: 0.3;
 			transition: $transition-long;
 		}
 	}
@@ -175,8 +183,8 @@ div.interaction{
 		font-size: 1.5em;
 		color: $hot-blue;
 		position: absolute;
-		bottom: 3%;
-		right: 3%;
+		bottom: 30px;
+		right: 30px;
 	
 		svg#progress-bar {
 			fill: $pink;
@@ -221,21 +229,85 @@ div.response{
 		fill:$transparent-fill;
 		stroke-width:1;
 		stroke-miterlimit:10;			
-		transform: scale(0.75);
-		g:hover{
-			transition: $transition-short;
-			stroke: $hot-orange;
-			stroke-width: 5;
-		}
+		position: relative;
+	    left: calc(50% - 250px);
+	    top: calc(50% - 250px);
 	}
 
-	div#dartboard-label {
+	div.dartboard-label {
 	    color: $white;
 	    font-size: 1.25em;
 	    width: 150px;
 	    position: absolute;
 	    left: 350px;
 	    bottom: 350px;
+	}
+	div.result-label {
+		color: $white;
+		font-size: 0.9em;
+		width: 90px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+			&.label1 {
+			    top: calc(50% - 280px);
+			    left: calc(50% + 20px);
+			}
+			
+			&.label2 {
+			    top: calc(50% - 220px);
+			    left: calc(50% + 180px);
+			}
+			
+			&.label3 {
+			    top: calc(50% - 90px);
+			    left: calc(50% + 260px);
+			}
+			
+			&.label4 {
+			    left: calc(50% + 260px);
+			    top: calc(50% + 50px);
+			}
+			
+			&.label5 {
+			    top: calc(50% + 180px);
+			    left: calc(50% + 180px);
+			}
+			
+			&.label6 {
+			    top: calc(50% + 260px);
+			    left: calc(50% + 20px);
+			}
+			
+			&.label7 {
+			    top: calc(50% + 260px);
+			    left: calc(50% - 100px);
+			}
+			
+			&.label8 {
+			    top: calc(50% + 180px);
+			    left: calc(50% - 258px);
+			}
+			
+			&.label9 {
+			    top: calc(50% + 50px);
+			    left: calc(50% - 290px);
+			}
+			
+			&.label10 {
+			    top: calc(50% - 70px);
+			    left: calc(50% - 285px);
+			}
+			
+			&.label11 {
+			    top: calc(50% - 210px);
+			    left: calc(50% - 225px);
+			}
+			
+			&.label12 {
+			    top: calc(50% - 280px);
+			    left: calc(50% - 120px);
+			}
 	}
 
 }

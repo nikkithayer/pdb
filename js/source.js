@@ -57,7 +57,7 @@ $.getJSON( "./questions.json", function( json ) {
 	
 	function rotateDartboard(quizStep){
 		$("#dartboard").css("transform","scale(1.9) rotate("+(quizPosition*30)+"deg)");
-		$("#dartboard-label").text(quizStep + ". " +questions[quizPosition].title);	
+		$(".dartboard-label").text(quizStep + ". " +questions[quizPosition].title);	
 	}
 	
 	function resetQuizStatus(){
