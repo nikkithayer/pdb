@@ -65,6 +65,7 @@ header{
 		font-weight: normal;
 		font-size: 0.5em;
 		color: $hot-blue;
+		margin-left: 50px;
 	}
 }
 
@@ -234,8 +235,7 @@ div.interaction{
 			}
 		}
 		.result-content{
-			border: 3px solid $hot-blue;
-			padding: 15px;
+			padding: 0 15px 30px;
 		}
 	}
 }

@@ -35,7 +35,8 @@ header {
     font-family: "aktiv-grotesk", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     font-weight: normal;
     font-size: 0.5em;
-    color: #4f00ff; }
+    color: #4f00ff;
+    margin-left: 50px; }
 
 h1 {
   color: #4f00ff;
@@ -169,8 +170,7 @@ div.interaction {
       font-size: 0.8em;
       margin-top: 3px; }
   div.interaction .results .result-content {
-    border: 3px solid #4f00ff;
-    padding: 15px; }
+    padding: 0 15px 30px; }
 
 div.response {
   background: #343f45;

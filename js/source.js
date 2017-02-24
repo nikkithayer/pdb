@@ -27,6 +27,12 @@ $.getJSON( "./questions.json", function( json ) {
 		}
 	);
 
+	$(".results h1").click(
+		function(){
+			$(this).next().toggle();
+		}
+	);
+
 	function lightUpQuiz(attrId, buttonRating){
 		var buttonCount = 0;
 		$("#dartboard "+attrId).children().each(function () {
