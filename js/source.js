@@ -4,8 +4,11 @@ $.getJSON( "./questions.json", function( json ) {
 	var questions = json;
 	var quizPosition = 0;
 	iterateQuizPosition();
-	iterateProgressWheel(2)
-
+	iterateProgressWheel(2);
+	$(".results h1").next().hide();
+	$(".results h1:first").next().show();
+	
+	
 	$("fieldset button").click(
 		function(){
 			$(this).addClass("active");
