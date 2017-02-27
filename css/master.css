@@ -154,23 +154,25 @@ div.interaction {
       div.interaction .progress-bar svg#progress-bar #step-filled {
         fill: #4f00ff;
         transition: all 1s; }
-  div.interaction .results h1 {
-    color: #343f45;
-    font-size: 1.125em;
-    margin-bottom: 10px; }
-    div.interaction .results h1:before {
-      content: "";
-      background: url(../triangle.svg) no-repeat top left;
-      width: 16px;
-      height: 16px;
-      display: inline-block; }
-    div.interaction .results h1 span {
-      color: #4f00ff;
-      float: right;
-      font-size: 0.8em;
-      margin-top: 3px; }
-  div.interaction .results .result-content {
-    padding: 0 15px 30px; }
+  div.interaction .assessment-fields {
+    padding: 30px; }
+    div.interaction .assessment-fields h1 {
+      color: #343f45;
+      font-size: 1.125em;
+      margin-bottom: 10px; }
+      div.interaction .assessment-fields h1:before {
+        content: "";
+        background: url(../triangle.svg) no-repeat top left;
+        width: 16px;
+        height: 16px;
+        display: inline-block; }
+      div.interaction .assessment-fields h1 span {
+        color: #4f00ff;
+        float: right;
+        font-size: 0.8em;
+        margin-top: 3px; }
+    div.interaction .assessment-fields .result-content {
+      padding: 0 15px 30px; }
 
 div.response {
   background: #343f45;

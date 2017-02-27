@@ -4,10 +4,9 @@ $.getJSON( "./questions.json", function( json ) {
 	var questions = json;
 	var quizPosition = 0;
 	iterateQuizPosition();
-	iterateProgressWheel(2);
+	populateResults();
 	$(".results h1").next().hide();
 	$(".results h1:first").next().show();
-	
 	
 	$("fieldset button").click(
 		function(){
@@ -30,11 +29,21 @@ $.getJSON( "./questions.json", function( json ) {
 		}
 	);
 
-	$(".results h1").click(
+	$("h1.assessment-dropdown").click(
 		function(){
 			$(this).next().toggle();
 		}
 	);
+
+	function populateResults(){
+		questions.sort(function(a, b) {
+			return parseFloat(a.average) - parseFloat(b.average);
+		});
+		for(i=0;i<questions.length;i++){
+			$(".assessment-fields").append('<h1 class="assessment-dropdown">'+questions[i].title+'<span>Average: '+questions[i].average+'</span></h1>');
+			$(".assessment-fields").append('<div class="result-content">'+questions[i].content+'</div>');
+		}
+	}
 
 	function lightUpQuiz(attrId, buttonRating){
 		var buttonCount = 0;
@@ -76,7 +85,3 @@ $.getJSON( "./questions.json", function( json ) {
 
  });
 });
-
-//make the next button work nicer
-//little svg version lights up at bottom of window
-//fix up the positioning, especially for the next button
