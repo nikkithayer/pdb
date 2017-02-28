@@ -5,15 +5,13 @@ $.getJSON( "./questions.json", function( json ) {
 	var quizPosition = 0;
 	iterateQuizPosition();
 	populateResults();
-	$(".results h1").next().hide();
-	$(".results h1:first").next().show();
+	$("h1.assessment-dropdown").next().hide();
+	$("h1.assessment-dropdown:first").next().show();
 	
-	$("#dartboard-results g").hover(function(){
-		var responseClass = $(this).attr("id");
-		console.log($("h1.assessment-dropdown").eq(2).attr("class"));
+	$("#dartboard-results g").click(function(){
+		var responseClass = $(this).attr("id").toString();
+		$("h1.assessment-dropdown").next().hide();
 		$("h1.assessment-dropdown."+responseClass).next().show("fast");
-	}, function(){
-//		$("h1.assessment-dropdown").hasClass(responseClass).next().hide("fast");
 	});
 	
 	$("fieldset button").click(
@@ -48,7 +46,7 @@ $.getJSON( "./questions.json", function( json ) {
 			return parseFloat(a.average) - parseFloat(b.average);
 		});
 		for(i=0;i<questions.length;i++){
-			$(".assessment-fields").append('<h1 class="assessment-dropdown results'+questions[i].position+'">'+questions[i].title+'<span>Average: '+questions[i].average+'</span></h1>');
+			$(".assessment-fields").append('<h1 class="assessment-dropdown result'+questions[i].position+'">'+questions[i].title+'<span>Average: '+questions[i].average+'</span></h1>');
 			$(".assessment-fields").append('<div class="result-content">'+questions[i].content+'</div>');
 		}
 	}
