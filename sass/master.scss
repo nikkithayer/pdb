@@ -270,6 +270,9 @@ div.response{
 		position: relative;
 	    left: calc(50% - 250px);
 	    top: calc(50% - 250px);
+		#svg-filled.highlight{
+			fill: $pink;
+		}
 	}
 
 	div.dartboard-label {

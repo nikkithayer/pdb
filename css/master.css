@@ -199,6 +199,8 @@ div.response {
     position: relative;
     left: calc(50% - 250px);
     top: calc(50% - 250px); }
+    div.response #dartboard-results #svg-filled.highlight {
+      fill: #ff9faa; }
   div.response div.dartboard-label {
     color: #fff;
     font-size: 1.25em;

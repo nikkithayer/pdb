@@ -9,9 +9,10 @@ $.getJSON( "./questions.json", function( json ) {
 	$("h1.assessment-dropdown:first").next().show();
 	
 	$("#dartboard-results g").click(function(){
+		$("#dartboard-results").children().children().removeClass("highlight");
+		$(this).children().addClass("highlight");
 		var responseClass = $(this).attr("id").toString();
-		$("h1.assessment-dropdown").next().hide();
-		$("h1.assessment-dropdown."+responseClass).next().show("fast");
+		showAttributeInfo($("h1.assessment-dropdown."+responseClass));
 	});
 	
 	$("fieldset button").click(
@@ -37,9 +38,15 @@ $.getJSON( "./questions.json", function( json ) {
 
 	$("h1.assessment-dropdown").click(
 		function(){
-			$(this).next().toggle();
+			showAttributeInfo($(this));
+			console.log($(this).attr("class").split(' ').pop());
 		}
 	);
+	
+	function showAttributeInfo(ele){
+		$("h1.assessment-dropdown").next().hide();
+		ele.next().show("fast");		
+	}
 
 	function populateResults(){
 		questions.sort(function(a, b) {
