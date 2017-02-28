@@ -5,6 +5,7 @@ $.getJSON( "./questions.json", function( json ) {
 
 // -- ASSESSMENT PAGE --
 	var quizPosition = 0;
+	var allowNext = false;
 	iterateQuizPosition();
 	iterateProgressWheel("#step1");
 
@@ -17,16 +18,23 @@ $.getJSON( "./questions.json", function( json ) {
 			var buttonRating = $(this).text();
 			var attrId = "#attr"+quizPosition;
 			lightUpQuiz(attrId, buttonRating);
+			allowNext = true;
 		}
 	);	
 
 	$("button.next").click(
-		function(){
-			iterateQuizPosition();
-			var stepId = "#step"+quizPosition;
-			iterateProgressWheel(stepId);
-			resetQuizStatus();
+		function(event){
+			if(allowNext && (quizPosition < questions.length)){
+				iterateQuizPosition();
+				var stepId = "#step"+quizPosition;
+				iterateProgressWheel(stepId);
+				resetQuizStatus();
+				allowNext = false;
+				console.log(quizPosition);
+				event.preventDefault();
+			}
 		}
+		//if you haven't put a button in, 
 	);
 
 	function lightUpQuiz(attrId, buttonRating){
@@ -53,7 +61,10 @@ $.getJSON( "./questions.json", function( json ) {
 			$("p#question-description").text(questions[quizPosition].description);
 			$("span#progress-step").text(quizStep + " of 12");
 			rotateDartboard(quizStep);
-			quizPosition++;		
+			quizPosition++;
+			if(quizPosition == questions.length){
+				$("button.next").text("Finished");
+			}
 		}
 	}
 	
