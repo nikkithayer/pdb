@@ -13,6 +13,8 @@ $futura-family: 'futura-pt', "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $aktiv-family: 'aktiv-grotesk', "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $freight-family: "freight-display-pro", "Bodoni", "Garamond", serif;
 
+$highligh-text-color: $hot-blue;
+$text-color: $warm-dark-grey;
 $stroke-color: $warm-light-grey;
 $transparent-fill: rgba(255,255,255,0.1);
 $header-color: $warm-dark-grey;
@@ -29,7 +31,7 @@ html, body{
 	height: 100%;
 	font-size: 16px;
 	font-family: $aktiv-family;
-	color: $warm-dark-grey;
+	color: $text-color;
 	margin: 0;
 	padding: 0;
 	display: flex;
@@ -70,19 +72,19 @@ header{
 }
 
 h1{
-	color: $hot-blue;
+	color: $highligh-text-color;
 	font-family: $futura-family;
 	font-size: 1.5em;
 	text-transform: uppercase;
 }
 h2{
-	color: $warm-dark-grey;
+	color: $text-color;
 	font-size: 1.25em;
 	font-family: $freight-family;
 	margin-top: 10px;
 }
 h3{
-	color: $hot-blue;
+	color: $highligh-text-color;
 	font-size: 1em;
 	font-family: $freight-family;
 	margin-top: 10px;

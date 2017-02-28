@@ -6,6 +6,7 @@ $.getJSON( "./questions.json", function( json ) {
 // -- ASSESSMENT PAGE --
 	var quizPosition = 0;
 	iterateQuizPosition();
+	iterateProgressWheel("#step1");
 
 	$("fieldset button").click(
 		function(){
@@ -50,7 +51,7 @@ $.getJSON( "./questions.json", function( json ) {
 			var quizStep = quizPosition+1;
 			$("h1#question-title").html("<span>" + quizStep + ". </span>" + questions[quizPosition].title);
 			$("p#question-description").text(questions[quizPosition].description);
-			$("span#progress-step").text(quizStep + "of 12");
+			$("span#progress-step").text(quizStep + " of 12");
 			rotateDartboard(quizStep);
 			quizPosition++;		
 		}
@@ -106,8 +107,6 @@ $.getJSON( "./questions.json", function( json ) {
 			$(".assessment-fields").append('<div class="result-content">'+questions[i].content+'</div>');
 		}
 	}
-
-
 
  });
 });
