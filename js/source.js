@@ -2,19 +2,11 @@ $( document ).ready(function() {
 
 $.getJSON( "./questions.json", function( json ) {
 	var questions = json;
+
+// -- ASSESSMENT PAGE --
 	var quizPosition = 0;
 	iterateQuizPosition();
-	populateResults();
-	$("h1.assessment-dropdown").next().hide();
-	$("h1.assessment-dropdown:first").next().show();
-	
-	$("#dartboard-results g").click(function(){
-		$("#dartboard-results").children().children().removeClass("highlight");
-		$(this).children().addClass("highlight");
-		var responseClass = $(this).attr("id").toString();
-		showAttributeInfo($("h1.assessment-dropdown."+responseClass));
-	});
-	
+
 	$("fieldset button").click(
 		function(){
 			$(this).addClass("active");
@@ -35,28 +27,6 @@ $.getJSON( "./questions.json", function( json ) {
 			resetQuizStatus();
 		}
 	);
-
-	$("h1.assessment-dropdown").click(
-		function(){
-			showAttributeInfo($(this));
-			console.log($(this).attr("class").split(' ').pop());
-		}
-	);
-	
-	function showAttributeInfo(ele){
-		$("h1.assessment-dropdown").next().hide();
-		ele.next().show("fast");		
-	}
-
-	function populateResults(){
-		questions.sort(function(a, b) {
-			return parseFloat(a.average) - parseFloat(b.average);
-		});
-		for(i=0;i<questions.length;i++){
-			$(".assessment-fields").append('<h1 class="assessment-dropdown result'+questions[i].position+'">'+questions[i].title+'<span>Average: '+questions[i].average+'</span></h1>');
-			$(".assessment-fields").append('<div class="result-content">'+questions[i].content+'</div>');
-		}
-	}
 
 	function lightUpQuiz(attrId, buttonRating){
 		var buttonCount = 0;
@@ -95,6 +65,47 @@ $.getJSON( "./questions.json", function( json ) {
 		$("fieldset button").removeClass("active");
 		$("button.next").addClass("inactive");		
 	}
+		
+// -- RESULTS PAGE --	
+	populateQuizResults();
+	$("h1.assessment-dropdown").next().hide();
+	$("h1.assessment-dropdown:first").next().show();
+	
+	$("#dartboard-results g").click(function(){
+		var responseClass = $(this).attr("id").toString();
+		highlightResults($(this));
+		showAttributeInfo($("h1.assessment-dropdown."+responseClass));
+	});
+	
+	$("h1.assessment-dropdown").click(
+		function(){
+			var responseId = $(this).attr("class").split(' ').pop().toString();
+			highlightResults($("g#"+responseId));
+			showAttributeInfo($(this));			
+		}
+	);
+
+	function highlightResults(ele){
+		$("#dartboard-results").children().children().removeClass("highlight");		
+		ele.children().addClass("highlight");
+	}
+
+	function showAttributeInfo(ele){
+		$("h1.assessment-dropdown").next().hide();
+		ele.next().show("fast");
+	}
+
+	function populateQuizResults(){
+		questions.sort(function(a, b) {
+			return parseFloat(a.average) - parseFloat(b.average);
+		});
+		for(i=0;i<questions.length;i++){
+			$(".assessment-fields").append('<h1 class="assessment-dropdown result'+questions[i].position+'">'+questions[i].title+'<span>Average: '+questions[i].average+'</span></h1>');
+			$(".assessment-fields").append('<div class="result-content">'+questions[i].content+'</div>');
+		}
+	}
+
+
 
  });
 });
