@@ -60,6 +60,9 @@ h3 {
 ul {
   list-style: disc inside none; }
 
+p {
+  margin-bottom: 15px; }
+
 div.container {
   display: flex;
   flex-grow: 1; }

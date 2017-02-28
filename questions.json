@@ -2,72 +2,72 @@
 		"title": "Clear Roles",
 		"average": "4.3",
 		"position": "2",		
-		"content": "At the start: When you kick off your project, it’s really helpful to include some time for the team to get on the same page about roles. This should happen as a group, but you may also want some 1:1 time. For example, at Carbon Five we will have the Product Manager and the Tech Lead sit down before the project starts to discuss how they see their respective roles and what they would most value from the other person. During the project: If you realize part way through a project that roles are not clear, you’ll need to make some time to repair that. It’s important to make some time explicitly to address this topic, rather than just hoping it comes up in your regular retros. We most often see this come up with regard to product ownership, usually because the team made some assumptions that didn’t hold up. For example, a founder may have been the obvious product owner, but actually it turns out that they don’t have time to focus on the product day to day. This can seem like a daunting conversation--you may feel like you’re telling someone they’re not doing their job. But really you’re reiterating what the team needs, and figuring out how best to fill that need. Keeping it focused on the needs of the team and working together to figure out how to meet them can make for a proactive and productive working session. ",
+		"content": "<h2>At the start:</h2> <p>When you kick off your project, it’s really helpful to include some time for the team to get on the same page about roles. This should happen as a group, but you may also want some 1:1 time. For example, at Carbon Five we will have the Product Manager and the Tech Lead sit down before the project starts to discuss how they see their respective roles and what they would most value from the other person.</p> <h2>During the project:</h2> <p>If you realize part way through a project that roles are not clear, you’ll need to make some time to repair that. It’s important to make some time explicitly to address this topic, rather than just hoping it comes up in your regular retros. We most often see this come up with regard to product ownership, usually because the team made some assumptions that didn’t hold up.</p><p> For example, a founder may have been the obvious product owner, but actually it turns out that they don’t have time to focus on the product day to day. This can seem like a daunting conversation--you may feel like you’re telling someone they’re not doing their job. But really you’re reiterating what the team needs, and figuring out how best to fill that need. Keeping it focused on the needs of the team and working together to figure out how to meet them can make for a proactive and productive working session.</p>",
 		"description": "Do the roles and responsibilities on your team match the skills and abilities of the team? Do team members understand what is expected of them consistently?"
 	}, {
 		"title": "Understand Process",
 		"average": "3.2",
  		"position": "1",		
-		"content": "At the start: Be explicit about your process, or the lack of it. If you’re not subscribing to a process, make sure your team all agrees that’s the case. If you want to introduce a process, define what that means, and have a plan for how you’re going to introduce and (crucially) improve your process. Process, like teams, like people, is never static. During the project: The most important way to address process issues during a project is to have a mechanism for identifying and improving them. We use reflections/retrospectives (more on this below). Whatever your mechanism, if you’re in flight and your process is in trouble, try changing one thing at a time. Imagine you’re a doctor treating a patient: if you change too many variables at once, how will you know which treatment path made them feel better? If you know what’s working, you know what to do more of.",
+		"content": "<h2>At the start:</h2> <p>Be explicit about your process, or the lack of it. If you’re not subscribing to a process, make sure your team all agrees that’s the case. If you want to introduce a process, define what that means, and have a plan for how you’re going to introduce and (crucially) improve your process. Process, like teams, like people, is never static.</p> <h2>During the project:</h2><p> The most important way to address process issues during a project is to have a mechanism for identifying and improving them. We use reflections/retrospectives (more on this below). Whatever your mechanism, if you’re in flight and your process is in trouble, try changing one thing at a time. Imagine you’re a doctor treating a patient: if you change too many variables at once, how will you know which treatment path made them feel better? If you know what’s working, you know what to do more of.</p>",
 		"description": "Does your team follow a process? Do all members have a shared understanding of that process and a say in the evolution of that process?"
 	}, {
 		"title": "Experienced in Software",
 		"average": "2.1",
 		"position": "12",		
-		"content": "TBD PDB",
+		"content": "This content is coming soon. Sorry for the delay!",
 		"description": "Does your team have experience working on software projects similar to this one?"
 	}, {
 		"title": "Experts in Our Field",
 		"average": "3.2",
 		"position": "11",		
-		"content": "TBD PDB",
+		"content": "This content is coming soon. Sorry for the delay!",
 		"description": "Does your team have experience working on software projects similar to this one?"
 	}, {
 		"title": "Clear, Shared Vision",
 		"average": "4.7",
 		"position": "10",		
-		"content": "Kickoff is a great time to have the holder of your vision communicate this to the team. Give them some time to present, and give the team plenty of time to ask questions. But don’t leave it there - a presentation can be a great overview, but for people who will be implementing software, you want to dive deeper. An experience map is a great way to get into the nitty gritty of the vision and translate it into terms everyone can share. During the project: Once you’ve kicked off, it’s important to continue to reiterate the vision. If you’re lucky enough to have a project space, make sure you keep artifacts like experience maps and key statements (eg goals, elevator pitches) about the product visible. At every opportunity, tie the work the team is doing back to the vision. Whether it’s signing off an individual story, doing a demo at the end of an iteration, or defining a new feature, it should be clear to the team that this work is in service of a larger vision.",
+		"content": "<h2>At the start:</h2><p>Kickoff is a great time to have the holder of your vision communicate this to the team. Give them some time to present, and give the team plenty of time to ask questions. But don’t leave it there - a presentation can be a great overview, but for people who will be implementing software, you want to dive deeper. An experience map is a great way to get into the nitty gritty of the vision and translate it into terms everyone can share. <p/><h2>During the project:</h2><p> Once you’ve kicked off, it’s important to continue to reiterate the vision. If you’re lucky enough to have a project space, make sure you keep artifacts like experience maps and key statements (eg goals, elevator pitches) about the product visible. At every opportunity, tie the work the team is doing back to the vision. Whether it’s signing off an individual story, doing a demo at the end of an iteration, or defining a new feature, it should be clear to the team that this work is in service of a larger vision.</p>",
 		"description": "Is there a vision for this product that has been clearly communicated? Do all team members have a shared understanding of what they’re trying to achieve?"
 	}, {
 		"title": "Talent is Valued",
 		"average": "1.3",
 		"position": "9",		
-		"content": "TBD PDB",
+		"content": "This content is coming soon. Sorry for the delay!",
 		"description": "Do all the team members feel that the work they do is respected and their contributions to the work are valuable?"
 	}, {
 		"title": "Challenge",
 		"average": "2.5",
 		"position": "8",		
-		"content": "TBD PDB",
+		"content": "This content is coming soon. Sorry for the delay!",
 		"description": "Do the members feel challenged by their work and think the work is important?"
 	}, {
 		"title": "Debate and Decide Together",
 		"average": "3.7",
 		"position": "7",		
-		"content": "TBD PDB",
+		"content": "This content is coming soon. Sorry for the delay!",
 		"description": "Do people on your team give their opinions? Does the team debate different options and make decisions together?"
 	}, {
 		"title": "MVP",
 		"average": "4.6",
 		"position": "6",		
-		"content": "TBD PDB",
+		"content": "This content is coming soon. Sorry for the delay!",
 		"description": "Is your team committed to building the smallest whole product and releasing it to real users?"
 	}, {
 		"title": "UVP",
 		"average": "3.8",
 		"position": "5",		
-		"content": "TBD PDB",
+		"content": "This content is coming soon. Sorry for the delay!",
 		"description": "Can your team articulate the unique value proposition for this product, i.e. the thing that will make users choose this over other options?"
 	}, {
 		"title": "Metrics",
 		"average": "2.9",
 		"position": "4",		
-		"content": "TBD PDB",
+		"content": "This content is coming soon. Sorry for the delay!",
 		"description": "Does your team focus on one success metric at a time?"
 	}, {
 		"title": "Product/Market Fit",
 		"average": "5",
 		"position": "3",		
-		"content": "TBD PDB",
+		"content": "This content is coming soon. Sorry for the delay!",
 		"description": "Does your team feel it is in a good market with a product that can satisfy that market?"
 	}]
