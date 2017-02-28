@@ -65,7 +65,8 @@ header{
 	h2{
 		color: $pink;
 		font-family: $futura-family;
-		font-size: 0.75em;
+		font-size: 0.6em;
+		text-transform: uppercase;
 		margin-left: 50px;
 		margin-top: -5px;		
 	}
@@ -81,6 +82,7 @@ header{
 h1{
 	font-size: 1.5em;
 	text-transform: uppercase;
+	font-family: $futura-family;
 }
 h2{
 	color: $text-color;
