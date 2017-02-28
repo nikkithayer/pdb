@@ -6,8 +6,10 @@ $.getJSON( "./questions.json", function( json ) {
 // -- ASSESSMENT PAGE --
 	var quizPosition = 0;
 	var allowNext = false;
+	var quizIsDone = false;
 	iterateQuizPosition();
 	iterateProgressWheel("#step1");
+	$("#thanks").hide();
 
 	$("fieldset button").click(
 		function(){
@@ -24,17 +26,17 @@ $.getJSON( "./questions.json", function( json ) {
 
 	$("button.next").click(
 		function(event){
-			if(allowNext && (quizPosition < questions.length)){
+			if(allowNext){
 				iterateQuizPosition();
 				var stepId = "#step"+quizPosition;
 				iterateProgressWheel(stepId);
 				resetQuizStatus();
 				allowNext = false;
-				console.log(quizPosition);
-				event.preventDefault();
+				if(quizIsDone){
+					showYourResponses();
+				}
 			}
 		}
-		//if you haven't put a button in, 
 	);
 
 	function lightUpQuiz(attrId, buttonRating){
@@ -50,11 +52,18 @@ $.getJSON( "./questions.json", function( json ) {
 		});
 	}
 	
+	function showYourResponses(){
+		$("#thanks").show();
+	}
+	
 	function iterateProgressWheel(stepId){
 		$("#progress-bar "+stepId).attr("id","step-filled");
 	}
 
 	function iterateQuizPosition(){
+		if(quizPosition == questions.length){
+			quizIsDone = true;
+		}
 		if(quizPosition<questions.length){
 			var quizStep = quizPosition+1;
 			$("h1#question-title").html("<span>" + quizStep + ". </span>" + questions[quizPosition].title);

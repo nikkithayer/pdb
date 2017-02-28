@@ -13,7 +13,7 @@ $futura-family: 'futura-pt', "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $aktiv-family: 'aktiv-grotesk', "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $freight-family: "freight-display-pro", "Bodoni", "Garamond", serif;
 
-$highligh-text-color: $hot-blue;
+$highlight-text-color: $hot-blue;
 $text-color: $warm-dark-grey;
 $stroke-color: $warm-light-grey;
 $transparent-fill: rgba(255,255,255,0.1);
@@ -62,18 +62,23 @@ header{
 	    height: 42px;
 	    vertical-align: bottom;			
 	}
+	h2{
+		color: $pink;
+		font-family: $futura-family;
+		font-size: 0.75em;
+		margin-left: 50px;
+		margin-top: -5px;		
+	}
 	p{
 		font-family: $aktiv-family;
 		font-weight: normal;
+		color: $highlight-text-color;
 		font-size: 0.5em;
-		color: $hot-blue;
 		margin-left: 50px;
 	}
 }
 
 h1{
-	color: $highligh-text-color;
-	font-family: $futura-family;
 	font-size: 1.5em;
 	text-transform: uppercase;
 }
@@ -84,7 +89,7 @@ h2{
 	margin-top: 10px;
 }
 h3{
-	color: $highligh-text-color;
+	color: $highlight-text-color;
 	font-size: 1em;
 	font-family: $freight-family;
 	margin-top: 10px;
@@ -98,6 +103,19 @@ p{
 	margin-bottom: 15px;
 }
 
+button{
+	text-transform: uppercase;
+	padding: 10px 30px;
+	margin: 15px 0;
+	background-color: $hot-blue;
+	border: none;
+	color: $white; 
+	font-size: 0.8em;
+	letter-spacing: 2px;
+	font-weight: 600;
+	transition: $transition-long;
+}
+	
 div.container{
 	display: flex;
 	flex-grow: 1;
@@ -133,6 +151,15 @@ div.interaction{
 	height: 100vh;
 	overflow-y: scroll;
 	position: relative;
+
+	div#thanks {
+	    padding: 30px;
+	    height: 100vh;
+	    position: relative;
+	    z-index: 2;
+	    text-align: center;
+	    background-color: white;
+	}
 
 	h1#question-title{
 		span{
@@ -177,16 +204,6 @@ div.interaction{
 	
 
 	button.next{
-		text-transform: uppercase;
-		padding: 10px 30px;
-		margin: 15px 0;
-		background-color: $hot-blue;
-		border: none;
-		color: $white; 
-		font-size: 0.8em;
-		letter-spacing: 2px;
-		font-weight: 600;
-		transition: $transition-long;
 		position: absolute;
 		bottom: 30px;
 		left: 30px;
