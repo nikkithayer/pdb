@@ -159,13 +159,17 @@ div.interaction {
     div.interaction .assessment-fields h1 {
       color: #343f45;
       font-size: 1.125em;
-      margin-bottom: 10px; }
+      margin-bottom: 12px;
+      cursor: hand; }
       div.interaction .assessment-fields h1:before {
         content: "";
         background: url(../triangle.svg) no-repeat top left;
         width: 16px;
         height: 16px;
+        margin-right: 5px;
         display: inline-block; }
+      div.interaction .assessment-fields h1:hover, div.interaction .assessment-fields h1.open {
+        color: #4f00ff; }
       div.interaction .assessment-fields h1 span {
         color: #4f00ff;
         float: right;

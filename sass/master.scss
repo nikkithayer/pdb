@@ -220,14 +220,19 @@ div.interaction{
 		h1{ 
 			color: $warm-dark-grey;
 			font-size: 1.125em; 
-			margin-bottom: 10px;
+			margin-bottom: 12px;
+			cursor: hand;
 			&:before{
 			    content: "";
 			    background: url(../triangle.svg) no-repeat top left;
 			    width: 16px;
 			    height: 16px;
+				margin-right: 5px;
 			    display: inline-block;
-    			}
+			}
+			&:hover, &.open{
+				color: $hot-blue;
+			}
 			span{
 			    color: #4f00ff;
 			    float: right;

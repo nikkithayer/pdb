@@ -92,6 +92,8 @@ $.getJSON( "./questions.json", function( json ) {
 
 	function showAttributeInfo(ele){
 		$("h1.assessment-dropdown").next().hide();
+		$("h1.assessment-dropdown").removeClass("open");
+		ele.addClass("open");
 		ele.next().show("fast");
 	}
 
