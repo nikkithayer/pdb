@@ -5,7 +5,7 @@ $hot-orange : #ff4500;
 $white : #fff;
 $transparent-white: rgba(255,255,255,0.8);
 $hot-magenta : #f70582;
-$pink: #ff9faa;
+$accent-color: darken($hot-blue, 25%);
 $blue-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 $grey-gradient: linear-gradient(to top, #09203f 0%, #537895 100%);
 
@@ -63,7 +63,7 @@ header{
 	    vertical-align: bottom;			
 	}
 	h2{
-		color: $pink;
+		color: $accent-color;
 		font-family: $futura-family;
 		font-size: 0.6em;
 		text-transform: uppercase;
@@ -132,16 +132,25 @@ svg{
 		fill:$hot-orange;
 		transition: $transition-long;
 	}
-	#svg-filled{
+	path#svg-filled{
 		fill:$hot-blue;
 		transition: $transition-long;
+		&:nth-child(1){ fill: lighten($hot-blue, 25%); }
+		&:nth-child(2){ fill: lighten($hot-blue, 20%); }
+		&:nth-child(3){ fill: lighten($hot-blue, 15%); }
+		&:nth-child(4){ fill: lighten($hot-blue, 10%); }
+		&:nth-child(5){ fill: lighten($hot-blue, 1%); }
 	}
 	#svg-unfilled{
 		fill:$white;
 		transition: $transition-long;
 	}
 	#svg-bullseye{
-		fill:$pink;
+		fill:$hot-blue;
+		transition: $transition-long;
+	}
+	#svg-bullseye2{
+		fill:$hot-blue;
 		transition: $transition-long;
 	}
 }
@@ -165,7 +174,7 @@ div.interaction{
 
 	h1#question-title{
 		span{
-			color: $pink;
+			color: $accent-color;
 			font-family: $freight-family;
 			font-size: 2.5em;
 		}		
@@ -178,7 +187,7 @@ div.interaction{
 		border: none;
 		margin: 5vh 0;
 		button{
-			background-color: $pink;
+			background-color: $accent-color;
 			outline: none;
 			border: none;
 			border-radius: 2px;
@@ -225,7 +234,7 @@ div.interaction{
 		right: 30px;
 	
 		svg#progress-bar {
-			fill: $pink;
+			fill: $accent-color;
 		    stroke: white;
 		    stroke-width: 6;
 		    stroke-miterlimit:10;
@@ -256,7 +265,7 @@ div.interaction{
 			    display: inline-block;
 			}
 			&:hover, &.open{
-				color: $hot-blue;
+				color: $accent-color;
 			}
 			span{
 			    color: #4f00ff;
@@ -301,7 +310,7 @@ div.response{
 	    left: calc(50% - 250px);
 	    top: calc(50% - 250px);
 		#svg-filled.highlight{
-			fill: $pink;
+			fill: $accent-color;
 		}
 	}
 

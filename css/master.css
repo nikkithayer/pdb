@@ -32,7 +32,7 @@ header {
     height: 42px;
     vertical-align: bottom; }
   header h2 {
-    color: #ff9faa;
+    color: #280080;
     font-family: "futura-pt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     font-size: 0.6em;
     text-transform: uppercase;
@@ -91,14 +91,27 @@ svg #svg-empty {
 svg #svg-error {
   fill: #ff4500;
   transition: all 1s; }
-svg #svg-filled {
+svg path#svg-filled {
   fill: #4f00ff;
   transition: all 1s; }
+  svg path#svg-filled:nth-child(1) {
+    fill: #a780ff; }
+  svg path#svg-filled:nth-child(2) {
+    fill: #9566ff; }
+  svg path#svg-filled:nth-child(3) {
+    fill: #844dff; }
+  svg path#svg-filled:nth-child(4) {
+    fill: #7233ff; }
+  svg path#svg-filled:nth-child(5) {
+    fill: #5305ff; }
 svg #svg-unfilled {
   fill: #fff;
   transition: all 1s; }
 svg #svg-bullseye {
-  fill: #ff9faa;
+  fill: #4f00ff;
+  transition: all 1s; }
+svg #svg-bullseye2 {
+  fill: #4f00ff;
   transition: all 1s; }
 
 div.interaction {
@@ -116,7 +129,7 @@ div.interaction {
     text-align: center;
     background-color: white; }
   div.interaction h1#question-title span {
-    color: #ff9faa;
+    color: #280080;
     font-family: "freight-display-pro", "Bodoni", "Garamond", serif;
     font-size: 2.5em; }
   div.interaction .quiz, div.interaction .content, div.interaction .results {
@@ -125,7 +138,7 @@ div.interaction {
     border: none;
     margin: 5vh 0; }
     div.interaction fieldset button {
-      background-color: #ff9faa;
+      background-color: #280080;
       outline: none;
       border: none;
       border-radius: 2px;
@@ -161,7 +174,7 @@ div.interaction {
     bottom: 30px;
     right: 30px; }
     div.interaction .progress-bar svg#progress-bar {
-      fill: #ff9faa;
+      fill: #280080;
       stroke: white;
       stroke-width: 6;
       stroke-miterlimit: 10;
@@ -187,7 +200,7 @@ div.interaction {
         margin-right: 5px;
         display: inline-block; }
       div.interaction .assessment-fields h1:hover, div.interaction .assessment-fields h1.open {
-        color: #4f00ff; }
+        color: #280080; }
       div.interaction .assessment-fields h1 span {
         color: #4f00ff;
         float: right;
@@ -222,7 +235,7 @@ div.response {
     left: calc(50% - 250px);
     top: calc(50% - 250px); }
     div.response #dartboard-results #svg-filled.highlight {
-      fill: #ff9faa; }
+      fill: #280080; }
   div.response div.dartboard-label {
     color: #fff;
     font-size: 1.25em;
