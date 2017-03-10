@@ -92,6 +92,13 @@ $.getJSON( "./questions.json", function( json ) {
 	$("h1.assessment-dropdown").next().hide();
 	$("h1.assessment-dropdown:first").next().show();
 	
+	$(".result-label").click(function(){
+		var responseId = $(this).attr("class").split(' ').pop().toString();
+		responseId = responseId.replace("label","result");
+			highlightResults($("g#"+responseId));
+		showAttributeInfo($("h1.assessment-dropdown."+responseId));  	
+	});
+	
 	$("#dartboard-results g").click(function(){
 		var responseClass = $(this).attr("id").toString();
 		highlightResults($(this));

@@ -132,14 +132,47 @@ svg{
 		fill:$hot-orange;
 		transition: $transition-long;
 	}
+	text{
+		fill:$hot-blue;
+		stroke: none;
+		transition: $transition-long;
+		font-family: $futura-family;
+		font-size: 24px;
+		&:nth-child(1){ 
+  		fill: lighten($hot-blue, 25%); 
+    }
+		&:nth-child(2){
+  		fill: lighten($hot-blue, 20%); }
+		&:nth-child(3){ 
+  		fill: lighten($hot-blue, 15%);
+		}
+		&:nth-child(4){ 
+  		fill: lighten($hot-blue, 10%);
+		}
+		&:nth-child(5){ 
+  		fill: lighten($hot-blue, 1%); 
+		}
+		&#unfilled{
+  		fill: $white;
+		}
+	}
 	path#svg-filled{
 		fill:$hot-blue;
 		transition: $transition-long;
-		&:nth-child(1){ fill: lighten($hot-blue, 25%); }
-		&:nth-child(2){ fill: lighten($hot-blue, 20%); }
-		&:nth-child(3){ fill: lighten($hot-blue, 15%); }
-		&:nth-child(4){ fill: lighten($hot-blue, 10%); }
-		&:nth-child(5){ fill: lighten($hot-blue, 1%); }
+		&:nth-child(1){ 
+  		fill: lighten($hot-blue, 25%); 
+    }
+		&:nth-child(2){
+  		fill: lighten($hot-blue, 20%); }
+		&:nth-child(3){ 
+  		fill: lighten($hot-blue, 15%);
+		}
+		&:nth-child(4){ 
+  		fill: lighten($hot-blue, 10%);
+		}
+		&:nth-child(5){ 
+  		fill: lighten($hot-blue, 1%); 
+		}
 	}
 	#svg-unfilled{
 		fill:$white;
@@ -329,62 +362,68 @@ div.response{
 		position: absolute;
 		left: 50%;
 		top: 50%;
-			&.label1 {
+		z-index: 3;
+		cursor: pointer;
+		&:hover{
+  		color: lighten($hot-blue,30%);
+  		transition: $transition-short;
+		}
+			&.label2 {
 			    top: calc(50% - 280px);
 			    left: calc(50% + 20px);
 			}
 			
-			&.label2 {
+			&.label1 {
 			    top: calc(50% - 220px);
 			    left: calc(50% + 180px);
 			}
 			
-			&.label3 {
+			&.label12 {
 			    top: calc(50% - 90px);
 			    left: calc(50% + 260px);
 			}
 			
-			&.label4 {
+			&.label11 {
 			    left: calc(50% + 260px);
 			    top: calc(50% + 50px);
 			}
 			
-			&.label5 {
+			&.label10 {
 			    top: calc(50% + 180px);
 			    left: calc(50% + 180px);
 			}
 			
-			&.label6 {
+			&.label9 {
 			    top: calc(50% + 260px);
 			    left: calc(50% + 20px);
 			}
 			
-			&.label7 {
+			&.label8 {
 			    top: calc(50% + 260px);
 			    left: calc(50% - 100px);
 			}
 			
-			&.label8 {
+			&.label7 {
 			    top: calc(50% + 180px);
 			    left: calc(50% - 258px);
 			}
 			
-			&.label9 {
+			&.label6 {
 			    top: calc(50% + 50px);
 			    left: calc(50% - 290px);
 			}
 			
-			&.label10 {
+			&.label5 {
 			    top: calc(50% - 70px);
 			    left: calc(50% - 285px);
 			}
 			
-			&.label11 {
+			&.label4 {
 			    top: calc(50% - 210px);
 			    left: calc(50% - 225px);
 			}
 			
-			&.label12 {
+			&.label3 {
 			    top: calc(50% - 280px);
 			    left: calc(50% - 120px);
 			}

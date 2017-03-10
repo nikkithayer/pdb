@@ -91,6 +91,24 @@ svg #svg-empty {
 svg #svg-error {
   fill: #ff4500;
   transition: all 1s; }
+svg text {
+  fill: #4f00ff;
+  stroke: none;
+  transition: all 1s;
+  font-family: "futura-pt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 24px; }
+  svg text:nth-child(1) {
+    fill: #a780ff; }
+  svg text:nth-child(2) {
+    fill: #9566ff; }
+  svg text:nth-child(3) {
+    fill: #844dff; }
+  svg text:nth-child(4) {
+    fill: #7233ff; }
+  svg text:nth-child(5) {
+    fill: #5305ff; }
+  svg text#unfilled {
+    fill: #fff; }
 svg path#svg-filled {
   fill: #4f00ff;
   transition: all 1s; }
@@ -249,41 +267,46 @@ div.response {
     width: 90px;
     position: absolute;
     left: 50%;
-    top: 50%; }
-    div.response div.result-label.label1 {
+    top: 50%;
+    z-index: 3;
+    cursor: pointer; }
+    div.response div.result-label:hover {
+      color: #b999ff;
+      transition: all 0.3s; }
+    div.response div.result-label.label2 {
       top: calc(50% - 280px);
       left: calc(50% + 20px); }
-    div.response div.result-label.label2 {
+    div.response div.result-label.label1 {
       top: calc(50% - 220px);
       left: calc(50% + 180px); }
-    div.response div.result-label.label3 {
+    div.response div.result-label.label12 {
       top: calc(50% - 90px);
       left: calc(50% + 260px); }
-    div.response div.result-label.label4 {
+    div.response div.result-label.label11 {
       left: calc(50% + 260px);
       top: calc(50% + 50px); }
-    div.response div.result-label.label5 {
+    div.response div.result-label.label10 {
       top: calc(50% + 180px);
       left: calc(50% + 180px); }
-    div.response div.result-label.label6 {
+    div.response div.result-label.label9 {
       top: calc(50% + 260px);
       left: calc(50% + 20px); }
-    div.response div.result-label.label7 {
+    div.response div.result-label.label8 {
       top: calc(50% + 260px);
       left: calc(50% - 100px); }
-    div.response div.result-label.label8 {
+    div.response div.result-label.label7 {
       top: calc(50% + 180px);
       left: calc(50% - 258px); }
-    div.response div.result-label.label9 {
+    div.response div.result-label.label6 {
       top: calc(50% + 50px);
       left: calc(50% - 290px); }
-    div.response div.result-label.label10 {
+    div.response div.result-label.label5 {
       top: calc(50% - 70px);
       left: calc(50% - 285px); }
-    div.response div.result-label.label11 {
+    div.response div.result-label.label4 {
       top: calc(50% - 210px);
       left: calc(50% - 225px); }
-    div.response div.result-label.label12 {
+    div.response div.result-label.label3 {
       top: calc(50% - 280px);
       left: calc(50% - 120px); }
 
