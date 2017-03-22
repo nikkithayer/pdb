@@ -1,0 +1,96 @@
+#assessment{
+  .dartboard-panel{
+  	overflow: hidden;
+  	width: 60%;
+  	position: relative;    
+  }
+  .assessment-panel{
+  	width: 40%;
+  	min-width: 500px;
+  	z-index: 1;
+  	position: relative;
+    
+    h1{
+      color: $dartboard-highest;
+    }
+    p{ margin-left: $big-margin; }
+    button{
+    	text-transform: uppercase;
+    	padding: 10px 30px;
+    	margin: $small-margin 0;
+    	border: none;
+    		background-color: $dartboard-highest; 
+    	font-size: 0.8em;
+    	font-weight: 600;
+    	transition: $transition-long;
+			outline: none;
+			border-radius: 2px;
+			color: $white;
+    }
+  
+  	div#thanks {
+  	    padding: 30px;
+  	    height: 100vh;
+  	    position: relative;
+  	    z-index: 2;
+  	    text-align: center;
+  	}
+  
+  	.quiz, .content, .results{
+  		padding: 30px;		
+  	}
+  
+  	fieldset{
+  		border: none;
+  		margin: $big-margin;
+  		button{
+  			padding: 15px 17px;
+  			margin: 8px;
+  			transition: $transition-short;
+  			border-radius: 2px;
+  			background-color: lighten($bg-color, 10%);
+  			&.active{
+  				transition: $transition-short;
+  				background-color: $dartboard-highest;
+  			}
+  			&:hover{
+  				transform: scale(1.1);
+  				transition: $transition-short;
+  				background-color: $dartboard-highest;
+  			}
+  		}
+  		span{
+  			font-size: 0.8em;
+  			display: block;
+  			text-transform: uppercase;
+  			letter-spacing: 1;
+  		}
+  	}	
+  	  
+  	.progress-bar{
+  		font-family: $futura-family;
+  		font-size: 1.5em;
+  		position: absolute;
+  		bottom: 0;
+  		left: 0;
+  		border-top: 1px solid $soft-white-border;
+  		width: 100%;
+      span{ 
+        color: $dartboard-highest;
+  			position: absolute;
+  			top: $big-margin;
+  			right: $big-margin;
+      }
+    	button.next{
+        margin: $big-margin;
+    		&.inactive{
+    			transition: $transition-long;
+    			background-color: lighten($bg-color, 10%);
+    		}
+    	}
+  	}
+  }
+  .dartboard-panel{
+    
+  }
+}

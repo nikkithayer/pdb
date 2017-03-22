@@ -1,22 +1,171 @@
+#assessment .dartboard-panel {
+  overflow: hidden;
+  width: 60%;
+  position: relative; }
+#assessment .assessment-panel {
+  width: 40%;
+  min-width: 500px;
+  z-index: 1;
+  position: relative; }
+  #assessment .assessment-panel h1 {
+    color: #07EEB5; }
+  #assessment .assessment-panel p {
+    margin-left: 35px; }
+  #assessment .assessment-panel button {
+    text-transform: uppercase;
+    padding: 10px 30px;
+    margin: 15px 0;
+    border: none;
+    background-color: #07EEB5;
+    font-size: 0.8em;
+    font-weight: 600;
+    transition: all 1s;
+    outline: none;
+    border-radius: 2px;
+    color: #fff; }
+  #assessment .assessment-panel div#thanks {
+    padding: 30px;
+    height: 100vh;
+    position: relative;
+    z-index: 2;
+    text-align: center; }
+  #assessment .assessment-panel .quiz, #assessment .assessment-panel .content, #assessment .assessment-panel .results {
+    padding: 30px; }
+  #assessment .assessment-panel fieldset {
+    border: none;
+    margin: 35px; }
+    #assessment .assessment-panel fieldset button {
+      padding: 15px 17px;
+      margin: 8px;
+      transition: all 0.3s;
+      border-radius: 2px;
+      background-color: #3b3b4e; }
+      #assessment .assessment-panel fieldset button.active {
+        transition: all 0.3s;
+        background-color: #07EEB5; }
+      #assessment .assessment-panel fieldset button:hover {
+        transform: scale(1.1);
+        transition: all 0.3s;
+        background-color: #07EEB5; }
+    #assessment .assessment-panel fieldset span {
+      font-size: 0.8em;
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 1; }
+  #assessment .assessment-panel .progress-bar {
+    font-family: "futura-pt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 1.5em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%; }
+    #assessment .assessment-panel .progress-bar span {
+      color: #07EEB5;
+      position: absolute;
+      top: 35px;
+      right: 35px; }
+    #assessment .assessment-panel .progress-bar button.next {
+      margin: 35px; }
+      #assessment .assessment-panel .progress-bar button.next.inactive {
+        transition: all 1s;
+        background-color: #3b3b4e; }
+
+#results .dartboard-panel {
+  overflow: hidden;
+  width: 60%;
+  position: relative; }
+#results .results-panel {
+  width: 40%;
+  min-width: 500px;
+  z-index: 1;
+  position: relative;
+  padding: 35px; }
+  #results .results-panel h1 {
+    color: #fff; }
+  #results .results-panel h2 {
+    color: #07EEB5;
+    margin-bottom: 15px; }
+    #results .results-panel h2 span {
+      font-weight: lighter;
+      color: #bcbccc; }
+  #results .results-panel .dist-label {
+    position: absolute;
+    bottom: 7px;
+    color: #9090ab;
+    width: calc(100% - 140px);
+    text-align: center; }
+  #results .results-panel svg {
+    position: absolute;
+    bottom: 35px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #2c2c3a;
+    border-radius: 2;
+    padding: 15px; }
+    #results .results-panel svg rect:nth-child(5) {
+      fill: #07EEB5; }
+    #results .results-panel svg rect:nth-child(4) {
+      fill: #13E1DD; }
+    #results .results-panel svg rect:nth-child(3) {
+      fill: #11BCEB; }
+    #results .results-panel svg rect:nth-child(2) {
+      fill: #248CE2; }
+    #results .results-panel svg rect:nth-child(1) {
+      fill: #7130B3; }
+    #results .results-panel svg text {
+      fill: white; }
+#results footer {
+  background-color: #2c2c3a;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); }
+  #results footer ol {
+    display: flex;
+    flex-direction: row; }
+    #results footer ol li {
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+      display: block;
+      text-align: center;
+      padding: 15px; }
+      #results footer ol li span {
+        text-transform: uppercase;
+        letter-spacing: 0.5;
+        font-size: 0.7em;
+        color: #8282a0; }
+      #results footer ol li h2 {
+        font-family: "futura-pt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+        font-size: 1.8em;
+        font-weight: 100; }
+        #results footer ol li h2.lowest-average {
+          color: #a470d9; }
+        #results footer ol li h2.highest-average {
+          color: #07EEB5; }
+        #results footer ol li h2.total-responses {
+          color: #11BCEB; }
+        #results footer ol li h2.date {
+          color: #fff; }
+  #results footer:after {
+    content: '';
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: url("../carbon-five-logo.svg") no-repeat center center;
+    background-size: 40%; }
+
 * {
   padding: 0;
   margin: 0; }
 
 html, body {
-  background-color: #fff;
+  background: #252531;
   height: 100%;
-  font-size: 16px;
+  font-size: 15px;
   font-family: "aktiv-grotesk", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  color: #343f45;
+  color: #fff;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column; }
-  html.results .interaction, body.results .interaction {
-    width: 40%; }
-  html.results .response, body.results .response {
-    width: 60%;
-    min-width: 700px; }
 
 body > * {
   flex-shrink: 0; }
@@ -24,290 +173,75 @@ body > * {
 header {
   font-family: "freight-display-pro", "Bodoni", "Garamond", serif;
   font-weight: bold;
-  color: black;
-  margin: 30px;
-  font-size: 2em; }
+  padding: 15px;
+  font-size: 1.5em;
+  color: #fff;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
   header img {
     display: inline-block;
     height: 42px;
-    vertical-align: bottom; }
-  header h2 {
-    color: #280080;
-    font-family: "futura-pt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    font-size: 0.6em;
-    text-transform: uppercase;
-    margin-left: 50px;
-    margin-top: -5px; }
-  header p {
-    font-family: "aktiv-grotesk", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    font-weight: normal;
-    color: #4f00ff;
-    font-size: 0.5em;
-    margin-left: 50px; }
-
-h1 {
-  font-size: 1.5em;
-  text-transform: uppercase;
-  font-family: "futura-pt", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
-
-h2 {
-  color: #343f45;
-  font-size: 1.25em;
-  font-family: "freight-display-pro", "Bodoni", "Garamond", serif;
-  margin-top: 10px; }
-
-h3 {
-  color: #4f00ff;
-  font-size: 1em;
-  font-family: "freight-display-pro", "Bodoni", "Garamond", serif;
-  margin-top: 10px;
-  font-style: italic; }
-
-ul {
-  list-style: disc inside none; }
-
-p {
-  margin-bottom: 15px; }
-
-button {
-  text-transform: uppercase;
-  padding: 10px 30px;
-  margin: 15px 0;
-  background-color: #4f00ff;
-  border: none;
-  color: #fff;
-  font-size: 0.8em;
-  letter-spacing: 2px;
-  font-weight: 600;
-  transition: all 1s; }
+    margin-right: 10px;
+    vertical-align: middle; }
 
 div.container {
   display: flex;
   flex-grow: 1; }
 
-svg #svg-empty {
-  fill: rgba(255, 255, 255, 0.1);
-  transition: all 1s; }
-svg #svg-error {
-  fill: #ff4500;
-  transition: all 1s; }
-svg text {
-  fill: #4f00ff;
-  stroke: none;
-  transition: all 1s;
+h1 {
   font-family: "futura-pt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  font-size: 24px; }
-  svg text:nth-child(1) {
-    fill: #a780ff; }
-  svg text:nth-child(2) {
-    fill: #9566ff; }
-  svg text:nth-child(3) {
-    fill: #844dff; }
-  svg text:nth-child(4) {
-    fill: #7233ff; }
-  svg text:nth-child(5) {
-    fill: #5305ff; }
-  svg text#unfilled {
-    fill: #fff; }
-svg path#svg-filled {
-  fill: #4f00ff;
-  transition: all 1s; }
-  svg path#svg-filled:nth-child(1) {
-    fill: #a780ff; }
-  svg path#svg-filled:nth-child(2) {
-    fill: #9566ff; }
-  svg path#svg-filled:nth-child(3) {
-    fill: #844dff; }
-  svg path#svg-filled:nth-child(4) {
-    fill: #7233ff; }
-  svg path#svg-filled:nth-child(5) {
-    fill: #5305ff; }
-svg #svg-unfilled {
-  fill: #fff;
-  transition: all 1s; }
-svg #svg-bullseye {
-  fill: #4f00ff;
-  transition: all 1s; }
-svg #svg-bullseye2 {
-  fill: #4f00ff;
-  transition: all 1s; }
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 2em;
+  letter-spacing: 1px; }
 
-div.interaction {
-  background-color: #fff;
-  width: 60%;
-  z-index: 1;
-  height: 100vh;
-  overflow-y: scroll;
-  position: relative; }
-  div.interaction div#thanks {
-    padding: 30px;
-    height: 100vh;
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    background-color: white; }
-  div.interaction h1#question-title span {
-    color: #280080;
-    font-family: "freight-display-pro", "Bodoni", "Garamond", serif;
-    font-size: 2.5em; }
-  div.interaction .quiz, div.interaction .content, div.interaction .results {
-    padding: 30px; }
-  div.interaction fieldset {
-    border: none;
-    margin: 5vh 0; }
-    div.interaction fieldset button {
-      background-color: #280080;
-      outline: none;
-      border: none;
-      border-radius: 2px;
-      padding: 10px 12px;
-      margin: 5px;
-      color: #fff;
-      font-weight: bold;
-      transition: all 0.3s; }
-      div.interaction fieldset button.active {
-        transition: all 0.3s;
-        background-color: #4f00ff; }
-      div.interaction fieldset button:hover {
-        transform: scale(1.1);
-        transition: all 0.3s; }
-    div.interaction fieldset span {
-      font-size: 0.8em;
-      color: #343f45;
-      display: block;
-      opacity: 0.7; }
-  div.interaction button.next {
-    position: absolute;
-    bottom: 30px;
-    left: 30px; }
-    div.interaction button.next.inactive {
-      opacity: 0.3;
-      transition: all 1s; }
-  div.interaction .progress-bar {
-    font-family: "futura-pt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    font-weight: 600;
-    font-size: 1.5em;
-    color: #4f00ff;
-    position: absolute;
-    bottom: 30px;
-    right: 30px; }
-    div.interaction .progress-bar svg#progress-bar {
-      fill: #280080;
-      stroke: white;
-      stroke-width: 6;
-      stroke-miterlimit: 10;
-      width: 60px;
-      height: 60px;
-      display: inline-block;
-      vertical-align: middle; }
-      div.interaction .progress-bar svg#progress-bar #step-filled {
-        fill: #4f00ff;
-        transition: all 1s; }
-  div.interaction .assessment-fields {
-    padding: 30px; }
-    div.interaction .assessment-fields h1 {
-      color: #343f45;
-      font-size: 1.125em;
-      margin-bottom: 12px;
-      cursor: hand; }
-      div.interaction .assessment-fields h1:before {
-        content: "";
-        background: url(../triangle.svg) no-repeat top left;
-        width: 16px;
-        height: 16px;
-        margin-right: 5px;
-        display: inline-block; }
-      div.interaction .assessment-fields h1:hover, div.interaction .assessment-fields h1.open {
-        color: #280080; }
-      div.interaction .assessment-fields h1 span {
-        color: #4f00ff;
-        float: right;
-        font-size: 0.8em;
-        margin-top: 3px; }
-    div.interaction .assessment-fields .result-content {
-      padding: 0 15px 30px; }
+p {
+  color: #e7e7ed; }
 
-div.response {
-  background: #343f45;
-  overflow: hidden;
-  width: 40%;
-  min-width: 500px;
-  position: relative; }
-  div.response #dartboard {
-    position: absolute;
-    left: -252px;
-    bottom: -252px;
-    transform: scale(1.9);
-    transition: all 1s;
-    stroke: #b4bfc5;
-    fill: rgba(255, 255, 255, 0.1);
-    stroke-width: 0.5;
-    stroke-miterlimit: 10; }
-  div.response #dartboard-results {
-    transition: all 1s;
-    stroke: #b4bfc5;
-    fill: rgba(255, 255, 255, 0.1);
-    stroke-width: 1;
-    stroke-miterlimit: 10;
-    position: relative;
-    left: calc(50% - 250px);
-    top: calc(50% - 250px); }
-    div.response #dartboard-results #svg-filled.highlight {
-      fill: #280080; }
-  div.response div.dartboard-label {
-    color: #fff;
-    font-size: 1.25em;
-    width: 150px;
-    position: absolute;
-    left: 350px;
-    bottom: 350px; }
-  div.response div.result-label {
-    color: #fff;
-    font-size: 0.9em;
-    width: 90px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    z-index: 3;
-    cursor: pointer; }
-    div.response div.result-label:hover {
-      color: #b999ff;
-      transition: all 0.3s; }
-    div.response div.result-label.label2 {
-      top: calc(50% - 280px);
-      left: calc(50% + 20px); }
-    div.response div.result-label.label1 {
-      top: calc(50% - 220px);
-      left: calc(50% + 180px); }
-    div.response div.result-label.label12 {
-      top: calc(50% - 90px);
-      left: calc(50% + 260px); }
-    div.response div.result-label.label11 {
-      left: calc(50% + 260px);
-      top: calc(50% + 50px); }
-    div.response div.result-label.label10 {
-      top: calc(50% + 180px);
-      left: calc(50% + 180px); }
-    div.response div.result-label.label9 {
-      top: calc(50% + 260px);
-      left: calc(50% + 20px); }
-    div.response div.result-label.label8 {
-      top: calc(50% + 260px);
-      left: calc(50% - 100px); }
-    div.response div.result-label.label7 {
-      top: calc(50% + 180px);
-      left: calc(50% - 258px); }
-    div.response div.result-label.label6 {
-      top: calc(50% + 50px);
-      left: calc(50% - 290px); }
-    div.response div.result-label.label5 {
-      top: calc(50% - 70px);
-      left: calc(50% - 285px); }
-    div.response div.result-label.label4 {
-      top: calc(50% - 210px);
-      left: calc(50% - 225px); }
-    div.response div.result-label.label3 {
-      top: calc(50% - 280px);
-      left: calc(50% - 120px); }
+.arc {
+  stroke-width: 1;
+  stroke: rgba(31, 42, 60, 0.035);
+  fill: none; }
+
+.unfilled {
+  fill: #252531;
+  stroke: #252531; }
+
+.circle-1 {
+  fill: #7130B3; }
+
+.circle-2 {
+  fill: #248CE2; }
+
+.circle-3 {
+  fill: #11BCEB; }
+
+.circle-4 {
+  fill: #13E1DD; }
+
+.circle-5 {
+  fill: #07EEB5; }
+
+.selected .arc:nth-child(1) {
+  fill: #975cd3; }
+.selected .arc:nth-child(2) {
+  fill: #68afeb; }
+.selected .arc:nth-child(3) {
+  fill: #56d1f3; }
+.selected .arc:nth-child(4) {
+  fill: #50f0ed; }
+.selected .arc:nth-child(5) {
+  fill: #48face; }
+.selected .arc.unfilled {
+  fill: #46465d;
+  stroke: #46465d; }
+
+.root-bullseye {
+  stroke: rgba(31, 42, 60, 0.035);
+  stroke-width: 1; }
+
+.bullseye {
+  fill: #07EEB5;
+  opacity: 1; }
 
 /*# sourceMappingURL=master.css.map */

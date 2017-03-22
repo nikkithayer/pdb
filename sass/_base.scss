@@ -1,0 +1,31 @@
+$white : #fff;
+$soft-white-border: rgba(255,255,255,0.1);
+$dark-blue-grey: #252531;
+
+//dartboard colors
+$brightest-mint-green: #07EEB5;
+$bright-mint-green: #13E1DD;
+$bright-teal: #11BCEB;
+$bright-blue: #248CE2;
+$bright-purple: #7130B3;
+
+$futura-family: 'futura-pt', "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$aktiv-family: 'aktiv-grotesk', "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$freight-family: "freight-display-pro", "Bodoni", "Garamond", serif;
+
+$bg-color: $dark-blue-grey;
+$text-color: $white;
+
+$button-color: $bright-mint-green;
+
+$dartboard-lowest: $bright-purple;
+$dartboard-second-lowest: $bright-blue;
+$dartboard-middle: $bright-teal;
+$dartboard-second-highest: $bright-mint-green;
+$dartboard-highest: $brightest-mint-green;
+
+$transition-long: all 1s;
+$transition-short: all 0.3s;
+
+$small-margin: 15px;
+$big-margin: 35px;

@@ -1,0 +1,80 @@
+#results{
+  .dartboard-panel{
+  	overflow: hidden;
+  	width: 60%;
+  	position: relative;    
+  }
+  .results-panel{
+  	width: 40%;
+  	min-width: 500px;
+  	z-index: 1;
+  	position: relative;    
+  	padding: $big-margin;
+  	h1{color: $white;}
+  	h2{color: $dartboard-highest;margin-bottom: $small-margin;
+    	span{ font-weight: lighter; color: lighten($bg-color,60%); }
+  	}
+  	.dist-label{ 
+    	position: absolute; 
+    	bottom: 7px; 
+    	color:lighten($bg-color,45%); 
+    	width: calc(100% - 140px); 
+    	text-align: center; 
+    }
+  	svg{
+    	position: absolute;
+    	bottom: $big-margin;
+      border-top: 1px solid $soft-white-border;
+      background-color: lighten($bg-color, 3%);
+      border-radius: 2;
+      padding: $small-margin;
+    	rect{
+      	&:nth-child(5){ fill: $dartboard-highest;}
+      	&:nth-child(4){ fill: $dartboard-second-highest;}
+      	&:nth-child(3){ fill: $dartboard-middle;}
+      	&:nth-child(2){ fill: $dartboard-second-lowest;}
+      	&:nth-child(1){ fill: $dartboard-lowest;}
+    	}
+    	text{ fill: white; }
+  	}
+  }
+  footer{
+    background-color: lighten($bg-color, 3%);
+    border-top: 1px solid $soft-white-border;
+    ol{
+    display: flex;
+    flex-direction: row;
+      li{
+        border-right: 1px solid $soft-white-border;
+        display: block;
+        text-align: center;
+        padding: $small-margin;
+        span{
+          text-transform: uppercase;
+          letter-spacing: 0.5;
+          font-size: 0.7em;
+          color: lighten($bg-color,40%);
+        }
+        h2{
+          font-family: $futura-family;
+          font-size: 1.8em;
+          font-weight: 100;
+          &.lowest-average{ color: lighten($dartboard-lowest,20%); }
+          &.highest-average{ color: $dartboard-highest; }
+          &.total-responses{ color: $dartboard-middle; }
+          &.date{ color: $white; }
+        }
+      }
+    }
+      &:after{
+        content: '';
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: url('../carbon-five-logo.svg') no-repeat center center;
+        background-size:40%;
+      }
+  }
+}

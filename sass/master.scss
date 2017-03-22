@@ -1,50 +1,19 @@
-$warm-dark-grey : #343f45;
-$warm-light-grey : #b4bfc5;
-$hot-blue : #4f00ff;
-$hot-orange : #ff4500;
-$white : #fff;
-$transparent-white: rgba(255,255,255,0.8);
-$hot-magenta : #f70582;
-$accent-color: darken($hot-blue, 25%);
-$blue-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-$grey-gradient: linear-gradient(to top, #09203f 0%, #537895 100%);
-
-$futura-family: 'futura-pt', "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-$aktiv-family: 'aktiv-grotesk', "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-$freight-family: "freight-display-pro", "Bodoni", "Garamond", serif;
-
-$highlight-text-color: $hot-blue;
-$text-color: $warm-dark-grey;
-$stroke-color: $warm-light-grey;
-$transparent-fill: rgba(255,255,255,0.1);
-$header-color: $warm-dark-grey;
-$interaction-bg: $white;
-$response-bg: $warm-dark-grey;
-
-$transition-long: all 1s;
-$transition-short: all 0.3s;
+@import 'base';
+@import 'assessment';
+@import 'results';
 
 *{ padding: 0; margin: 0; }
 
 html, body{
-	background-color: $white;
+  background: $bg-color;
 	height: 100%;
-	font-size: 16px;
+	font-size: 15px;
 	font-family: $aktiv-family;
 	color: $text-color;
 	margin: 0;
 	padding: 0;
 	display: flex;
 	flex-direction: column;
-	&.results{
-		.interaction{
-			width: 40%;
-		}
-		.response{
-			width: 60%;
-			min-width: 700px;			
-		}
-	}
 }
 
 body > *{
@@ -54,68 +23,17 @@ body > *{
 header{
 	font-family: $freight-family;
 	font-weight: bold;
-	color: black;
-	margin: 30px;
-	font-size: 2em;
+	padding: $small-margin;
+	font-size: 1.5em;
+	color: $text-color;
+	letter-spacing: 0.5px;
+	border-bottom: 1px solid $soft-white-border;
 	img{
 	    display: inline-block;
 	    height: 42px;
-	    vertical-align: bottom;			
+	    margin-right: 10px;
+	    vertical-align: middle;			
 	}
-	h2{
-		color: $accent-color;
-		font-family: $futura-family;
-		font-size: 0.6em;
-		text-transform: uppercase;
-		margin-left: 50px;
-		margin-top: -5px;		
-	}
-	p{
-		font-family: $aktiv-family;
-		font-weight: normal;
-		color: $highlight-text-color;
-		font-size: 0.5em;
-		margin-left: 50px;
-	}
-}
-
-h1{
-	font-size: 1.5em;
-	text-transform: uppercase;
-	font-family: $futura-family;
-}
-h2{
-	color: $text-color;
-	font-size: 1.25em;
-	font-family: $freight-family;
-	margin-top: 10px;
-}
-h3{
-	color: $highlight-text-color;
-	font-size: 1em;
-	font-family: $freight-family;
-	margin-top: 10px;
-	font-style: italic;
-}
-ul{
-	list-style: disc inside none;
-}
-
-p{
-	margin-bottom: 15px;
-}
-
-button{
-	text-transform: uppercase;
-	padding: 10px 30px;
-	margin: 15px 0;
-	background-color: $hot-blue;
-	border: none;
-	color: $white; 
-	font-size: 0.8em;
-	letter-spacing: 2px;
-	font-weight: 600;
-	transition: $transition-long;
 }
 	
 div.container{
@@ -123,310 +41,46 @@ div.container{
 	flex-grow: 1;
 }
 
-svg{
-	#svg-empty{
-		fill:$transparent-fill;			
-		transition: $transition-long;
-	}
-	#svg-error{
-		fill:$hot-orange;
-		transition: $transition-long;
-	}
-	text{
-		fill:$hot-blue;
-		stroke: none;
-		transition: $transition-long;
-		font-family: $futura-family;
-		font-size: 24px;
-		&:nth-child(1){ 
-  		fill: lighten($hot-blue, 25%); 
-    }
-		&:nth-child(2){
-  		fill: lighten($hot-blue, 20%); }
-		&:nth-child(3){ 
-  		fill: lighten($hot-blue, 15%);
-		}
-		&:nth-child(4){ 
-  		fill: lighten($hot-blue, 10%);
-		}
-		&:nth-child(5){ 
-  		fill: lighten($hot-blue, 1%); 
-		}
-		&#unfilled{
-  		fill: $white;
-		}
-	}
-	path#svg-filled{
-		fill:$hot-blue;
-		transition: $transition-long;
-		&:nth-child(1){ 
-  		fill: lighten($hot-blue, 25%); 
-    }
-		&:nth-child(2){
-  		fill: lighten($hot-blue, 20%); }
-		&:nth-child(3){ 
-  		fill: lighten($hot-blue, 15%);
-		}
-		&:nth-child(4){ 
-  		fill: lighten($hot-blue, 10%);
-		}
-		&:nth-child(5){ 
-  		fill: lighten($hot-blue, 1%); 
-		}
-	}
-	#svg-unfilled{
-		fill:$white;
-		transition: $transition-long;
-	}
-	#svg-bullseye{
-		fill:$hot-blue;
-		transition: $transition-long;
-	}
-	#svg-bullseye2{
-		fill:$hot-blue;
-		transition: $transition-long;
-	}
+h1{
+  font-family: $futura-family;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 2em;
+  letter-spacing: 1px;
+}
+p{ color: lighten($bg-color, 75%); }
+
+
+.arc {
+  stroke-width: 1;
+  stroke: rgba(31,42,60,0.035);
+  fill: none;
 }
 
-div.interaction{
-	background-color: $interaction-bg;
-	width: 60%;
-	z-index: 1;
-	height: 100vh;
-	overflow-y: scroll;
-	position: relative;
+.unfilled{ fill: $bg-color; stroke: $bg-color;}
 
-	div#thanks {
-	    padding: 30px;
-	    height: 100vh;
-	    position: relative;
-	    z-index: 2;
-	    text-align: center;
-	    background-color: white;
-	}
+.circle-1{ fill: $dartboard-lowest;}
+.circle-2{ fill: $dartboard-second-lowest;}
+.circle-3{ fill: $dartboard-middle;}
+.circle-4{ fill: $dartboard-second-highest;}
+.circle-5{ fill: $dartboard-highest;}
 
-	h1#question-title{
-		span{
-			color: $accent-color;
-			font-family: $freight-family;
-			font-size: 2.5em;
-		}		
-	}
-	.quiz, .content, .results{
-		padding: 30px;		
-	}
-
-	fieldset{
-		border: none;
-		margin: 5vh 0;
-		button{
-			background-color: $accent-color;
-			outline: none;
-			border: none;
-			border-radius: 2px;
-			padding: 10px 12px;
-			margin: 5px;
-			color: $white;
-			font-weight: bold;
-			transition: $transition-short;
-			&.active{
-				transition: $transition-short;
-				background-color: $hot-blue;
-			}
-			&:hover{
-				transform: scale(1.1);
-				transition: $transition-short;
-			}
-		}
-		span{
-			font-size: 0.8em;
-			color: $warm-dark-grey;
-			display: block;
-			opacity: 0.7;
-		}
-	}	
-	
-
-	button.next{
-		position: absolute;
-		bottom: 30px;
-		left: 30px;
-		&.inactive{
-			opacity: 0.3;
-			transition: $transition-long;
-		}
-	}
-
-	.progress-bar{
-		font-family: $futura-family;
-		font-weight: 600;
-		font-size: 1.5em;
-		color: $hot-blue;
-		position: absolute;
-		bottom: 30px;
-		right: 30px;
-	
-		svg#progress-bar {
-			fill: $accent-color;
-		    stroke: white;
-		    stroke-width: 6;
-		    stroke-miterlimit:10;
-		    width: 60px;
-		    height: 60px;
-		    display: inline-block;
-		    vertical-align: middle;
-			#step-filled{
-				fill:$hot-blue;
-				transition: $transition-long;
-			}
-		}		
-	}
-	
-	.assessment-fields{
-		padding: 30px;
-		h1{ 
-			color: $warm-dark-grey;
-			font-size: 1.125em; 
-			margin-bottom: 12px;
-			cursor: hand;
-			&:before{
-			    content: "";
-			    background: url(../triangle.svg) no-repeat top left;
-			    width: 16px;
-			    height: 16px;
-				margin-right: 5px;
-			    display: inline-block;
-			}
-			&:hover, &.open{
-				color: $accent-color;
-			}
-			span{
-			    color: #4f00ff;
-			    float: right;
-			    font-size: 0.8em;
-			    margin-top: 3px;				
-			}
-		}
-		.result-content{
-			padding: 0 15px 30px;
-		}
-	}
+.selected{
+  .arc{ 
+    &:nth-child(1){ fill: lighten($dartboard-lowest, 15%);}
+    &:nth-child(2){ fill: lighten($dartboard-second-lowest, 15%);}
+    &:nth-child(3){ fill: lighten($dartboard-middle, 15%);}
+    &:nth-child(4){ fill: lighten($dartboard-second-highest, 15%);}
+    &:nth-child(5){ fill: lighten($dartboard-highest, 15%);}
+    &.unfilled{ fill: lighten($bg-color,15%); stroke: lighten($bg-color,15%);}
+  }
 }
 
-div.response{
-	background: $response-bg;
-	overflow: hidden;
-	width: 40%;
-	min-width: 500px;
-	position: relative;
-
-
-	#dartboard{ 
-		position: absolute;
-		left: -252px;
-		bottom: -252px;
-		transform: scale(1.9);
-		transition: $transition-long;
-		stroke:$stroke-color;
-		fill:$transparent-fill;
-		stroke-width:0.5;
-		stroke-miterlimit:10;	
-	}
-	
-	#dartboard-results{
-		transition: $transition-long;
-		stroke:$stroke-color;
-		fill:$transparent-fill;
-		stroke-width:1;
-		stroke-miterlimit:10;			
-		position: relative;
-	    left: calc(50% - 250px);
-	    top: calc(50% - 250px);
-		#svg-filled.highlight{
-			fill: $accent-color;
-		}
-	}
-
-	div.dartboard-label {
-	    color: $white;
-	    font-size: 1.25em;
-	    width: 150px;
-	    position: absolute;
-	    left: 350px;
-	    bottom: 350px;
-	}
-	div.result-label {
-		color: $white;
-		font-size: 0.9em;
-		width: 90px;
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		z-index: 3;
-		cursor: pointer;
-		&:hover{
-  		color: lighten($hot-blue,30%);
-  		transition: $transition-short;
-		}
-			&.label2 {
-			    top: calc(50% - 280px);
-			    left: calc(50% + 20px);
-			}
-			
-			&.label1 {
-			    top: calc(50% - 220px);
-			    left: calc(50% + 180px);
-			}
-			
-			&.label12 {
-			    top: calc(50% - 90px);
-			    left: calc(50% + 260px);
-			}
-			
-			&.label11 {
-			    left: calc(50% + 260px);
-			    top: calc(50% + 50px);
-			}
-			
-			&.label10 {
-			    top: calc(50% + 180px);
-			    left: calc(50% + 180px);
-			}
-			
-			&.label9 {
-			    top: calc(50% + 260px);
-			    left: calc(50% + 20px);
-			}
-			
-			&.label8 {
-			    top: calc(50% + 260px);
-			    left: calc(50% - 100px);
-			}
-			
-			&.label7 {
-			    top: calc(50% + 180px);
-			    left: calc(50% - 258px);
-			}
-			
-			&.label6 {
-			    top: calc(50% + 50px);
-			    left: calc(50% - 290px);
-			}
-			
-			&.label5 {
-			    top: calc(50% - 70px);
-			    left: calc(50% - 285px);
-			}
-			
-			&.label4 {
-			    top: calc(50% - 210px);
-			    left: calc(50% - 225px);
-			}
-			
-			&.label3 {
-			    top: calc(50% - 280px);
-			    left: calc(50% - 120px);
-			}
-	}
-
+.root-bullseye{
+  stroke: rgba(31,42,60,0.035);
+  stroke-width: 1;
+}
+.bullseye {
+  fill: $dartboard-highest;
+  opacity: 1;
 }
