@@ -55,6 +55,7 @@
   	padding: $big-margin;
   	h1{color: $white;}
   	h2{
+    	font-family: $futura-family;
     	margin-bottom: $small-margin;
     	&.lowest{ color: $dartboard-lowest;}
     	span{ font-weight: lighter; color: lighten($bg-color,60%); }

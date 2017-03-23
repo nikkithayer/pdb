@@ -4,7 +4,6 @@ var questions = json;
 
 //text doesn't show up except maybe on hover
 //correctly place distribution label
-//fix font on H2
 //color code averages
                                 
 drawDartboard();

@@ -132,23 +132,7 @@ $.getJSON( "./questions.json", function( json ) {
       .attr("data",function(d,i){ return i;})
       .attr("title",function(d,i){ return d.title;})
       .attr("transform", function(d,i){ return "translate(" + width / 2 + "," + height / 2 + ") rotate("+ 30*i +")";});
-  
-  /*
-  var newText= arcGroup.append("text")
-      .attr("x", 0)
-      .attr("y", 0)
-      .attr("dy", "-18em")
-      .text(function(d) { return d.title; })
-      .attr("font-family", "sans-serif")
-      .attr("font-weight", "lighter")
-      .attr("font-size", "14px")
-      .attr("fill", "white");
-      
-  svg.selectAll("text")
-      .data(questions)
-      .attr("transform", function(d,i){ console.log(d,i); return "translate(" + 0 + "," + 0 + ") rotate("+ -30*i +")";});
-  */
-  
+    
   var arc = d3.svg.arc()
       .innerRadius(function(d,i) { return (d.index + spacing / 2) * radius; })
       .outerRadius(function(d) { return (d.index + spacing / 2); })
@@ -170,7 +154,7 @@ $.getJSON( "./questions.json", function( json ) {
   
   arcPath.on("click",function(){
     var sel = d3.select(this);
-    sel.classed("unselected",true);
+    sel.classed("selected",true);
     var index = d3.select(this.parentNode).attr("data");
     addRating(sel.attr("data").substr(7),index);
   });
@@ -179,12 +163,12 @@ $.getJSON( "./questions.json", function( json ) {
 
 function addRating(rating,index){
   console.log(rating, index);
-  $("g.arcGroup[data='"+index+"'] path").removeClass("unselected");
+  $("g.arcGroup[data='"+index+"'] path").removeClass("selected");
   var ratingGroup = $("g.arcGroup[data='"+index+"'] path");
   for(j=0;j<ratingGroup.length;j++){
     console.log(ratingGroup[j],rating);
     if((j)<rating){
-      $(ratingGroup[j]).addClass("unselected");
+      $(ratingGroup[j]).addClass("selected");
     }    
   }
 }

@@ -133,6 +133,7 @@
   #results .results-panel h1 {
     color: #fff; }
   #results .results-panel h2 {
+    font-family: "futura-pt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     margin-bottom: 15px; }
     #results .results-panel h2.lowest {
       color: #7130B3; }
@@ -249,7 +250,8 @@ p {
   color: #e7e7ed; }
 
 .circle-1 {
-  fill: #7130B3; }
+  fill: #7130B3;
+  filter: none !important; }
 
 .circle-2 {
   fill: #248CE2; }
@@ -265,18 +267,21 @@ p {
 
 .arc {
   stroke-width: 1;
-  stroke: rgba(255, 255, 255, 0.035);
-  fill: #303040; }
-  .arc.unselected {
+  stroke: rgba(255, 255, 255, 0.035); }
+  .arc:nth-child(1) {
+    fill: #252531; }
+  .arc:nth-child(2) {
+    fill: #303040; }
+  .arc:nth-child(3) {
+    fill: #3b3b4e; }
+  .arc:nth-child(4) {
+    fill: #46465d; }
+  .arc:nth-child(5) {
+    fill: #51516b; }
+  .arc.selected {
     fill: rgba(255, 255, 255, 0.01); }
-
-.unfilled {
-  fill: #252531;
-  stroke: #252531; }
-
-.filled {
-  fill: rgba(0, 0, 0, 0.1);
-  stroke: red; }
+  .arc.unselected {
+    fill: red; }
 
 .bullseye {
   stroke: rgba(31, 42, 60, 0.035);
