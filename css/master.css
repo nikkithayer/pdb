@@ -75,6 +75,55 @@
   overflow: hidden;
   width: 60%;
   position: relative; }
+  #results .dartboard-panel .arc {
+    stroke-width: 1;
+    stroke: rgba(31, 42, 60, 0.035);
+    fill: none; }
+  #results .dartboard-panel .unfilled {
+    fill: #252531;
+    stroke: #252531; }
+  #results .dartboard-panel .filled {
+    fill: rgba(0, 0, 0, 0.01); }
+  #results .dartboard-panel .circle-1 {
+    fill: #7130B3; }
+  #results .dartboard-panel .circle-2 {
+    fill: #248CE2; }
+  #results .dartboard-panel .circle-3 {
+    fill: #11BCEB; }
+  #results .dartboard-panel .circle-4 {
+    fill: #13E1DD; }
+  #results .dartboard-panel .circle-5 {
+    fill: #07EEB5; }
+  #results .dartboard-panel .selected .arc:nth-child(1) {
+    fill: #975cd3; }
+  #results .dartboard-panel .selected .arc:nth-child(2) {
+    fill: #68afeb; }
+  #results .dartboard-panel .selected .arc:nth-child(3) {
+    fill: #56d1f3; }
+  #results .dartboard-panel .selected .arc:nth-child(4) {
+    fill: #50f0ed; }
+  #results .dartboard-panel .selected .arc:nth-child(5) {
+    fill: #48face; }
+  #results .dartboard-panel .selected .arc.unfilled {
+    fill: #46465d;
+    stroke: #46465d; }
+  #results .dartboard-panel .highlight .arc:nth-child(1) {
+    fill: #7e35c7; }
+  #results .dartboard-panel .highlight .arc:nth-child(2) {
+    fill: #3b98e5; }
+  #results .dartboard-panel .highlight .arc:nth-child(3) {
+    fill: #26c4ef; }
+  #results .dartboard-panel .highlight .arc:nth-child(4) {
+    fill: #21ece8; }
+  #results .dartboard-panel .highlight .arc:nth-child(5) {
+    fill: #16f8c0; }
+  #results .dartboard-panel .highlight .arc.unfilled {
+    fill: #303040;
+    stroke: #303040; }
+  #results .dartboard-panel .bullseye {
+    stroke: rgba(31, 42, 60, 0.035);
+    stroke-width: 1;
+    fill: #07EEB5; }
 #results .results-panel {
   width: 40%;
   min-width: 500px;
@@ -84,8 +133,9 @@
   #results .results-panel h1 {
     color: #fff; }
   #results .results-panel h2 {
-    color: #07EEB5;
     margin-bottom: 15px; }
+    #results .results-panel h2.lowest {
+      color: #7130B3; }
     #results .results-panel h2 span {
       font-weight: lighter;
       color: #bcbccc; }
@@ -102,15 +152,15 @@
     background-color: #2c2c3a;
     border-radius: 2;
     padding: 15px; }
-    #results .results-panel svg rect:nth-child(5) {
+    #results .results-panel svg rect:nth-child(6) {
       fill: #07EEB5; }
-    #results .results-panel svg rect:nth-child(4) {
+    #results .results-panel svg rect:nth-child(5) {
       fill: #13E1DD; }
-    #results .results-panel svg rect:nth-child(3) {
+    #results .results-panel svg rect:nth-child(4) {
       fill: #11BCEB; }
-    #results .results-panel svg rect:nth-child(2) {
+    #results .results-panel svg rect:nth-child(3) {
       fill: #248CE2; }
-    #results .results-panel svg rect:nth-child(1) {
+    #results .results-panel svg rect:nth-child(2) {
       fill: #7130B3; }
     #results .results-panel svg text {
       fill: white; }
@@ -198,15 +248,6 @@ h1 {
 p {
   color: #e7e7ed; }
 
-.arc {
-  stroke-width: 1;
-  stroke: rgba(31, 42, 60, 0.035);
-  fill: none; }
-
-.unfilled {
-  fill: #252531;
-  stroke: #252531; }
-
 .circle-1 {
   fill: #7130B3; }
 
@@ -222,26 +263,24 @@ p {
 .circle-5 {
   fill: #07EEB5; }
 
-.selected .arc:nth-child(1) {
-  fill: #975cd3; }
-.selected .arc:nth-child(2) {
-  fill: #68afeb; }
-.selected .arc:nth-child(3) {
-  fill: #56d1f3; }
-.selected .arc:nth-child(4) {
-  fill: #50f0ed; }
-.selected .arc:nth-child(5) {
-  fill: #48face; }
-.selected .arc.unfilled {
-  fill: #46465d;
-  stroke: #46465d; }
+.arc {
+  stroke-width: 1;
+  stroke: rgba(255, 255, 255, 0.035);
+  fill: #303040; }
+  .arc.unselected {
+    fill: rgba(255, 255, 255, 0.01); }
 
-.root-bullseye {
-  stroke: rgba(31, 42, 60, 0.035);
-  stroke-width: 1; }
+.unfilled {
+  fill: #252531;
+  stroke: #252531; }
+
+.filled {
+  fill: rgba(0, 0, 0, 0.1);
+  stroke: red; }
 
 .bullseye {
-  fill: #07EEB5;
-  opacity: 1; }
+  stroke: rgba(31, 42, 60, 0.035);
+  stroke-width: 1;
+  fill: #07EEB5; }
 
 /*# sourceMappingURL=master.css.map */

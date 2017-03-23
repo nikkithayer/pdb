@@ -50,37 +50,27 @@ h1{
 }
 p{ color: lighten($bg-color, 75%); }
 
-
-.arc {
-  stroke-width: 1;
-  stroke: rgba(31,42,60,0.035);
-  fill: none;
-}
-
-.unfilled{ fill: $bg-color; stroke: $bg-color;}
-
 .circle-1{ fill: $dartboard-lowest;}
 .circle-2{ fill: $dartboard-second-lowest;}
 .circle-3{ fill: $dartboard-middle;}
 .circle-4{ fill: $dartboard-second-highest;}
 .circle-5{ fill: $dartboard-highest;}
 
-.selected{
-  .arc{ 
-    &:nth-child(1){ fill: lighten($dartboard-lowest, 15%);}
-    &:nth-child(2){ fill: lighten($dartboard-second-lowest, 15%);}
-    &:nth-child(3){ fill: lighten($dartboard-middle, 15%);}
-    &:nth-child(4){ fill: lighten($dartboard-second-highest, 15%);}
-    &:nth-child(5){ fill: lighten($dartboard-highest, 15%);}
-    &.unfilled{ fill: lighten($bg-color,15%); stroke: lighten($bg-color,15%);}
+.arc {
+  stroke-width: 1;
+  stroke: rgba(255,255,255,0.035);
+  fill: lighten($bg-color, 5%);
+  &.unselected{
+    fill: rgba(255,255,255,0.01);
   }
 }
 
-.root-bullseye{
+.unfilled{ fill: $bg-color; stroke: $bg-color;}
+.filled{ fill: rgba(0,0,0,0.1); stroke: red; }
+
+
+.bullseye{
   stroke: rgba(31,42,60,0.035);
   stroke-width: 1;
-}
-.bullseye {
   fill: $dartboard-highest;
-  opacity: 1;
 }

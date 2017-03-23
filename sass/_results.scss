@@ -3,6 +3,49 @@
   	overflow: hidden;
   	width: 60%;
   	position: relative;    
+      .arc {
+        stroke-width: 1;
+        stroke: rgba(31,42,60,0.035);
+        fill: none;
+      }
+      
+      .unfilled{ fill: $bg-color; stroke: $bg-color;}
+      .filled{ fill: rgba(0,0,0,0.01);}
+      
+      .circle-1{ fill: $dartboard-lowest;}
+      .circle-2{ fill: $dartboard-second-lowest;}
+      .circle-3{ fill: $dartboard-middle;}
+      .circle-4{ fill: $dartboard-second-highest;}
+      .circle-5{ fill: $dartboard-highest;}
+      
+      .selected{
+        .arc{ 
+          &:nth-child(1){ fill: lighten($dartboard-lowest, 15%);}
+          &:nth-child(2){ fill: lighten($dartboard-second-lowest, 15%);}
+          &:nth-child(3){ fill: lighten($dartboard-middle, 15%);}
+          &:nth-child(4){ fill: lighten($dartboard-second-highest, 15%);}
+          &:nth-child(5){ fill: lighten($dartboard-highest, 15%);}
+          &.unfilled{ fill: lighten($bg-color,15%); stroke: lighten($bg-color,15%);}
+        }
+      }
+      
+      .highlight{
+        .arc{
+          &:nth-child(1){ fill: lighten($dartboard-lowest, 5%);}
+          &:nth-child(2){ fill: lighten($dartboard-second-lowest, 5%);}
+          &:nth-child(3){ fill: lighten($dartboard-middle, 5%);}
+          &:nth-child(4){ fill: lighten($dartboard-second-highest, 5%);}
+          &:nth-child(5){ fill: lighten($dartboard-highest, 5%);}
+          &.unfilled{ fill: lighten($bg-color,5%); stroke: lighten($bg-color,5%);}
+        }
+      }
+      
+      .bullseye{
+        stroke: rgba(31,42,60,0.035);
+        stroke-width: 1;
+        fill: $dartboard-highest;
+      }
+
   }
   .results-panel{
   	width: 40%;
@@ -11,7 +54,9 @@
   	position: relative;    
   	padding: $big-margin;
   	h1{color: $white;}
-  	h2{color: $dartboard-highest;margin-bottom: $small-margin;
+  	h2{
+    	margin-bottom: $small-margin;
+    	&.lowest{ color: $dartboard-lowest;}
     	span{ font-weight: lighter; color: lighten($bg-color,60%); }
   	}
   	.dist-label{ 
@@ -29,11 +74,12 @@
       border-radius: 2;
       padding: $small-margin;
     	rect{
-      	&:nth-child(5){ fill: $dartboard-highest;}
-      	&:nth-child(4){ fill: $dartboard-second-highest;}
-      	&:nth-child(3){ fill: $dartboard-middle;}
-      	&:nth-child(2){ fill: $dartboard-second-lowest;}
-      	&:nth-child(1){ fill: $dartboard-lowest;}
+//compensating for the filter element that takes the first style
+      	&:nth-child(6){ fill: $dartboard-highest;}
+      	&:nth-child(5){ fill: $dartboard-second-highest;}
+      	&:nth-child(4){ fill: $dartboard-middle;}
+      	&:nth-child(3){ fill: $dartboard-second-lowest;}
+      	&:nth-child(2){ fill: $dartboard-lowest;}
     	}
     	text{ fill: white; }
   	}
