@@ -50,6 +50,7 @@ h1{
 }
 p{ color: lighten($bg-color, 75%); }
 
+
 .circle-1{ fill: $dartboard-lowest; filter:none!important;}
 .circle-2{ fill: $dartboard-second-lowest;}
 .circle-3{ fill: $dartboard-middle;}
@@ -58,16 +59,17 @@ p{ color: lighten($bg-color, 75%); }
 
 .arc {
   stroke-width: 1;
-  stroke: rgba(255,255,255,0.035);
+  stroke: rgba(255,255,255,0.05);
+  transition: $transition-long;
   &:nth-child(1){ fill: lighten($bg-color, 0%);}
-  &:nth-child(2){ fill: lighten($bg-color, 5%);}
-  &:nth-child(3){ fill: lighten($bg-color, 10%);}
-  &:nth-child(4){ fill: lighten($bg-color, 15%);}
-  &:nth-child(5){ fill: lighten($bg-color, 20%);}
+  &:nth-child(2){ fill: lighten($bg-color, 2.5%);}
+  &:nth-child(3){ fill: lighten($bg-color, 5%);}
+  &:nth-child(4){ fill: lighten($bg-color, 7.5%);}
+  &:nth-child(5){ fill: lighten($bg-color, 10%);}
   &.selected{
     fill: rgba(255,255,255,0.01);
   }
-  &.unselected{ fill: red;}
+  &.unselected{ fill: $bg-color;}
 }
 
 .bullseye{

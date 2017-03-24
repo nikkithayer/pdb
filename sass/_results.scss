@@ -19,6 +19,7 @@
       .circle-5{ fill: $dartboard-highest;}
       
       .selected{
+        transition: $transition-short;
         .arc{ 
           &:nth-child(1){ fill: lighten($dartboard-lowest, 15%);}
           &:nth-child(2){ fill: lighten($dartboard-second-lowest, 15%);}
@@ -30,6 +31,7 @@
       }
       
       .highlight{
+        transition: $transition-short;
         .arc{
           &:nth-child(1){ fill: lighten($dartboard-lowest, 5%);}
           &:nth-child(2){ fill: lighten($dartboard-second-lowest, 5%);}

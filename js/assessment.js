@@ -3,6 +3,10 @@ $( document ).ready(function() {
 $.getJSON( "./questions.json", function( json ) {
 	var questions = json;
 
+//scale up dartboard
+//refine colors
+//hover state on dartboard only if it's okay
+
 // -- ASSESSMENT PAGE --
 	var quizPosition = 0;
 	var allowNext = false;
@@ -13,13 +17,8 @@ $.getJSON( "./questions.json", function( json ) {
 
 	$("fieldset button").click(
 		function(){
-			$(this).addClass("active");
-			$(this).prevAll().addClass("active");
-			$(this).nextAll().removeClass("active");
-			$("button.next").removeClass("inactive");
 			var buttonRating = $(this).text();
       addRating(buttonRating,quizPosition);
-			allowNext = true;
 		}
 	);	
 
@@ -154,23 +153,35 @@ $.getJSON( "./questions.json", function( json ) {
   
   arcPath.on("click",function(){
     var sel = d3.select(this);
-    sel.classed("selected",true);
     var index = d3.select(this.parentNode).attr("data");
-    addRating(sel.attr("data").substr(7),index);
+    index++;
+    if(index == quizPosition){
+      addRating(sel.attr("data").substr(7),quizPosition);
+    }
   });
 
 }  
 
 function addRating(rating,index){
-  console.log(rating, index);
-  $("g.arcGroup[data='"+index+"'] path").removeClass("selected");
+  var activeButton = $('button:contains("'+rating+'")');
+  activeButton.addClass("active");
+  activeButton.prevAll().addClass("active");
+  activeButton.nextAll().removeClass("active");
+
+  index = index-1;
+  $("g.arcGroup[data='"+index+"'] path").removeClass("selected unselected");
   var ratingGroup = $("g.arcGroup[data='"+index+"'] path");
   for(j=0;j<ratingGroup.length;j++){
-    console.log(ratingGroup[j],rating);
     if((j)<rating){
       $(ratingGroup[j]).addClass("selected");
+    }else{
+      $(ratingGroup[j]).addClass("unselected");      
     }    
   }
+
+	$("button.next").removeClass("inactive");
+	allowNext = true;
+
 }
 
 function circleRadii() {
