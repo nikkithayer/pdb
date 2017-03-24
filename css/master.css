@@ -139,8 +139,6 @@
   #results .results-panel h2 {
     font-family: "futura-pt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     margin-bottom: 15px; }
-    #results .results-panel h2.lowest {
-      color: #7130B3; }
     #results .results-panel h2 span {
       font-weight: lighter;
       color: #bcbccc; }
@@ -253,6 +251,11 @@ h1 {
 p {
   color: #e7e7ed; }
 
+.bullseye {
+  stroke: rgba(31, 42, 60, 0.035);
+  stroke-width: 1;
+  fill: #07EEB5; }
+
 .circle-1 {
   fill: #7130B3;
   filter: none !important; }
@@ -268,6 +271,24 @@ p {
 
 .circle-5 {
   fill: #07EEB5; }
+
+.dartboard-error {
+  color: #FF3C63; }
+
+.dartboard-highest {
+  color: #07EEB5; }
+
+.dartboard-second-highest {
+  color: #13E1DD; }
+
+.dartboard-middle {
+  color: #11BCEB; }
+
+.dartboard-second-lowest {
+  color: #248CE2; }
+
+.dartboard-lowest {
+  color: #7632bb; }
 
 .arc {
   stroke-width: 1;
@@ -288,9 +309,13 @@ p {
   .arc.unselected {
     fill: #252531; }
 
-.bullseye {
-  stroke: rgba(31, 42, 60, 0.035);
-  stroke-width: 1;
-  fill: #07EEB5; }
+span {
+  text-transform: uppercase;
+  letter-spacing: 0.5;
+  font-size: 0.7em;
+  color: #8282a0; }
+  span.lowest-score {
+    color: #ff5677;
+    letter-spacing: 1; }
 
 /*# sourceMappingURL=master.css.map */

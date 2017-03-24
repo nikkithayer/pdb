@@ -50,12 +50,20 @@ h1{
 }
 p{ color: lighten($bg-color, 75%); }
 
-
+.bullseye{ stroke: rgba(31,42,60,0.035); stroke-width: 1; fill: $dartboard-highest; }
 .circle-1{ fill: $dartboard-lowest; filter:none!important;}
 .circle-2{ fill: $dartboard-second-lowest;}
 .circle-3{ fill: $dartboard-middle;}
 .circle-4{ fill: $dartboard-second-highest;}
 .circle-5{ fill: $dartboard-highest;}
+
+.dartboard-error{ color: $dartboard-error;}
+.dartboard-highest{ color: $dartboard-highest;}
+.dartboard-second-highest{ color: $dartboard-second-highest;}
+.dartboard-middle{ color: $dartboard-middle;}
+.dartboard-second-lowest{ color: $dartboard-second-lowest;}
+.dartboard-lowest{ color: lighten($dartboard-lowest,2%);}
+
 
 .arc {
   stroke-width: 1;
@@ -72,8 +80,13 @@ p{ color: lighten($bg-color, 75%); }
   &.unselected{ fill: $bg-color;}
 }
 
-.bullseye{
-  stroke: rgba(31,42,60,0.035);
-  stroke-width: 1;
-  fill: $dartboard-highest;
+span{
+  text-transform: uppercase;
+  letter-spacing: 0.5;
+  font-size: 0.7em;
+  color: lighten($bg-color,40%);
+  &.lowest-score{
+    color: lighten($dartboard-error,5%);
+    letter-spacing: 1;
+  }
 }

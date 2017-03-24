@@ -147,9 +147,34 @@ function getIndex(sel){
 }
 
 function changePanel(index){
+  var average = parseInt(calcAverage(index));
+  var colorCode;
+  switch(average){
+    case 1:
+      colorCode = "dartboard-lowest";
+    break;
+    case 2:
+      colorCode = "dartboard-second-lowest";
+    break;
+    case 3:
+      colorCode = "dartboard-middle";
+    break;
+    case 4:
+      colorCode = "dartboard-second-highest";
+    break;
+    case 5:
+      colorCode = "dartboard-highest";
+    break;
+  }
+  
+  
   $(".results-panel .content").html("");
+  if(calcLowest()==index){
+    $(".results-panel .content").append("<span class='lowest-score'>Lowest Rating</span>"); 
+    colorCode = "dartboard-error";   
+  }
   $(".results-panel .content").append("<h1>"+questions[index].title+"</h1>");
-  $(".results-panel .content").append("<h2><span>Team average: </span>"+calcAverage(index)+"</h2>");
+  $(".results-panel .content").append("<h2 class='"+colorCode+"'><span>Team average: </span>"+calcAverage(index)+"</h2>");
   $(".results-panel .content").append("<p>"+questions[index].description+"</p>");
   updateBarGraph(questions[index].ratings);
 }
@@ -157,10 +182,12 @@ function changePanel(index){
 function calcAverage(index){
   var ratings = questions[index].ratings;
   var total = 0;
+  var responses = 0;
   for(j=0;j<ratings.length;j++){
     total += (ratings[j]*(j+1));
+    responses += ratings[j];
   }
-  total = total/11;
+  total = total/responses;
   return total.toFixed(1);
 }
 
