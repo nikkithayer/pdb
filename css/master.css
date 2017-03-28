@@ -96,30 +96,30 @@
     fill: #07EEB5; }
   #results .dartboard-panel .selected {
     transition: all 0.3s; }
-    #results .dartboard-panel .selected .arc:nth-child(1) {
-      fill: #975cd3; }
     #results .dartboard-panel .selected .arc:nth-child(2) {
-      fill: #68afeb; }
+      fill: #975cd3; }
     #results .dartboard-panel .selected .arc:nth-child(3) {
-      fill: #56d1f3; }
+      fill: #68afeb; }
     #results .dartboard-panel .selected .arc:nth-child(4) {
-      fill: #50f0ed; }
+      fill: #56d1f3; }
     #results .dartboard-panel .selected .arc:nth-child(5) {
+      fill: #50f0ed; }
+    #results .dartboard-panel .selected .arc:nth-child(6) {
       fill: #48face; }
     #results .dartboard-panel .selected .arc.unfilled {
       fill: #46465d;
       stroke: #46465d; }
   #results .dartboard-panel .highlight {
     transition: all 0.3s; }
-    #results .dartboard-panel .highlight .arc:nth-child(1) {
-      fill: #7e35c7; }
     #results .dartboard-panel .highlight .arc:nth-child(2) {
-      fill: #3b98e5; }
+      fill: #7e35c7; }
     #results .dartboard-panel .highlight .arc:nth-child(3) {
-      fill: #26c4ef; }
+      fill: #3b98e5; }
     #results .dartboard-panel .highlight .arc:nth-child(4) {
-      fill: #21ece8; }
+      fill: #26c4ef; }
     #results .dartboard-panel .highlight .arc:nth-child(5) {
+      fill: #21ece8; }
+    #results .dartboard-panel .highlight .arc:nth-child(6) {
       fill: #16f8c0; }
     #results .dartboard-panel .highlight .arc.unfilled {
       fill: #303040;

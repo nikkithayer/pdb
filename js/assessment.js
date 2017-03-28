@@ -1,16 +1,20 @@
 $( document ).ready(function() {								
 
 $.getJSON( "./questions.json", function( json ) {
-	var questions = json;
+	var questions = json.descriptions;
 
 //scale up dartboard
 //refine colors
 //hover state on dartboard only if it's okay
+//concierge the dartboard - php read/write from file? Is it time to put this stuff into a database.
+
 
 // -- ASSESSMENT PAGE --
 	var quizPosition = 0;
 	var allowNext = false;
 	var quizIsDone = false;
+	var currentRating = 0;
+	var ratings = [];
 	iterateQuizPosition();
 	$("#thanks").hide();
 	drawDartboard();
@@ -19,6 +23,7 @@ $.getJSON( "./questions.json", function( json ) {
 		function(){
 			var buttonRating = $(this).text();
       addRating(buttonRating,quizPosition);
+      currentRating = buttonRating;
 		}
 	);	
 
@@ -26,8 +31,8 @@ $.getJSON( "./questions.json", function( json ) {
 		function(event){
 			if(allowNext){
 				iterateQuizPosition();
-				var stepId = "#step"+quizPosition;
 				resetQuizStatus();
+				logResponse();
 				allowNext = false;
 				if(quizIsDone){
 					showYourResponses();
@@ -36,9 +41,18 @@ $.getJSON( "./questions.json", function( json ) {
 		}
 	);
 	
+	function logResponse(){
+  	ratings.push(currentRating);
+ 	}
+	
 	function showYourResponses(){
 		$("#thanks").show();
+		console.log(ratings);
 	}
+	
+	$("#thanks button").click(function(){
+      window.location = "results.html?val="+ratings;
+	});
 	
 	function iterateQuizPosition(){
 		if(quizPosition == questions.length){
@@ -71,7 +85,7 @@ $.getJSON( "./questions.json", function( json ) {
 
   var width = $("div.dartboard-panel").width(),
     height = $("div.dartboard-panel").height(),
-    radius = Math.min(width, height) / 1.2,
+    radius = Math.min(width, height) / 1.3,
     spacing = .095;
 
   var svg = d3.select("div.dartboard-panel").append("svg")

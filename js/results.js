@@ -1,14 +1,80 @@
 $( document ).ready(function() {								
 $.getJSON( "./questions.json", function( json ) {
 var questions = json;
-
+var ratings = formatURLString(parseURL());
 //text doesn't show up except maybe on hover
 //correctly place distribution label
-//color code averages
+//selected state for active index part of change panel
+//take data from a post action when you load this up (involves calc average, change panel)
                                 
 drawDartboard();
 changePanel(calcLowest());
 
+function parseURL(){
+  var query = window.location.search.substring(5);
+  var URLresponses = query.split(",");
+  var newArr=[];
+  if(URLresponses.length < 12){
+    newArr = questions.ratings;
+  }else{
+    var newArr = [];
+    newArr.push(URLresponses);
+  }
+  return newArr;
+}
+
+function formatURLString(allData){
+  var formattedData = [];
+  var returnData={};
+  for(k=0;k<questions.descriptions.length;k++){
+      var newObj = [0,0,0,0,0];
+      for(l=0;l<allData.length;l++){
+        switch(parseInt(allData[l][k])){
+          case 1:
+            newObj[0]++;
+          break;
+          case 2:
+            newObj[1]++;
+          break;
+          case 3:
+            newObj[2]++;
+          break;
+          case 4:
+            newObj[3]++;
+          break;
+          case 5:
+            newObj[4]++;
+          break;
+        }
+      }
+      formattedData.push(newObj);
+  }
+  returnData.responses = allData.length;
+  returnData.data = formattedData;
+  return returnData;  
+}
+
+function calcAverage(index){
+  var total = 0;
+  var responses = ratings.responses;
+  for(j=0;j<ratings.data[0].length;j++){
+    total += (ratings.data[index][j]*(j+1));
+  }
+  total = total/responses;
+  return total.toFixed(1);
+}
+
+function calcLowest(){
+  var lowScore = {score: 5,index: 0};
+  for(i=0;i<ratings.data.length;i++){
+    var average = calcAverage(i);
+      if(average < lowScore.score){
+        lowScore.score = average;
+        lowScore.index = i;
+      }
+  }
+  return lowScore.index;
+}
 
 function drawDartboard(){
                                 
@@ -20,7 +86,7 @@ function drawDartboard(){
 
   var width = $("div.dartboard-panel").width(),
     height = $("div.dartboard-panel").height(),
-    radius = Math.min(width, height) / 1.2,
+    radius = Math.min(width, height) / 1.3,
     spacing = .095;
 
   var svg = d3.select("div.dartboard-panel").append("svg")
@@ -73,7 +139,7 @@ function drawDartboard(){
      .attr("class",function(d){ return "circle " + d.class;});
   
   var arcGroup = svg.selectAll("g")
-      .data(questions)
+      .data(questions.descriptions)
       .enter()
       .append("g")
       .attr("class","arcGroup")
@@ -81,21 +147,35 @@ function drawDartboard(){
       .attr("title",function(d,i){ return d.title;})
       .attr("transform", function(d,i){ return "translate(" + width / 2 + "," + height / 2 + ") rotate("+ 30*i +")";});
   
-  /*
+  
   var newText= arcGroup.append("text")
       .attr("x", 0)
       .attr("y", 0)
-      .attr("dy", "-18em")
+  //    .attr("dy", "-em")
+  //    .attr("dx", "1em")
       .text(function(d) { return d.title; })
       .attr("font-family", "sans-serif")
       .attr("font-weight", "lighter")
       .attr("font-size", "14px")
+//      .attr('baseline-shift', '400%')
+      .style('text-anchor', function(d,i){ 
+        var orientation;
+        if(i<6){
+          orientation = "right";
+        }else{
+          orientation = "left";
+        }
+        return orientation;
+      })
       .attr("fill", "white");
       
   svg.selectAll("text")
       .data(questions)
-      .attr("transform", function(d,i){ console.log(d,i); return "translate(" + 0 + "," + 0 + ") rotate("+ -30*i +")";});
-  */
+      .attr("transform", function(d,i){ 
+           return "translate(" + -170 + "," + -170 + ") rotate("+ -30*i +")";
+      })
+      .moveToFront();
+  
   
   var arc = d3.svg.arc()
       .innerRadius(function(d,i) { return (d.index + spacing / 2) * radius; })
@@ -173,22 +253,10 @@ function changePanel(index){
     $(".results-panel .content").append("<span class='lowest-score'>Lowest Rating</span>"); 
     colorCode = "dartboard-error";   
   }
-  $(".results-panel .content").append("<h1>"+questions[index].title+"</h1>");
+  $(".results-panel .content").append("<h1>"+questions.descriptions[index].title+"</h1>");
   $(".results-panel .content").append("<h2 class='"+colorCode+"'><span>Team average: </span>"+calcAverage(index)+"</h2>");
-  $(".results-panel .content").append("<p>"+questions[index].description+"</p>");
-  updateBarGraph(questions[index].ratings);
-}
-
-function calcAverage(index){
-  var ratings = questions[index].ratings;
-  var total = 0;
-  var responses = 0;
-  for(j=0;j<ratings.length;j++){
-    total += (ratings[j]*(j+1));
-    responses += ratings[j];
-  }
-  total = total/responses;
-  return total.toFixed(1);
+  $(".results-panel .content").append("<p>"+questions.descriptions[index].description+"</p>");
+  updateBarGraph(ratings.data[index]);
 }
 
 function updateBarGraph(data){
@@ -273,18 +341,6 @@ function circleRadii() {
     {index: .12, class: "circle-5"},
     {index: .05, class: "bullseye"}
   ];
-}
-
-function calcLowest(){
-  var lowScore = {score: 5,index: 0};
-  for(i=0;i<questions.length;i++){
-    var average = calcAverage(i);
-      if(average < lowScore.score){
-        lowScore.score = average;
-        lowScore.index = i;
-      }
-  }
-  return lowScore.index;
 }
 
 });
