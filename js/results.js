@@ -2,8 +2,6 @@ $( document ).ready(function() {
 $.getJSON( "./questions.json", function( json ) {
 var questions = json;
 var ratings = formatURLString(parseURL());
-//correctly place distribution label
-//selected state for active index part of change panel
 //re-style so text is on right?
                                 
 drawDartboard();
@@ -326,29 +324,36 @@ function updateBarGraph(data){
    .attr("width", barwidth/5)
    .attr("height", function(d){ return (d*12)+3;})
    .attr("x", function(d,i){ return singleBar*i;})
-   .attr("y", function(d){ return barheight-((d*12)+20);})
+   .attr("y", function(d){ return barheight-((d*12)+40);})
    .attr("class",function(d){ return "getrect ";});
    
    rects.exit().remove();
     rects.transition().duration(750)
-      .attr("y", function(d){ return barheight-((d*12)+20);})
+      .attr("y", function(d){ return barheight-((d*12)+40);})
       .attr("height", function(d) { return (d*12)+3; });
-
   
   var texts = barsvg.selectAll("text")
     .data(data);
     
     texts.enter().append("text")
       .attr("x", function(d,i){ return (i*singleBar)+(singleBar/2); })
-      .attr("y", function(d){ return barheight;})
+      .attr("y", function(d){ return barheight-20;})
       .style("text-anchor", "end")
       .text(function(d){ return d;});
      texts.exit().remove();
   
       texts.transition().duration(750)
-        .text(function(d){ return d;});    
+        .text(function(d){ return d;});
+           
+barsvg.append("text")
+  .attr("class", "legend")
+  .attr("width",barwidth)
+  .attr("height","15")
+  .style('text-anchor', "middle")
+  .attr("x",function(d){ return barwidth/2;})
+  .attr("y",function(d){ return barheight;})
+  .text("Response Distribution");
 }
-
 function circleRadii() {
   return [
     {index: .5, class: "circle-1"},

@@ -82,8 +82,6 @@ p{ color: lighten($bg-color, 75%); }
 
 span{
   text-transform: uppercase;
-  letter-spacing: 0.5;
-  font-size: 0.7em;
   color: lighten($bg-color,40%);
   &.lowest-score{
     color: lighten($dartboard-error,5%);

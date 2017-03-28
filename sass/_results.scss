@@ -20,6 +20,9 @@
       
       .selected{
         transition: $transition-short;
+        text{
+          fill: lighten($bg-color, 70%);
+        }
         .arc{ 
           &:nth-child(2){ fill: lighten($dartboard-lowest, 15%);}
           &:nth-child(3){ fill: lighten($dartboard-second-lowest, 15%);}
@@ -53,7 +56,7 @@
       text{
       	font-family: $aktiv-family;
       	font-size: 0.8em;
-      	fill: lighten($bg-color, 30%);
+      	fill: lighten($bg-color, 20%);
       }
   }
   .results-panel{
@@ -68,19 +71,12 @@
     	margin-bottom: $small-margin;
     	span{ font-weight: lighter; color: lighten($bg-color,60%); }
   	}
-  	.dist-label{ 
-    	position: absolute; 
-    	bottom: 7px; 
-    	color:lighten($bg-color,45%); 
-    	width: calc(100% - 140px); 
-    	text-align: center; 
-    }
   	svg{
     	position: absolute;
     	bottom: $big-margin;
       border-top: 1px solid $soft-white-border;
       background-color: lighten($bg-color, 3%);
-      border-radius: 2;
+      border-radius: 2px;
       padding: $small-margin;
     	rect{
 //compensating for the filter element that takes the first style
@@ -92,6 +88,13 @@
     	}
     	text{
       	fill: white;
+      	&.legend{
+        	fill: lighten($bg-color,50%);
+        	font-size: 0.75em;
+        	text-transform: uppercase;
+        	letter-spacing: 0.5;
+        	font-family: $aktiv-family;
+      	}
     	}
   	}
   }
