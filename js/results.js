@@ -2,13 +2,24 @@ $( document ).ready(function() {
 $.getJSON( "./questions.json", function( json ) {
 var questions = json;
 var ratings = formatURLString(parseURL());
-//text doesn't show up except maybe on hover
 //correctly place distribution label
 //selected state for active index part of change panel
-//take data from a post action when you load this up (involves calc average, change panel)
+//re-style so text is on right?
                                 
 drawDartboard();
-changePanel(calcLowest());
+selectOn(calcLowest());
+populateFooter();
+
+function populateFooter(){
+var format = d3.time.format("%b %d");
+var dateConvert = format(new Date());
+  $("footer h2.date").text(dateConvert);
+  $("footer h2.total-responses").text(ratings.responses);
+  $("footer h2.lowest-average").text(calcAverage(calcLowest()));
+  $("footer h2.highest-average").text(calcAverage(calcHighest()));
+  $("footer p.lowest-average").text(questions.descriptions[calcLowest()].title);
+  $("footer p.highest-average").text(questions.descriptions[calcHighest()].title);
+}
 
 function parseURL(){
   var query = window.location.search.substring(5);
@@ -74,6 +85,18 @@ function calcLowest(){
       }
   }
   return lowScore.index;
+}
+
+function calcHighest(){
+  var highScore = {score: 0,index: 0};
+  for(i=0;i<ratings.data.length;i++){
+    var average = calcAverage(i);
+      if(average > highScore.score){
+        highScore.score = average;
+        highScore.index = i;
+      }
+  }
+  return highScore.index;
 }
 
 function drawDartboard(){
@@ -151,28 +174,23 @@ function drawDartboard(){
   var newText= arcGroup.append("text")
       .attr("x", 0)
       .attr("y", 0)
-  //    .attr("dy", "-em")
-  //    .attr("dx", "1em")
+      .attr("dy", "0em")
+      .attr("dx", "0em")
       .text(function(d) { return d.title; })
-      .attr("font-family", "sans-serif")
-      .attr("font-weight", "lighter")
-      .attr("font-size", "14px")
-//      .attr('baseline-shift', '400%')
       .style('text-anchor', function(d,i){ 
         var orientation;
         if(i<6){
-          orientation = "right";
+          orientation = "start";
         }else{
-          orientation = "left";
+          orientation = "end";
         }
         return orientation;
-      })
-      .attr("fill", "white");
+      });
       
   svg.selectAll("text")
-      .data(questions)
+      .data(questions.descriptions)
       .attr("transform", function(d,i){ 
-           return "translate(" + -170 + "," + -170 + ") rotate("+ -30*i +")";
+           return "translate(" + 50 + "," + -215 + ") rotate("+ -30*i +")";
       })
       .moveToFront();
   
@@ -184,7 +202,7 @@ function drawDartboard(){
       .startAngle(0)
       .endAngle(0.1667 * Math.PI);
   
-  var isFilled = calcAverage(0);
+  var isFilled;
   var arcPath = arcGroup.selectAll("path")
       .data(circleRadii)
       .enter()
@@ -205,10 +223,7 @@ function drawDartboard(){
       .moveToFront();
   
   arcGroup.on("click",function(){
-    d3.selectAll(".arcGroup").classed("selected",false).classed("highlight",false);
-    var sel = d3.select(this);
-    sel.classed("selected",true);
-    changePanel(getIndex(sel));
+    selectOn(d3.select(this).attr("data"));
   });
   
   arcGroup.on("mouseover",function(){
@@ -218,12 +233,15 @@ function drawDartboard(){
   });
   
   arcGroup.on("mouseout",function(){
-    d3.selectAll(".arcGroup").classed("highlight",false);
+     d3.selectAll(".arcGroup").classed("highlight",false); 
   });
 }  
 
-function getIndex(sel){
-  return sel.attr("data");
+function selectOn(index){
+  d3.selectAll(".arcGroup").classed("selected",false).classed("highlight",false);
+  var sel = d3.select("[data='"+index+"']");
+  sel.classed("selected",true);
+  changePanel(index);  
 }
 
 function changePanel(index){
@@ -246,7 +264,6 @@ function changePanel(index){
       colorCode = "dartboard-highest";
     break;
   }
-  
   
   $(".results-panel .content").html("");
   if(calcLowest()==index){

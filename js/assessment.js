@@ -6,7 +6,6 @@ $.getJSON( "./questions.json", function( json ) {
 //scale up dartboard
 //refine colors
 //hover state on dartboard only if it's okay
-//concierge the dartboard - php read/write from file? Is it time to put this stuff into a database.
 
 
 // -- ASSESSMENT PAGE --
@@ -47,7 +46,6 @@ $.getJSON( "./questions.json", function( json ) {
 	
 	function showYourResponses(){
 		$("#thanks").show();
-		console.log(ratings);
 	}
 	
 	$("#thanks button").click(function(){

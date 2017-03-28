@@ -32,6 +32,9 @@
       
       .highlight{
         transition: $transition-short;
+        text{
+          fill: lighten($bg-color, 70%);
+        }
         .arc{
           &:nth-child(2){ fill: lighten($dartboard-lowest, 5%);}
           &:nth-child(3){ fill: lighten($dartboard-second-lowest, 5%);}
@@ -47,7 +50,11 @@
         stroke-width: 1;
         fill: $dartboard-highest;
       }
-
+      text{
+      	font-family: $aktiv-family;
+      	font-size: 0.8em;
+      	fill: lighten($bg-color, 30%);
+      }
   }
   .results-panel{
   	width: 40%;
@@ -83,7 +90,9 @@
       	&:nth-child(3){ fill: $dartboard-second-lowest;}
       	&:nth-child(2){ fill: $dartboard-lowest;}
     	}
-    	text{ fill: white; }
+    	text{
+      	fill: white;
+    	}
   	}
   }
   footer{

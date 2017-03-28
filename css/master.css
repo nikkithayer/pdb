@@ -111,6 +111,8 @@
       stroke: #46465d; }
   #results .dartboard-panel .highlight {
     transition: all 0.3s; }
+    #results .dartboard-panel .highlight text {
+      fill: #d9d9e2; }
     #results .dartboard-panel .highlight .arc:nth-child(2) {
       fill: #7e35c7; }
     #results .dartboard-panel .highlight .arc:nth-child(3) {
@@ -128,6 +130,10 @@
     stroke: rgba(31, 42, 60, 0.035);
     stroke-width: 1;
     fill: #07EEB5; }
+  #results .dartboard-panel text {
+    font-family: "aktiv-grotesk", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 0.8em;
+    fill: #676788; }
 #results .results-panel {
   width: 40%;
   min-width: 500px;
