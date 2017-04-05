@@ -7,6 +7,7 @@
         stroke-width: 1;
         stroke: rgba(31,42,60,0.035);
         fill: none;
+        cursor: pointer;
       }
       
       .unfilled{ fill: $bg-color; stroke: $bg-color;}
@@ -74,6 +75,7 @@
   	svg{
     	position: absolute;
     	bottom: $big-margin;
+    	cursor: pointer;
       border-top: 1px solid $soft-white-border;
       background-color: lighten($bg-color, 3%);
       border-radius: 2px;
@@ -88,6 +90,7 @@
     	}
     	text{
       	fill: white;
+      	cursor: pointer;
       	&.legend{
         	fill: lighten($bg-color,50%);
         	font-size: 0.75em;

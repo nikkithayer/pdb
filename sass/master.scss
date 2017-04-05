@@ -55,13 +55,14 @@ button{
 	padding: 10px 30px;
 	margin: $small-margin 0;
 	border: none;
-		background-color: $dartboard-highest; 
+	background-color: $dartboard-highest; 
 	font-size: 0.8em;
 	font-weight: 600;
 	transition: $transition-long;
 	outline: none;
 	border-radius: 2px;
 	color: $white;
+	cursor: pointer;
 }
 
 
@@ -91,6 +92,7 @@ button{
   &:nth-child(5){ fill: lighten($bg-color, 10%);}
   &.selected{
     fill: rgba(255,255,255,0.01);
+    cursor: pointer;
   }
   &.unselected{ fill: $bg-color;}
 }
