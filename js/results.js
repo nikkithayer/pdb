@@ -2,7 +2,10 @@ $( document ).ready(function() {
 $.getJSON( "./questions.json", function( json ) {
 var questions = json;
 var ratings = formatURLString(parseURL());
-//re-style so text is on right?
+//fix labels (floating/visible?)
+//add click cursor on hover
+//add overall average / highest variation in footer?
+
                                 
 drawDartboard();
 selectOn(calcLowest());

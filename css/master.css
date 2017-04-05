@@ -1,3 +1,35 @@
+#assessment div#intro {
+  color: #252531;
+  background: url(../intro-bg.png) no-repeat top center #fff;
+  background-size: contain;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 2; }
+  #assessment div#intro .body-text {
+    position: absolute;
+    background-color: #fff;
+    top: 20vh;
+    left: 10%;
+    height: 50vh;
+    width: 40%;
+    padding: 5%; }
+    #assessment div#intro .body-text h1 {
+      color: #13E1DD;
+      font-size: 2.5em; }
+    #assessment div#intro .body-text h2 {
+      margin: 1vh 0 5vh;
+      font-family: "futura-pt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+      font-weight: lighter;
+      color: #676788; }
+    #assessment div#intro .body-text p {
+      color: #252531;
+      font-size: 1.125em; }
+    #assessment div#intro .body-text button {
+      font-size: 1em;
+      padding: 15px 35px; }
 #assessment .dartboard-panel {
   overflow: hidden;
   width: 60%;
@@ -11,18 +43,6 @@
     color: #07EEB5; }
   #assessment .assessment-panel p {
     margin-left: 35px; }
-  #assessment .assessment-panel button {
-    text-transform: uppercase;
-    padding: 10px 30px;
-    margin: 15px 0;
-    border: none;
-    background-color: #07EEB5;
-    font-size: 0.8em;
-    font-weight: 600;
-    transition: all 1s;
-    outline: none;
-    border-radius: 2px;
-    color: #fff; }
   #assessment .assessment-panel div#thanks {
     padding: 30px;
     height: 100vh;
@@ -258,6 +278,19 @@ h1 {
 
 p {
   color: #e7e7ed; }
+
+button {
+  text-transform: uppercase;
+  padding: 10px 30px;
+  margin: 15px 0;
+  border: none;
+  background-color: #07EEB5;
+  font-size: 0.8em;
+  font-weight: 600;
+  transition: all 1s;
+  outline: none;
+  border-radius: 2px;
+  color: #fff; }
 
 .bullseye {
   stroke: rgba(31, 42, 60, 0.035);

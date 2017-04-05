@@ -50,6 +50,21 @@ h1{
 }
 p{ color: lighten($bg-color, 75%); }
 
+button{
+	text-transform: uppercase;
+	padding: 10px 30px;
+	margin: $small-margin 0;
+	border: none;
+		background-color: $dartboard-highest; 
+	font-size: 0.8em;
+	font-weight: 600;
+	transition: $transition-long;
+	outline: none;
+	border-radius: 2px;
+	color: $white;
+}
+
+
 .bullseye{ stroke: rgba(31,42,60,0.035); stroke-width: 1; fill: $dartboard-highest; }
 .circle-1{ fill: $dartboard-lowest; filter:none!important;}
 .circle-2{ fill: $dartboard-second-lowest;}

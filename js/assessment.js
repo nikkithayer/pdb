@@ -4,9 +4,8 @@ $.getJSON( "./questions.json", function( json ) {
 	var questions = json.descriptions;
 
 //scale up dartboard
-//refine colors
-//hover state on dartboard only if it's okay
-
+//write introduction/start screen
+//thank you pushes down assessment instead of replacing it
 
 // -- ASSESSMENT PAGE --
 	var quizPosition = 0;
@@ -14,6 +13,7 @@ $.getJSON( "./questions.json", function( json ) {
 	var quizIsDone = false;
 	var currentRating = 0;
 	var ratings = [];
+	showIntroMessage();
 	iterateQuizPosition();
 	$("#thanks").hide();
 	drawDartboard();
@@ -44,6 +44,14 @@ $.getJSON( "./questions.json", function( json ) {
   	ratings.push(currentRating);
  	}
 	
+   function showIntroMessage(){
+     $("#intro").show();
+   }
+   
+   $("#intro button").click(function(){
+     $("#intro").hide();
+   });
+
 	function showYourResponses(){
 		$("#thanks").show();
 	}
