@@ -4,7 +4,6 @@ $.getJSON( "./questions.json", function( json ) {
 	var questions = json.descriptions;
 
 //scale up dartboard
-//write introduction/start screen
 //thank you pushes down assessment instead of replacing it
 
 // -- ASSESSMENT PAGE --
@@ -54,6 +53,7 @@ $.getJSON( "./questions.json", function( json ) {
 
 	function showYourResponses(){
 		$("#thanks").show();
+		$('.quiz').hide();
 	}
 	
 	$("#thanks button").click(function(){

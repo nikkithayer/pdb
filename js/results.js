@@ -2,8 +2,6 @@ $( document ).ready(function() {
 $.getJSON( "./questions.json", function( json ) {
 var questions = json;
 var ratings = formatURLString(parseURL());
-//fix labels (floating/visible?)
-//add click cursor on hover
 //add overall average / highest variation in footer?
 
                                 
@@ -191,7 +189,7 @@ function drawDartboard(){
   svg.selectAll("text")
       .data(questions.descriptions)
       .attr("transform", function(d,i){ 
-           return "translate(" + 50 + "," + -215 + ") rotate("+ -30*i +")";
+           return "translate(" + 55 + "," + -235 + ") rotate("+ -30*i +")";
       })
       .moveToFront();
   
