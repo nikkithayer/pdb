@@ -353,12 +353,20 @@ function updateBarGraph(data){
       .attr("x", function(d,i){ return (i*singleBar)+(singleBar/2); })
       .attr("y", function(d){ return barheight-20;})
       .style("text-anchor", "end")
-      .text(function(d){ return d;});
+      .text(function(d,i){ return i+1;});
      texts.exit().remove();
   
-      texts.transition().duration(750)
-        .text(function(d,i){ return i+1;});
-           
+  var labels = barsvg.selectAll("test")
+    .data(data);
+    
+    labels.enter().append("text")
+      .attr("x", function(d,i){ return (i*singleBar)+(singleBar/2); })
+      .attr("y", function(d,i){ return barheight-((d*12)+3)-50;})
+      .style("text-anchor", "end")
+      .attr("class","legend")
+      .text(function(d){ return d;});
+    labels.exit().remove();
+               
 barsvg.append("text")
   .attr("class", "legend")
   .attr("width",barwidth)
