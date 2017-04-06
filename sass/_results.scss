@@ -122,11 +122,17 @@
           font-family: $futura-family;
           font-size: 1.8em;
           font-weight: 100;
-          &.lowest-average{ color: lighten($dartboard-lowest,20%); }
-          &.highest-average{ color: $dartboard-highest; }
-          &.total-responses{ color: $dartboard-middle; }
-          &.date{ color: $white; }
         }
+          &.lowest-average{ 
+            h2 {color: lighten($dartboard-lowest,20%); }
+            cursor: pointer;
+          }
+          &.highest-average{ 
+            h2{ color: $dartboard-highest; }
+            cursor: pointer;
+          }
+          &.total-responses h2{ color: $dartboard-middle; }
+          &.date h2{ color: $white; }
       }
     }
       &:after{

@@ -104,4 +104,8 @@ span{
     color: lighten($dartboard-error,5%);
     letter-spacing: 1;
   }
+  &.highest-score{
+    color: $dartboard-highest;
+    letter-spacing: 1;
+  }
 }

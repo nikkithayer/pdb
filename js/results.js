@@ -2,6 +2,7 @@ $( document ).ready(function() {
 $.getJSON( "./questions.json", function( json ) {
 var questions = json;
 var ratings = formatURLString(parseURL());
+
 //add overall average / highest variation in footer?
 
                                 
@@ -12,13 +13,21 @@ populateFooter();
 function populateFooter(){
 var format = d3.time.format("%b %d");
 var dateConvert = format(new Date());
-  $("footer h2.date").text(dateConvert);
-  $("footer h2.total-responses").text(ratings.responses);
-  $("footer h2.lowest-average").text(calcAverage(calcLowest()));
-  $("footer h2.highest-average").text(calcAverage(calcHighest()));
-  $("footer p.lowest-average").text(questions.descriptions[calcLowest()].title);
-  $("footer p.highest-average").text(questions.descriptions[calcHighest()].title);
+  $("footer .date h2").text(dateConvert);
+  $("footer .total-responses h2").text(ratings.responses);
+  $("footer .lowest-average h2").text(calcAverage(calcLowest()));
+  $("footer .highest-average h2").text(calcAverage(calcHighest()));
+  $("footer .lowest-average p").text(questions.descriptions[calcLowest()].title);
+  $("footer .highest-average p").text(questions.descriptions[calcHighest()].title);
 }
+
+$("li.highest-average").click(function(){
+  selectOn(calcHighest());
+});
+
+$("li.lowest-average").click(function(){
+  selectOn(calcLowest());
+});
 
 function parseURL(){
   var query = window.location.search.substring(5);
@@ -266,8 +275,12 @@ function changePanel(index){
   
   $(".results-panel .content").html("");
   if(calcLowest()==index){
-    $(".results-panel .content").append("<span class='lowest-score'>Lowest Rating</span>"); 
+    $(".results-panel .content").append("<span class='lowest-score'>Lowest Average</span>"); 
     colorCode = "dartboard-error";   
+  }
+  if(calcHighest()==index){
+    $(".results-panel .content").append("<span class='highest-score'>Highest Average</span>"); 
+    colorCode = "dartboard-highest";   
   }
   $(".results-panel .content").append("<h1>"+questions.descriptions[index].title+"</h1>");
   $(".results-panel .content").append("<h2 class='"+colorCode+"'><span>Team average: </span>"+calcAverage(index)+"</h2>");

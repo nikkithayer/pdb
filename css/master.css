@@ -218,14 +218,18 @@
         font-family: "futura-pt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
         font-size: 1.8em;
         font-weight: 100; }
-        #results footer ol li h2.lowest-average {
+      #results footer ol li.lowest-average {
+        cursor: pointer; }
+        #results footer ol li.lowest-average h2 {
           color: #a470d9; }
-        #results footer ol li h2.highest-average {
+      #results footer ol li.highest-average {
+        cursor: pointer; }
+        #results footer ol li.highest-average h2 {
           color: #07EEB5; }
-        #results footer ol li h2.total-responses {
-          color: #11BCEB; }
-        #results footer ol li h2.date {
-          color: #fff; }
+      #results footer ol li.total-responses h2 {
+        color: #11BCEB; }
+      #results footer ol li.date h2 {
+        color: #fff; }
   #results footer:after {
     content: '';
     width: 100px;
@@ -360,6 +364,9 @@ span {
   color: #8282a0; }
   span.lowest-score {
     color: #ff5677;
+    letter-spacing: 1; }
+  span.highest-score {
+    color: #07EEB5;
     letter-spacing: 1; }
 
 /*# sourceMappingURL=master.css.map */

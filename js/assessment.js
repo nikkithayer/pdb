@@ -4,7 +4,6 @@ $.getJSON( "./questions.json", function( json ) {
 	var questions = json.descriptions;
 
 //scale up dartboard
-//thank you pushes down assessment instead of replacing it
 
 // -- ASSESSMENT PAGE --
 	var quizPosition = 0;
