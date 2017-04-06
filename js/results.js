@@ -346,7 +346,7 @@ function updateBarGraph(data){
      texts.exit().remove();
   
       texts.transition().duration(750)
-        .text(function(d){ return d;});
+        .text(function(d,i){ return i+1;});
            
 barsvg.append("text")
   .attr("class", "legend")
