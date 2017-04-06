@@ -94,7 +94,7 @@ button{
     fill: rgba(255,255,255,0.01);
     cursor: pointer;
   }
-  &.unselected{ fill: $bg-color;}
+  &.unselected{ fill: $bg-color; cursor: pointer;}
 }
 
 span{

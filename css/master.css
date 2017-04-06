@@ -357,7 +357,8 @@ button {
     fill: rgba(255, 255, 255, 0.01);
     cursor: pointer; }
   .arc.unselected {
-    fill: #252531; }
+    fill: #252531;
+    cursor: pointer; }
 
 span {
   text-transform: uppercase;
