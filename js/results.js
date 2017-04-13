@@ -284,7 +284,27 @@ function changePanel(index){
   }
   $(".results-panel .content").append("<h1>"+questions.descriptions[index].title+"</h1>");
   $(".results-panel .content").append("<h2 class='"+colorCode+"'><span>Team average: </span>"+calcAverage(index)+"</h2>");
-  $(".results-panel .content").append("<p>"+questions.descriptions[index].description+"</p>");
+  if(questions.descriptions[index].intro){
+    $(".results-panel .content").append("<p>"+questions.descriptions[index].intro+"</p>");  
+  }
+  if(questions.descriptions[index].tools){
+    $(".results-panel .content").append("<h3>Tools</h3");  
+    for(m=0;m<questions.descriptions[index].tools.length;m++){
+      if(questions.descriptions[index].tools[m].link){
+          $(".results-panel .content").append("<a href='>"+questions.descriptions[index].tools[m].link+"'>"+questions.descriptions[index].tools[m].name+"</a>");
+      }else{
+        $(".results-panel .content").append("<p>"+questions.descriptions[index].tools[m].name+"</p>");      
+      }
+    }
+  }
+  if(questions.descriptions[index].furtherReading){
+    $(".results-panel .content").append("<h3>Further Reading</h3");  
+    for(m=0;m<questions.descriptions[index].furtherReading.length;m++){
+      $(".results-panel .content").append("<p><a href='>"+questions.descriptions[index].furtherReading[m].link+"'>"+questions.descriptions[index].furtherReading[m].title+"</a></p>");
+    }
+  }
+  
+  //if there's further reading, list it and link it
   updateBarGraph(ratings.data[index]);
 }
 

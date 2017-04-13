@@ -66,11 +66,19 @@
   	z-index: 1;
   	position: relative;    
   	padding: $big-margin;
+  	font-size: 0.85em;
   	h1{color: $white;}
   	h2{
     	font-family: $futura-family;
     	margin-bottom: $small-margin;
     	span{ font-weight: lighter; color: lighten($bg-color,60%); }
+  	}
+  	h3{
+    	font-family: $futura-family;
+    	font-weight: 300;
+    	color: lighten($bg-color,60%);
+    	text-transform: uppercase;
+    	margin-top: $small-margin;
   	}
   	svg{
     	position: absolute;

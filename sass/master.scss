@@ -41,6 +41,11 @@ div.container{
 	flex-grow: 1;
 }
 
+a{
+  text-decoration: none;
+  color: $dartboard-highest;
+}
+
 h1{
   font-family: $futura-family;
   text-transform: uppercase;

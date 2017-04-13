@@ -1,23 +1,22 @@
 #assessment div#intro {
   color: #252531;
-  background: url(../intro-bg.png) no-repeat top center #fff;
-  background-size: contain;
+  background: linear-gradient(to bottom right, rgba(113, 48, 179, 0.55), rgba(17, 188, 235, 0.55)), url(../intro-bg.jpg) no-repeat top center #fff;
+  background-size: 100%;
   width: 100%;
   position: fixed;
-  top: 0;
+  top: 70px;
   left: 0;
-  height: 100vh;
+  height: calc(100vh - 70px);
   z-index: 2; }
   #assessment div#intro .body-text {
     position: absolute;
-    background-color: #fff;
-    top: 20vh;
-    left: 10%;
-    height: 50vh;
-    width: 40%;
-    padding: 5%; }
+    background-color: rgba(255, 255, 255, 0.85);
+    top: 12vh;
+    left: 25%;
+    width: 50%;
+    padding: 35px; }
     #assessment div#intro .body-text h1 {
-      color: #13E1DD;
+      color: #7130B3;
       font-size: 2.5em; }
     #assessment div#intro .body-text h2 {
       margin: 1vh 0 5vh;
@@ -29,7 +28,24 @@
       font-size: 1.125em; }
     #assessment div#intro .body-text button {
       font-size: 1em;
+      background-color: #7130B3;
+      margin-top: 35px;
       padding: 15px 35px; }
+  #assessment div#intro .c5-rep {
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #07EEB5;
+    text-align: right;
+    padding: 15px; }
+    #assessment div#intro .c5-rep a {
+      color: #fff;
+      text-decoration: none; }
+      #assessment div#intro .c5-rep a img {
+        width: 150px;
+        padding-left: 5px; }
 #assessment .dartboard-panel {
   overflow: hidden;
   width: 60%;
@@ -162,7 +178,8 @@
   min-width: 500px;
   z-index: 1;
   position: relative;
-  padding: 35px; }
+  padding: 35px;
+  font-size: 0.85em; }
   #results .results-panel h1 {
     color: #fff; }
   #results .results-panel h2 {
@@ -171,6 +188,12 @@
     #results .results-panel h2 span {
       font-weight: lighter;
       color: #bcbccc; }
+  #results .results-panel h3 {
+    font-family: "futura-pt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: 300;
+    color: #bcbccc;
+    text-transform: uppercase;
+    margin-top: 15px; }
   #results .results-panel svg {
     position: absolute;
     bottom: 35px;
@@ -275,6 +298,10 @@ header {
 div.container {
   display: flex;
   flex-grow: 1; }
+
+a {
+  text-decoration: none;
+  color: #07EEB5; }
 
 h1 {
   font-family: "futura-pt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
