@@ -2,18 +2,21 @@
 	"descriptions": [{
 		"title": "Clear Roles",
 		"description": "Our team has clearly defined roles. Roles and responsibilities match the skills and abilities of the team. Team members understand what is expected of them.",
+		"previous":"1.3",
 		"intro": "In any project, it’s really helpful to include some time for the team to get on the same page about roles. This can happen both as a group and in 1:1 conversations, ideally at the start of the project. For example, at Carbon Five we will have the Product Manager and the Tech Lead sit down before the project starts to discuss how they see their respective roles and what they would most value from the other person.",
 		"tools": [{"name":"Stakeholder map"},{"name":"RACI chart", "link": "http://racichart.org/"}],
 		"furtherReading": [{"title":"The Biggest Mistake You (Probably) Make with Teams", "link": "https://hbr.org/2012/04/the-biggest-mistake-you-probab"}]
 	}, {
 		"title": "Understand Process",
 		"description": "We have a shared understanding of our process.",
+		"previous":"2.3",
 		"intro": "Understanding--and agreeing on--the process your team is using is one of those things you never think about until it’s going wrong. This is one of the most common areas of challenge we see at Carbon Five, often because we are introducing a new process to teams. This isn’t about having a process-heavy team. It isn’t about choosing a particular process over others. This dimension is really about whether your team is on the same page about the way you work together.",
 		"tools": [{"name": "The most powerful tool we use to tweak process is regular reflections. If you’re not already doing these, start now!"},{"name":"Start, Stop, Continue","link":"https://www.mountaingoatsoftware.com/blog/a-simple-way-to-run-a-sprint-retrospective"}],
 		"furtherReading": [{"name":"Agile Retrospectives: Making Good Teams Great ","link":"https://www.amazon.com/dp/B00B03SRJW"}]
 	}, {
 		"title": "Experience in Software",
 		"description": "Our team has previous experience delivering projects like this one.",
+		"previous":"2.1",
 		"intro": "It might seem like this isn’t something you can improve: you’ve either done software or you haven’t. But if this is a challenge on your team there are things you can do to mitigate the risks. There are two main ways to shift the needle quickly: Hire or study.",
     "tools": [{"name": "Studying can involve reading a bunch of books about software, and you should do that. But studying can also be about learning to ask good questions."}, {"name": "Julia Evans wrote a great post about how engineers can learn to ask questions, but it can help non-engineers too.", "link": "https://jvns.ca/blog/good-questions/"}],
     "furtherReading": [{"title": "Kent Beck’s Extreme Programming Explained","link": "https://www.amazon.com/Extreme-Programming-Explained-Embrace-Change/dp/0321278658"},
@@ -21,45 +24,54 @@
 	}, {
 		"title": "Experts in Our Field",
 		"description": "Our team has expertise in the subject matter of our product.",
+		"previous":"3.1",
 		"intro": "This isn’t about becoming an instant expert. This is about your team acquiring enough expertise in the field to be able to come up with the right solutions and make the right tradeoffs in your product.",
     "tools": [{"name": "If you’re not experts in your domain, user research techniques can help you.", "link": "http://blog.carbonfive.com/2017/01/04/the-carbon-five-guide-to-user-research-introduction/"}]
 	}, {
 		"title": "Clear, Shared Vision",
 		"description": "There is a vision for this product and it has been clearly communicated. Team members have a shared understanding of what they’re trying to achieve.",
+		"previous":"2.6",
 		"intro": "How aligned your team is on vision affects the product at every level - from being able to get buy-in or funding, to making day-to-day decisions on how to implement features or prioritize work. If you don’t know what you’re working towards and why, you’re going to lose focus. Ensuring the vision is shared sometimes means making it more tactical.",
 		"tools": [{"name":"An experience map is a great tool for helping a team understand how the vision translates into what they’re going to build. (Need good link)"}]
 	}, {
 		"title": "Talent is Valued",
 		"description": "Team members feel that the work they do is respected and their contributions to the work are valuable.",
+		"previous":"2.9",
 		"intro": "We all like to feel that we’re valued on a team. If your team is struggling with this, you can try adopting some of the tools developed by veteran coach Kim Scott:",
 		"tools": [{"name":"Candor Coach App","link": "https://itunes.apple.com/us/app/candor-coach/id1199122197"}],
 		"furtherReading":[{"title":"Radical Candor","link":"https://www.radicalcandor.com/the-book/"}]
 	}, {
 		"title": "Challenge",
 		"description": "Team members feel challenged by their work and think the work is important.",
+		"previous":"1.7",
 		"intro": "Here’s a tough one - your team doesn’t feel challenged, or doesn’t feel that their work is important. If the work just isn’t that hard, what do you do?",
 		"tools":[{"name":"Understanding how work is perceived is a good start."},{"name":"Try Matt Le May’s status vs impact matrix","link":"https://medium.com/on-human-centric-systems/on-high-status-work-and-low-status-work-78c0ce8c19bb"}]
 	}, {
 		"title": "Debate and Decide Together",
 		"description": "We are comfortable voicing our opinions, debating and deciding together on this team.",
+		"previous":"3.3",
 		"intro": "You get a lot of value out of building enough trust that healthy debate and shared responsibility for decisions is a reality. You can use almost any regular meeting to create opportunities: retro is particulary useful.",
 		"furtherReading":[{"title":"Tribal Leadership","link":"https://www.amazon.com/dp/B006IDG1K6/"}]
 	}, {
 		"title": "Minimum Viable Product",
 		"description": "Our team has defined the smallest version that will provide value to users so that assumptions can be tested early and feedback incorporated into iterative builds.",
+		"previous":"3.4",
 		"intro": "Whatever stage you’re at, you can always build and release a software product incrementally. In order to put this into action, Story Mapping is a really powerful technique.",
     "furtherReading":[{"title": "The Lean Startup","link": "http://theleanstartup.com/book"},{"title": "User Story Mapping", "link": "http://jpattonassociates.com/user-story-mapping/"}]
 	}, {
 		"title": "Unique Value Proposition",
 		"description": "Our team understands the unique attributes of this product that will satisfy a particular group of users such that they embrace this product over other options.",
+		"previous":"1.9",
 		"furtherReading":[{"title":"Business Model Generation","link":"https://www.amazon.com/dp/B06X426D4F/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1"},{"title":"Inspired","link":"https://www.amazon.com/Inspired-Create-Products-Customers-Love/dp/0981690408/ref=sr_1_1?ie=UTF8&s=books&qid=1209491338&sr=8-1"}]
 	}, {
 		"title": "Metrics",
 		"description": "We have defined success and we use quality metrics to drive product decisions.",
+		"previous":"2.5",
     "furtherReading":[{"title":"Lean Analytics","link":"https://www.amazon.com/Lean-Analytics-Better-Startup-Faster-ebook/dp/B00AG66LTM"},{"title":"If you have a metrics question, Avinash Kaushik probably has an answer","link":"https://www.kaushik.net/avinash/biggest-web-analysts-mistake-how-to-avoid/"}]
 	}, {
 		"title": "Product/Market Fit",
 		"description": "We are confident that our product delivers specific value tailored to our intended user group. In the case of a consumer product, we know that there are enough potential buyers for the product to be viable.",
+		"previous":"2.1",
 		"furtherReading": [{"title":"Running Lean","link":"https://www.amazon.com/Running-Lean-Iterate-Works-OReilly/dp/1449305172"},{"title":"12 Things about Product-Market Fit","link":"http://a16z.com/2017/02/18/12-things-about-product-market-fit/"}]
 	}],
 	"ratings": [

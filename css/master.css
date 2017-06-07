@@ -183,8 +183,7 @@
   #results .results-panel h1 {
     color: #fff; }
   #results .results-panel h2 {
-    font-family: "futura-pt", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    margin-bottom: 15px; }
+    font-family: "futura-pt", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
     #results .results-panel h2 span {
       font-weight: lighter;
       color: #bcbccc; }
@@ -194,6 +193,14 @@
     color: #bcbccc;
     text-transform: uppercase;
     margin-top: 15px; }
+  #results .results-panel h4 {
+    margin-top: 5px;
+    font-weight: normal;
+    color: #9f9fb6;
+    opacity: 0.85;
+    margin-bottom: 15px; }
+    #results .results-panel h4 span {
+      color: #fff; }
   #results .results-panel svg {
     position: absolute;
     bottom: 35px;

@@ -284,6 +284,7 @@ function changePanel(index){
   }
   $(".results-panel .content").append("<h1>"+questions.descriptions[index].title+"</h1>");
   $(".results-panel .content").append("<h2 class='"+colorCode+"'><span>Team average: </span>"+calcAverage(index)+"</h2>");
+  $(".results-panel .content").append("<h4>Previous Average: <span>"+questions.descriptions[index].previous+"</span></h4>");
   if(questions.descriptions[index].intro){
     $(".results-panel .content").append("<p>"+questions.descriptions[index].intro+"</p>");  
   }

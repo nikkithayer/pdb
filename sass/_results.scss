@@ -70,7 +70,6 @@
   	h1{color: $white;}
   	h2{
     	font-family: $futura-family;
-    	margin-bottom: $small-margin;
     	span{ font-weight: lighter; color: lighten($bg-color,60%); }
   	}
   	h3{
@@ -80,6 +79,17 @@
     	text-transform: uppercase;
     	margin-top: $small-margin;
   	}
+  	h4 {
+    margin-top: 5px;
+    font-weight: normal;
+    color: lighten($bg-color,50%);
+    opacity: 0.85;
+  	margin-bottom: $small-margin;
+      span {
+        color: $white;
+      }    
+    }
+
   	svg{
     	position: absolute;
     	bottom: $big-margin;
