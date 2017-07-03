@@ -1,0 +1,83 @@
+#admin{
+  background-color: $lightest-grey;
+  color: $bg-color;
+  h1,h2,h3,h4,p{
+    color: $bg-color;
+    font-family: $futura-family;
+  }
+  p{
+    font-size: 1.25em;
+  }
+
+  .panel{
+    border: 1px solid $soft-border-light-bg;
+    color: $text-color-light-bg;
+    background-color: $white;    
+    margin: $big-margin auto;
+    padding: $big-margin;
+  }
+
+  .form{
+      width: 30%;
+      max-width: 350px;    
+
+      input {
+          padding: 10px;
+          width: 100%;
+          font-size: 0.9rem;
+          margin-top: 15px;
+          color: rgba(0,0,0,0.7);
+      }
+      
+      button {
+          background-color: $dartboard-highest;
+          border: none;
+          padding: $small-margin;
+          border-radius: 2px;
+          color: $white;
+          width: 100%;
+          font-size: 1.1em;
+          margin-top: $small-margin;
+          
+          &.outline{
+            border: 1px solid $dartboard-highest;
+            background-color: $white;
+            color: $dartboard-highest;
+              &:hover{
+                color: $white;
+                background-color: $dartboard-highest;
+              }
+          }
+      }
+  }
+  
+  .header, #admin-dashboard{
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;    
+  }
+ .header{
+   margin-top: $big-margin;
+   padding: 0;
+   h1{
+     font-family: $freight-family;
+     text-transform: capitalize;
+     letter-spacing: 0;
+     display:inline;
+   }
+   button{
+     float: right;
+     margin: 0;
+   }
+ }
+  #admin-dashboard{
+    margin-top: $small-margin;
+    table{
+      width: 100%;
+      td{
+        padding: $small-margin 0;
+        border-bottom: 1px solid $soft-border-light-bg;
+      }
+    }
+  }
+}

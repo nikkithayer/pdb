@@ -8,14 +8,64 @@
 
 	<link type="text/css" href="css/master.css" rel="stylesheet">
 	</head>
-	<body id="assessment">
+	<body id="admin">
 				<header>
   				<img src="logo.svg">Product Dartboard 
   				<a href="login-link">Login</a>
 				</header>
-        <div class="newthing">
-          
+				
+        <div id="admin-login" class="panel form">
+          <h1>Sign up</h1>
+          <p>Product Dartboard is team self-assessment tool that will show your team areas where they can improve. <a href="https://docs.google.com/document/d/1W8vGW8BYAvL8bnii-FewtzvY9GHymSdL1BlucNeJz9U/edit#heading=h.lstb366a3b03">Read more here</a>.</p>
+          <button class="outline">Log In with Google</button>
         </div>
-        <footer></footer>
+        
+        <div id="dashboard">
+          <div class="header"><h1>All Projects</h1> <button>+ New Project</button></div>
+          <div id="admin-dashboard" class="panel">
+            <table>
+              <thead>
+                <td>Name</td>
+                <td>Date</td>
+                <td>Assessments</td>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="#">Carbon Five - Product Dartboard</a></td>
+                  <td>12/7/17</td>
+                  <td>10 Assessments</td>
+                </tr>
+                <tr>
+                  <td><a href="#">Carbon Five - Product Dartboard</a></td>
+                  <td>12/7/17</td>
+                  <td>10 Assessments</td>
+                </tr>
+                <tr>
+                  <td><a href="#">Carbon Five - Product Dartboard</a></td>
+                  <td>12/7/17</td>
+                  <td>10 Assessments</td>
+                </tr>
+                <tr>
+                  <td><a href="#">Carbon Five - Product Dartboard</a></td>
+                  <td>12/7/17</td>
+                  <td>10 Assessments</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+        <div id="new-client">
+          <div class="panel form">
+            <h1>Create New Client</h1>
+            <label>Name</label>            
+            <input type="text" placeholder="Name">
+            <label>Project Name</label>            
+            <input type="text" placeholder="Project Name">
+            <button class="inactive">Add Client</button>
+          </div>
+        </div>
+
+        <footer>&copy; 2017 All rights reserved.</footer>
 	</body>
 </html>

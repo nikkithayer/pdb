@@ -1,10 +1,11 @@
 @import 'base';
 @import 'assessment';
 @import 'results';
+@import 'admin';
 
 *{ padding: 0; margin: 0; }
 
-html, body{
+body{
   background: $bg-color;
 	height: 100%;
 	font-size: 15px;
@@ -23,6 +24,7 @@ body > *{
 header{
 	font-family: $freight-family;
 	font-weight: bold;
+  background: $bg-color;
 	padding: $small-margin;
 	font-size: 1.5em;
 	color: $text-color;
@@ -34,6 +36,35 @@ header{
 	    margin-right: 10px;
 	    vertical-align: middle;			
 	}
+	a{
+  	font-family: $aktiv-family;
+  	float: right;
+  	text-transform: uppercase;
+  	font-weight: 300;
+  	font-size: 1rem;
+	}
+}
+
+footer{
+  position: relative;
+  background-color: $lightest-grey;
+  color: $text-color-light-bg;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid $soft-border-light-bg;
+  box-sizing: border-box;
+  padding: $small-margin;
+  background-size: contain;
+  &:after{
+    content: '';
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: url('../carbon-five-logo.svg') no-repeat center center;
+    background-size:40%;
+  }
 }
 	
 div.container{

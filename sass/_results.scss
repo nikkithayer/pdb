@@ -153,15 +153,5 @@
           &.date h2{ color: $white; }
       }
     }
-      &:after{
-        content: '';
-        width: 100px;
-        height: 100px;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        background: url('../carbon-five-logo.svg') no-repeat center center;
-        background-size:40%;
-      }
   }
 }

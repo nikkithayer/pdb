@@ -260,21 +260,74 @@
         color: #11BCEB; }
       #results footer ol li.date h2 {
         color: #fff; }
-  #results footer:after {
-    content: '';
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background: url("../carbon-five-logo.svg") no-repeat center center;
-    background-size: 40%; }
+
+#admin {
+  background-color: #F8F8F8;
+  color: #252531; }
+  #admin h1, #admin h2, #admin h3, #admin h4, #admin p {
+    color: #252531;
+    font-family: "futura-pt", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+  #admin p {
+    font-size: 1.25em; }
+  #admin .panel {
+    border: 1px solid #e7e7ed;
+    color: #9f9fb6;
+    background-color: #fff;
+    margin: 35px auto;
+    padding: 35px; }
+  #admin .form {
+    width: 30%;
+    max-width: 350px; }
+    #admin .form input {
+      padding: 10px;
+      width: 100%;
+      font-size: 0.9rem;
+      margin-top: 15px;
+      color: rgba(0, 0, 0, 0.7); }
+    #admin .form button {
+      background-color: #07EEB5;
+      border: none;
+      padding: 15px;
+      border-radius: 2px;
+      color: #fff;
+      width: 100%;
+      font-size: 1.1em;
+      margin-top: 15px; }
+      #admin .form button.outline {
+        border: 1px solid #07EEB5;
+        background-color: #fff;
+        color: #07EEB5; }
+        #admin .form button.outline:hover {
+          color: #fff;
+          background-color: #07EEB5; }
+  #admin .header, #admin #admin-dashboard {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto; }
+  #admin .header {
+    margin-top: 35px;
+    padding: 0; }
+    #admin .header h1 {
+      font-family: "freight-display-pro", "Bodoni", "Garamond", serif;
+      text-transform: capitalize;
+      letter-spacing: 0;
+      display: inline; }
+    #admin .header button {
+      float: right;
+      margin: 0; }
+  #admin #admin-dashboard {
+    margin-top: 15px; }
+    #admin #admin-dashboard table {
+      width: 100%; }
+      #admin #admin-dashboard table td {
+        padding: 15px 0;
+        border-bottom: 1px solid #e7e7ed; }
 
 * {
   padding: 0;
   margin: 0; }
 
-html, body {
+body {
   background: #252531;
   height: 100%;
   font-size: 15px;
@@ -291,6 +344,7 @@ body > * {
 header {
   font-family: "freight-display-pro", "Bodoni", "Garamond", serif;
   font-weight: bold;
+  background: #252531;
   padding: 15px;
   font-size: 1.5em;
   color: #fff;
@@ -301,6 +355,32 @@ header {
     height: 42px;
     margin-right: 10px;
     vertical-align: middle; }
+  header a {
+    font-family: "aktiv-grotesk", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    float: right;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1rem; }
+
+footer {
+  position: relative;
+  background-color: #F8F8F8;
+  color: #9f9fb6;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #e7e7ed;
+  box-sizing: border-box;
+  padding: 15px;
+  background-size: contain; }
+  footer:after {
+    content: '';
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: url("../carbon-five-logo.svg") no-repeat center center;
+    background-size: 40%; }
 
 div.container {
   display: flex;

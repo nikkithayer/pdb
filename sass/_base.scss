@@ -1,4 +1,5 @@
 $white : #fff;
+$lightest-grey: #F8F8F8;
 $soft-white-border: rgba(255,255,255,0.1);
 $dark-blue-grey: #252531;
 $c5-orange: #F15D2A;
@@ -17,6 +18,8 @@ $freight-family: "freight-display-pro", "Bodoni", "Garamond", serif;
 
 $bg-color: $dark-blue-grey;
 $text-color: $white;
+$text-color-light-bg: lighten($dark-blue-grey, 50%);
+$soft-border-light-bg: lighten($dark-blue-grey, 75%);
 
 $button-color: $bright-mint-green;
 
