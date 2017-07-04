@@ -269,6 +269,29 @@
     font-family: "futura-pt", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
   #admin p {
     font-size: 1.25em; }
+  #admin input {
+    padding: 10px;
+    width: 100%;
+    font-size: 0.9rem;
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.7); }
+  #admin .header, #admin .panel {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto; }
+  #admin .header {
+    margin-top: 35px;
+    padding: 0; }
+    #admin .header h1, #admin .header h2 {
+      font-family: "freight-display-pro", "Bodoni", "Garamond", serif;
+      text-transform: capitalize;
+      letter-spacing: 0;
+      display: inline; }
+    #admin .header h3 {
+      display: inline; }
+    #admin .header button {
+      float: right;
+      margin: 0; }
   #admin .panel {
     border: 1px solid #e7e7ed;
     color: #9f9fb6;
@@ -278,12 +301,6 @@
   #admin .form {
     width: 30%;
     max-width: 350px; }
-    #admin .form input {
-      padding: 10px;
-      width: 100%;
-      font-size: 0.9rem;
-      margin-top: 15px;
-      color: rgba(0, 0, 0, 0.7); }
     #admin .form button {
       background-color: #07EEB5;
       border: none;
@@ -300,28 +317,13 @@
         #admin .form button.outline:hover {
           color: #fff;
           background-color: #07EEB5; }
-  #admin .header, #admin #admin-dashboard {
-    width: 100%;
-    max-width: 960px;
-    margin: 0 auto; }
-  #admin .header {
-    margin-top: 35px;
-    padding: 0; }
-    #admin .header h1 {
-      font-family: "freight-display-pro", "Bodoni", "Garamond", serif;
-      text-transform: capitalize;
-      letter-spacing: 0;
-      display: inline; }
-    #admin .header button {
-      float: right;
-      margin: 0; }
-  #admin #admin-dashboard {
-    margin-top: 15px; }
-    #admin #admin-dashboard table {
-      width: 100%; }
-      #admin #admin-dashboard table td {
-        padding: 15px 0;
-        border-bottom: 1px solid #e7e7ed; }
+      #admin .form button.inactive {
+        filter: grayscale(100%); }
+  #admin table {
+    width: 100%; }
+    #admin table td {
+      padding: 15px 0;
+      border-bottom: 1px solid #e7e7ed; }
 
 * {
   padding: 0;

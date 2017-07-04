@@ -2,7 +2,7 @@
 	<head>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-compat-3.0.0-alpha1.js"></script>
   <script src="//d3js.org/d3.v3.min.js"></script>
-  <script type="text/javascript" src="js/assessment.js"></script>
+  <script type="text/javascript" src="js/admin.js"></script>
   <script src="https://use.typekit.net/ekw4mdw.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
@@ -20,7 +20,7 @@
           <button class="outline">Log In with Google</button>
         </div>
         
-        <div id="dashboard">
+        <div id="dashboard" class="hidden">
           <div class="header"><h1>All Projects</h1> <button>+ New Project</button></div>
           <div id="admin-dashboard" class="panel">
             <table>
@@ -55,14 +55,56 @@
           </div>
         </div>
         
-        <div id="new-client">
-          <div class="panel form">
-            <h1>Create New Client</h1>
-            <label>Name</label>            
-            <input type="text" placeholder="Name">
-            <label>Project Name</label>            
-            <input type="text" placeholder="Project Name">
-            <button class="inactive">Add Client</button>
+        <div id="new-client" class="panel form hidden">
+          <h1>Create New Client</h1>
+          <label>Name</label>            
+          <input type="text" placeholder="Name">
+          <label>Project Name</label>            
+          <input type="text" placeholder="Project Name">
+          <button class="inactive">Add Client</button>
+        </div>
+        
+        <div id="project" class="hidden">
+          <div class="header">
+            <h2>The Gap</h2>
+            <h3>Booking Manager</h3>
+            <button>+ New Assessment</button>
+          </div>
+          <div id="active-assessment" class="panel">
+            <h3>Created on: January 6, 2017</h3>
+            <h2>Share link with your team:</h2>
+            <input type="text" value="https://acceptance.productdartboard.com/assessments/12/intro"/>
+          </div>
+          <div id="previous-assessment" class="panel">
+            <table>
+              <thead>
+                <td>Date</td>
+                <td>Lowest Average</td>
+                <td>Highest Variance</td>
+                <td>Results</td>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="#">June 7, 2017</a></td>
+                  <td>2.6 Provides Unique Value</td>
+                  <td>1.6 Experienced in Software Projects</td>
+                  <td><a href="#">View 4 Results</a></td>
+                </tr>
+                <tr>
+                  <td><a href="#">June 7, 2017</a></td>
+                  <td>2.6 Provides Unique Value</td>
+                  <td>1.6 Experienced in Software Projects</td>
+                  <td><a href="#">View 4 Results</a></td>
+                </tr>
+                <tr>
+                  <td><a href="#">June 7, 2017</a></td>
+                  <td>2.6 Provides Unique Value</td>
+                  <td>1.6 Experienced in Software Projects</td>
+                  <td><a href="#">View 4 Results</a></td>
+                </tr>
+              </tbody>
+            </table>
+
           </div>
         </div>
 

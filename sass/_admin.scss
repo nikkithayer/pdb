@@ -9,6 +9,37 @@
     font-size: 1.25em;
   }
 
+  input {
+      padding: 10px;
+      width: 100%;
+      font-size: 0.9rem;
+      margin-top: 15px;
+      color: rgba(0,0,0,0.7);
+  }
+  
+  .header, .panel{
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;    
+  }
+ .header{
+   margin-top: $big-margin;
+   padding: 0;
+   h1, h2{
+     font-family: $freight-family;
+     text-transform: capitalize;
+     letter-spacing: 0;
+     display:inline;
+   }
+   h3{
+     display: inline;
+   }
+   button{
+     float: right;
+     margin: 0;
+   }
+ }
+
   .panel{
     border: 1px solid $soft-border-light-bg;
     color: $text-color-light-bg;
@@ -20,14 +51,6 @@
   .form{
       width: 30%;
       max-width: 350px;    
-
-      input {
-          padding: 10px;
-          width: 100%;
-          font-size: 0.9rem;
-          margin-top: 15px;
-          color: rgba(0,0,0,0.7);
-      }
       
       button {
           background-color: $dartboard-highest;
@@ -48,36 +71,19 @@
                 background-color: $dartboard-highest;
               }
           }
+          
+          &.inactive{
+            filter: grayscale(100%);
+          }
       }
   }
-  
-  .header, #admin-dashboard{
+
+  table{
     width: 100%;
-    max-width: 960px;
-    margin: 0 auto;    
-  }
- .header{
-   margin-top: $big-margin;
-   padding: 0;
-   h1{
-     font-family: $freight-family;
-     text-transform: capitalize;
-     letter-spacing: 0;
-     display:inline;
-   }
-   button{
-     float: right;
-     margin: 0;
-   }
- }
-  #admin-dashboard{
-    margin-top: $small-margin;
-    table{
-      width: 100%;
-      td{
-        padding: $small-margin 0;
-        border-bottom: 1px solid $soft-border-light-bg;
-      }
+    td{
+      padding: $small-margin 0;
+      border-bottom: 1px solid $soft-border-light-bg;
     }
   }
+  
 }
